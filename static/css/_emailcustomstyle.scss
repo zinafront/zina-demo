@@ -1,0 +1,123 @@
+.email-container#received-cpo {
+  .table-1 {
+    border: 1px solid #c3c3c3;
+    border-collapse: collapse;
+    .table-1-body {
+      &>tr {
+        &>td {
+          border: solid 1px #c3c3c3;
+          border-bottom: none;
+          background: #f2f2f2;
+          padding: 0 15pt;
+          &>p {
+            margin: 0;
+            margin-top: 1em;
+          }
+          &>.table-2 {
+            display: block;
+            &>tbody {
+              &>tr {
+                &>td {
+                  background: #004d9a;
+                  height: 60px;
+                  vertical-align: top;
+                  width: 700px;
+                  &>span {
+                    position: absolute;
+                    &>.table-3 {
+                      width: 100%;
+                      &>tbody {
+                        &>tr {
+                          &>td {
+                            &>.shape {
+                              padding:2.5pt 7pt;
+                              &>p {
+                                &>span {
+                                  font-family: Arial, Helvetica, Sans-serif;
+                                  color: #ffffff;
+                                  font-size: 22px;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &>div {
+            &>.table-4 {
+              border-collapse: collapse;
+              border: none;
+              &>tbody {
+                &>tr {
+                  &>td {
+                    padding: 0 5.4pt;
+                    width: 700px;
+                    &>p {
+                      margin: 15px 0 30px;
+                      &>strong {
+                        &>span {
+                          color: #666060;
+                          font-family: Arial, Sans-serif, Helvetica;
+                          font-size: 12pt;
+                          font-weight: normal;
+                        }
+                      }
+                    }
+                    &>div {
+                      &>.table-5 {
+                        border-collapse: collapse;
+                        margin-bottom: 45px;
+                        width: 80%;
+                        &>tbody {
+                          &>tr {
+                            .info-table-left {
+                              background: #0070c0;
+                              border: 1px solid windowtext;
+                              padding: 5px 15px;
+                              width: 50%;
+                              span {
+                                color: white;
+                                font-family: Calibri, Arial, Helvetica, Sans-serif;
+                                font-size: 11pt;
+                              }
+                            }
+                            .info-table-right {
+                              background: white;
+                              border: 1px solid windowtext;
+                              border-left: none;
+                              padding: 5px 15px;
+                              width: 50%;
+                              p {
+                                text-align: right;
+                                span {
+                                  color: #262626;
+                                  font-family: Calibri, Arial, Helvetica, Sans-serif;
+                                  font-size: 11pt;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    &>.support-email {
+                      text-align: center;
+                      span {
+                        font-family: Arial, Helvetica, Sans-serif;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

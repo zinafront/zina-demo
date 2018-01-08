@@ -1,0 +1,100 @@
+.supplier-detail {
+	.panel {
+		&.with-nav-tabs {
+			.panel-heading {
+			    color: #333333;
+			    background-color: #efefef;
+			    border-color: #dddddd;
+				padding: 5px 5px 0 5px;
+				.nav-tabs {
+					border-bottom: none;
+					li {
+						line-height: 0;
+						margin-bottom: -1px;
+					}
+				}
+			}
+		}
+	}
+}
+.datepicker {
+	&.dropdown-menu {
+		z-index: 99997 !important;
+	}
+}
+.modal {
+	top: 50px !important;
+}
+.supplier-panel {
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 10px;
+	margin-top: 20px;
+    padding-bottom: 10px;
+    &.cancel-border {
+    	border-bottom: none;
+    }
+}
+.cancel-padding {
+	padding: 0;
+}
+.panel-body {
+	&.cancel-padding-top {
+		padding-top: 0;
+	}
+}
+.supplier-autonomo, .supplier-empresa {
+	&.custom-padd {
+		padding: 0;
+	}
+}
+.supplier-autonomo {
+	&.custom-padd {
+		padding-left: 8px;
+	}
+}
+.supplier-empresa {
+	&.custom-padd {
+		padding-right: 8px;
+	}
+}
+#employee_table {
+	margin-top: 30px;
+}
+
+.supplier-fieldname {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	p {
+		font-weight: normal !important;
+		min-height: 40px;
+	}
+	.fa-circle {
+		padding-right: 10px;
+		&.expired {
+			color: #ff3333;
+		}
+		&.atrisk {
+			color: #ffcd33;
+		}
+		&.updated {
+			color: #33cc99;
+		}
+		&.default {
+			color: #d7d7d7;
+		}
+	}
+}
+.supplier-link {
+	.fa {
+		padding-right: 10px;
+	}
+}
+.supplier-rmpadding {
+	padding: 0;
+}
+.supplier-fileowner {
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

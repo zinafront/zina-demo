@@ -1,0 +1,44 @@
+//Dogi Basic Colors
+$danger:#a92c2c;
+$danger-border:#993333;
+$danger-hover:#992828;
+
+$warning:#e9a828;
+$warning-border:#cd9423;
+$warning-hover:#da9d25;
+
+$success:#5ea557;
+$success-border:#4a8144;
+$success-hover:#599b51;
+
+.zd-label {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0 15px;
+  &.blog {
+    position: absolute;
+    bottom: 50px;
+    left: 35px;
+  }
+  &-success { background: $success;}
+  &-warning { background: $warning;}
+  &-danger { background: $danger;}
+  //&-info { background: $info;}
+  //&-default { background: $default;}
+  &:hover {
+    color: white;
+    text-decoration: none;
+    &-success { background: $success-hover;}
+    &-warning { background: $warning-hover;}
+    &-danger { background: $danger-hover;}
+    //&-info { background: $info-hover;}
+    //&-default { background: $default-hover;}
+  }
+  &.disabled {
+    background: #adadad;
+    background-image: none;
+    color: #c1c1c1;
+    text-shadow: none;
+  }
+}

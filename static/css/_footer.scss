@@ -1,0 +1,46 @@
+/***********************************
+FOOTER
+************************************/
+
+footer {
+    background-color: #074E8F;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+}
+
+/* line 14, _footer.scss */
+footer a {
+  color: #fff;
+}
+/* line 16, _footer.scss */
+footer a:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+/* line 22, _footer.scss */
+footer .logoFooter {
+  text-align: right;
+}
+/* line 24, _footer.scss */
+footer .logoFooter img {
+  max-width: 100px;
+  height: auto;
+}
+/* line 29, _footer.scss */
+footer span {
+  display: block;
+  text-align: left;
+  padding: 10px 0;
+  width: 100%;
+}
+
+ * html footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+

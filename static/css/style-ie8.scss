@@ -1,0 +1,30 @@
+.landing{
+	.main-menu, #slides, .show-pop-up{
+		display: none;
+	}
+}
+.browsehappy{
+	background: #dc3228;
+	height: 300px;
+	position: relative;
+	z-index: 1000;
+	.text-container{
+		color: #fff;
+		margin: 0 auto;
+		padding: 100px 30px 30px 30px;
+		width: 800px;
+		h1{
+			margin-bottom: 30px;
+		}
+		p{
+			font-size: 20px;
+		}
+		a{
+			color: #fff;
+			text-decoration: underline
+		}
+	}
+}
+.nav-top-bar.navbar-fixed-top{
+	background: #123658;
+}

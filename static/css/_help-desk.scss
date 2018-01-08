@@ -1,0 +1,63 @@
+/******************************
+Help desk
+******************************/
+.helpdesk{
+	.btn-xs{
+		line-height: 1.5;
+	}
+
+	.ui-widget-content{
+		background: darken($blanco, 5%);
+		border: none;
+		color: $negro;
+		margin-bottom: 20px;
+		padding: 0px;
+	}
+	.ui-corner-all{
+		@include radius(2px);
+	}
+	.ui-tabs .ui-tabs-nav{
+		padding: 0px;
+	}
+	.ui-widget-header{
+		background: $blanco;
+		border: none;
+	}
+	.ui-corner-top{
+		@include radius(2px 2px 0 0);
+	}
+	.ui-tabs-panel{
+		padding: 20px;
+	}
+	.ui-state-default{
+		background: darken($blanco, 2%);
+		border: none;
+		a{
+			color: $negro;
+		}
+	}
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+		background: darken($blanco, 5%);
+		border: darken($blanco, 5%) solid 1px; 
+		background-image:none;
+		a{
+			color: $main-color;
+		}	
+	}
+	.ui-state-focus{
+		border: none !important;
+		outline: none !important;
+	}
+	.select-number{
+		margin: 20px 0;
+	}
+	.select-filter-ticket{
+		margin: 15px 0;
+	}
+
+
+}
+table.jqplot-table-legend{
+	margin-top: 0px !important;
+	margin-left: 15px !important;
+}

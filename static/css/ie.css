@@ -1,0 +1,6 @@
+#wrapper {
+    width:1024px;
+}
+
+/**** Forms ****/
+.uniForm, .uniForm fieldset, .uniForm .ctrlHolder, .uniForm .formHint, .uniForm .buttonHolder, .uniForm .ctrlHolder ul{ zoom:1; }

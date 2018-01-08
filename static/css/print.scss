@@ -1,0 +1,94 @@
+/*** BASE: header, side menu and footer ***/
+
+html, body{
+    height: 0;
+}
+
+.title, .user, .searchform, #left, .breadcumb_container, .base_footer, header, #header, #main-menu, .breadcrumb, .dropdown, #main-menu, .breadcrumb {
+  display: none;
+  float: left;
+  position: relative;
+  width: 0px;
+  /* Menu width */
+  right: 0px;
+  /* Menu width */
+  margin-left: 0%;
+}
+
+#container {
+  margin: 10px;
+  padding: 10px;
+}
+
+#header {
+  background-image: none;
+  height: 50px;
+}
+
+.main_content_area {
+  /* width: 100%; */
+  margin: 0px;
+  /* max-width: 100%; */
+  float: none;
+}
+
+
+#ft_documentation, .ttt_edit_button, .str_workflow_approval_form, .print_button, #mm_str_comment, footer {
+  display: none;
+}
+
+
+#taf-config{
+    font-size: 12px;
+    font-family: arial;
+    .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+        padding: 0px;
+    }
+
+    .logo{
+        height: auto;
+        width: 80px;
+    }
+
+    h1, .panel-heading, .title-wrapper, .leyend, .unslider-arrow, .unslider-nav, .btn-print, hr{
+        display: none;
+        height: 0px; 
+    }
+
+
+    .panel-body, .panel, .with-nav-tabs, .panel-default{
+        border: none;
+        padding: 0px;
+    }
+    .unslider{
+        padding: 0px;
+    }
+    .taf-slider{
+        overflow: initial;
+    }
+    .unslider-wrap{
+        position: relative;
+        float: none;
+        &.unslider-carousel>li{
+            float: none;
+            position:relative;
+            width: 100%;
+            page-break-inside: avoid; 
+            page-break-after: always;   
+        }
+        label{
+            margin-bottom: 0px;
+        }
+
+        td{
+            padding: 4px;
+        }
+        .signature{
+            height: 50px;
+        }
+
+        .txt-info{
+            font-size:10px;
+        }
+    }
+}

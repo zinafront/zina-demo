@@ -1,0 +1,40 @@
+.select-all * {
+    margin: 0px !important;
+    padding: 0px !important;
+    list-style-type: none;
+}
+
+.select-all input {
+    margin: 3px !important;
+}
+
+.select-all .search {
+    margin: 3px 0 3px -2px !important;
+}
+
+.select-all-scroll ul {
+    border: 1px solid #AAA;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    background-color: #EEE;
+}
+
+.select-all-scroll ul {
+    width: 100% !important;
+}
+
+.select-all li:hover {
+    background-color: #CCC;
+}
+
+.select-all-header {
+    background-color: #EEE;
+    border: 1px solid #AAA;
+    border-bottom: 0px;
+	width: 100%;
+}
+
+.select-all-body{
+	width: 100%;
+}

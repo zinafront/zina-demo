@@ -1,0 +1,18 @@
+@media screen and (max-width:480px) {
+  #main-section {
+    min-height: 0;
+    height: 80vh;
+  }
+  header .navbar .nav-bar-logo {
+    display: block;
+    margin-top: 2px;
+  }
+  header .zinawfm-logo {
+    display: none;
+  }
+}
+@media screen and (max-width:920px) {
+  .hello {
+    display: none;
+  }
+}

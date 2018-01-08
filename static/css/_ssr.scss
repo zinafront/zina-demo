@@ -1,0 +1,806 @@
+#ssr {
+   #form_select_price_list_items{
+      .input-group{
+         .form-control{
+            z-index: 0;
+         }
+      }
+   }
+   .btn-reject-ssr {
+      height: 34px;
+   }
+
+   .service-notification{
+      line-height: 15px;
+   }
+
+   .no-comment-yet{
+      border: 1px solid #dddddd;
+      a{
+         color: $black;
+         display: block;
+         padding: 20px;
+         text-align: center;
+         text-decoration: none;
+      }
+      &:hover{
+         background-color: #F2F2F2;
+      }
+   }
+
+   .comment-img{
+      margin-bottom: 20px;
+   }
+
+   .comment-name-date{
+      span{
+         color: $main-color;
+         font-family: $nokiafont-bold;
+      }
+   }
+   .comment-content{
+      margin-bottom: 20px;
+   }
+   #modal-show-more-comments{
+      .modal-body{
+         max-height: 400px;
+         overflow-x: scroll;
+      }
+   }
+
+}
+
+
+#ssr_massive, #taf-config {
+   .title-wrapper h2 span {
+      font-size: 1.3rem !important;
+   }
+
+   .rtp {
+      color: #4BDD33 !important;
+      font-size: 1rem !important;
+      margin-right: 1rem !important;
+   }
+
+   .error {
+      color: #FF3154 !important;
+      font-size: 1rem !important;
+      margin-right: 1rem !important;
+      background: none !important;
+      border: 0 !important;
+   }
+
+   #ssr_massive_step_4 {
+      .collapse-work-package{
+         >.panel-body{
+            label{
+               line-height: 34px;
+            }
+            .readonly-step-4-blue{
+               color: #2780e3
+            }
+         }
+      }
+      input[readonly],
+      .readonly-step-4 {
+         background: none;
+      }
+   }
+
+   .tab-ssr-masive {
+      .panel.with-nav-tabs {
+         .panel-heading {
+            padding: 5px 5px 0 5px;
+            color: #333333;
+            background-color: #f5f5f5;
+            border-color: #dddddd;
+            .nav-tabs {
+               border-bottom: none;
+               > li {
+                  margin-bottom: -1px;
+               }
+            }
+         }
+         .tab-content {
+            border: none;
+            padding: 0;
+         }
+         .panel-group {
+            .panel-heading {
+               padding: 8px;
+               .label{
+                  top: -2px !important;
+                  position: relative;
+               }
+            }
+            > .panel {
+               margin-bottom: 30px !important;
+            }
+            .wp-summary {
+               background-color: lighten($nokia-blue, 5%) !important;
+               color: #fff !important;
+            }
+         }
+
+      }
+      #tab1wp {
+         .importer-tool {
+            display: none;
+         }
+         @mixin circle($size) {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            left: calc(50% - #{$size/2});
+            top: calc(50% - #{$size/2});
+            width: $size;
+            height: $size;
+         }
+         $size: 150px;
+         .progress-pie-chart {
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background-color: #E5E5E5;
+            position: relative;
+            margin: auto;
+            &.gt-50 {
+               background-color: #81CE97;
+            }
+         }
+         .ppc-progress {
+            @include circle($size);
+            clip: rect(0, $size, $size, #{$size/2});
+            .ppc-progress-fill {
+               @include circle($size);
+               clip: rect(0, #{$size/2}, $size, 0);
+               background: #81CE97;
+               transform: rotate(60deg);
+            }
+            .gt-50 & {
+               clip: rect(0, #{$size/2}, $size, 0);
+               .ppc-progress-fill {
+                  clip: rect(0, $size, $size, #{$size/2});
+                  background: #E5E5E5;
+               }
+            }
+         }
+         .ppc-percents {
+            @include circle(#{$size/1.15});
+            background: #fff;
+            text-align: center;
+            display: table;
+            span {
+               display: block;
+               font-size: 2.6em;
+               font-weight: bold;
+               color: #81CE97;
+            }
+         }
+         .pcc-percents-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+         }
+      }
+      // Service configuration
+      #service_confi {
+         /*th:last-child {
+            width: 50%;
+         }*/
+         /*td:last-child {
+            .form-control {
+               width: 100%;
+            }
+         }*/
+         td + td + td + td {
+            max-width: 30%;
+            .form-control {
+               width: 100%;
+            }
+         }
+         td:last-child {
+            text-align: center;
+         }
+      }
+      // ZI partner configuration
+      #tab3zi {
+         #zi_confi {
+            th:first-child {
+               width: 18%;
+            }
+            th:last-child {
+               width: 65%;
+            }
+            td:last-child {
+               .input-group {
+                  width: 100%;
+               }
+               .input-group-btn {
+                  width: 77px;
+               }
+               .form-control {
+                  width: 100%;
+               }
+            }
+            .btn-input-group {
+               background-color: darken($white, 5%);
+               border-color: #ccc;
+               color: $black;
+               font-size: 20px;
+               line-height: 0.5;
+            }
+         }
+
+         #save_zi_info {
+            display: none;
+         }
+      }
+
+      #ssr_massive_step_4 {
+         .cs_wrapper {
+            margin-bottom: 5px;
+            .cs_title {
+               background: $light-blue;
+               color: $white;
+               font-size: 20px;
+               padding: 5px 10px;
+               .fa {
+                  cursor: pointer;
+               }
+            }
+            .cs_info_config {
+               background-color: $light-grey;
+               border-left: 1px solid #dddddd;
+               border-right: 1px solid #dddddd;
+               padding: 10px 10px 0;
+
+               .service_more_information {
+                  display: none;
+               }
+
+            }
+            .ser_wp_summary {
+               background-color: $light-grey;
+               padding: 6px 10px 0;
+               .rtp, .error{
+                  background: none !important;
+                  border: 0 !important;
+               }
+               .rtp {
+                  color: #4BDD33;
+                  font-size: 1rem;
+                  margin-right: 1rem !important;
+               }
+               .error {
+                  color: #FF3154;
+                  font-size: 1rem;
+                  margin-right: 1rem !important;
+
+               }
+            }
+            .bg-gray-dark {
+               background-color: #E0E0E0 !important;
+               border: none !important;
+            }
+            .cs_info_config_summary {
+               background-color: $light-grey;
+               padding: .2rem 10px .6rem 3.3rem;
+            }
+            .cp_wrapper {
+               padding: 0 10px 10px;
+               background-color: $light-grey;
+               border-left: 1px solid #dddddd;
+               border-right: 1px solid #dddddd;
+               border-bottom: 1px solid #dddddd;
+               .cp_title_wrapper {
+                  background-color: lighten($grey, 10%);
+                  padding-left: 10px;
+               }
+               .cost-package-title {
+                  color: $white;
+                  font-size: 17px;
+                  display: inline-block;
+                  width: 85%;
+               }
+               .cost-package-tools {
+                  display: inline-block;
+                  width: 14%;
+                  text-align: right;
+                  .btn-default {
+                     background-color: transparent;
+                     border-color: transparent;
+                  }
+                  .fa {
+                     font-size: 20px;
+                  }
+               }
+               .cost-package-body {
+                  .table {
+                     margin-bottom: 0;
+                  }
+                  table th {
+                     background: #E0E0E0;
+                     color: $black;
+                     border: #ccc solid 1px;
+                     &.action {
+                        width: 40px;
+                        text-align: center;
+                     }
+                  }
+                  .add-cost-package-area {
+                     border: 1px solid #dddddd;
+                     color: $black;
+                     text-align: center;
+                     padding: 20px;
+                     &:hover {
+                        background-color: $light-grey;
+                        cursor: pointer;
+                     }
+                  }
+               }
+            }
+
+            .cp-container {
+               > td {
+                  padding: 0px;
+               }
+               .cp-parent, .cp-child {
+                  td {
+                     width: 130px;
+                  }
+                  td + td {
+                     width: 880px;
+                  }
+                  td + td + td {
+                     width: 100px;
+                  }
+                  td + td + td + td {
+                     width: 100px;
+                  }
+                  td + td + td + td + td {
+                     width: 45px;
+                  }
+               }
+               .cost-packages{
+                  &+.errorlist{
+                     color: #FF0000;
+                     li{
+                        &:before{
+                           content: '';
+                        }
+                     }
+                  }
+               }
+
+            }
+         }
+      }
+      // cost package configuration tables
+      .cp_confi {
+         th {
+            width: 130px;
+         }
+         th + th {
+            width: 880px;
+         }
+         th + th + th {
+            width: 99px;
+         }
+         th + th + th + th {
+            width: 100px;
+         }
+         th + th + th + th + th {
+            width: 47px !important;
+         }
+         td {
+            vertical-align: middle;
+         }
+         .cp-parent {
+            background-color: $light-grey;
+            td:last-child {
+               text-align: center;
+            }
+         }
+         .cp-child {
+            td:first-child {
+               padding-left: 13px;
+               .fa {
+                  margin-right: 8px;
+               }
+            }
+         }
+      }
+   }
+}
+
+#ssr, #ssr_massive {
+   .zi-partner {
+      .input-group-addon {
+         background-color: #337ab7;
+         border: 1px solid #337ab7;
+         color: $white;
+         cursor: pointer;
+         &:hover {
+            background-color: #2780e3;
+            border: 1px solid #2780e3;
+         }
+         a {
+            color: $white;
+         }
+      }
+   }
+   .cost-package-list {
+      margin-bottom: 20px;
+
+   }
+
+   .zi_confi {
+      .btn-input-group {
+         background-color: darken($white, 5%);
+         border-color: #ccc;
+         color: $black;
+         font-size: 21px;
+         line-height: 0.5;
+      }
+   }
+
+   .free_of_charge {
+      .label-default {
+         background-color: transparent;
+         font-family: $nokiafont-light;
+         font-size: 13px;
+      }
+   }
+   .with_spo {
+      margin-top: 32px;
+   }
+
+   .btn.btn-cost-package-properties {
+      margin-bottom: 10px;
+      background: $nokia-blue-clear;
+   }
+
+   form {
+      .error {
+         font-weight: normal;
+         background: none;
+         border: none;
+         input {
+            border: 1px solid #FF0000;
+         }
+         .help-inline {
+            strong {
+               font-weight: normal;
+               color: #FF0000;
+            }
+
+         }
+      }
+      .errorlist {
+         list-style: none;
+         color: #FF0000;
+         margin-top: 10px;
+         li {
+            list-style: none;
+            color: #FF0000;
+         }
+      }
+
+   }
+   .form-control-readonly {
+      border: medium none;
+      background-color: #eee;
+      cursor: not-allowed;
+      opacity: 1;
+   }
+   .input-group {
+      width: 100%;
+   }
+   .widget-description {
+      float: right;
+      font-weight: normal;
+   }
+
+   .json_add_zi_partner label {
+      width: 100%;
+   }
+
+   .higlighted-value {
+      color: #FF0000;
+   }
+   #voa-information {
+      .modal-body {
+         table {
+            tbody {
+               overflow-y: scroll;
+            }
+         }
+      }
+   }
+   .cs_wrapper {
+      margin-bottom: 5px;
+      box-shadow: none;
+      .panel-body {
+         padding: 0;
+      }
+      &.cs_errors {
+         .cs_title {
+            background: #FF0000 !important;
+            color: white !important;
+         }
+      }
+
+      .chosen-container {
+         width: 100% !important;
+         &.chosen-container-active.chosen-with-drop {
+            .chosen-single {
+               div {
+                  b {
+                     background-position-y: 7px;
+
+                  }
+
+               }
+            }
+         }
+         &.chosen-container-single {
+            .chosen-single {
+               div {
+                  b {
+                     background-position-y: 6px;
+                  }
+               }
+            }
+         }
+         &.chosen-disabled {
+            opacity: 1 !important;
+            > a {
+               background: #eee;
+            }
+         }
+         > a {
+            background: white;
+            height: 34px;
+            padding-top: 5px;
+            border-radius: 2px;
+            border: 1px solid #ccc;
+
+         }
+         .chosen-search {
+            .search-button {
+               width: 25px;
+               height: 25px;
+               position: absolute;
+               right: 5px;
+               cursor: pointer;
+            }
+         }
+      }
+      .cs_title {
+         background: $nokia-gray;
+         color: $white;
+         font-size: 18px;
+         padding: 9px 10px;
+         border-top-left-radius: 0;
+         border-top-right-radius: 0;
+         .fa {
+            cursor: pointer;
+         }
+
+         &.service_done {
+            background-color: $green;
+         }
+         .panel-title {
+            font-size: 18px;
+            &[aria-expanded=true] {
+               .fa-chevron-circle-up {
+                  display: block !important;
+               }
+            }
+            &[aria-expanded=false] {
+               .fa-chevron-circle-down {
+                  display: block !important;
+               }
+            }
+         }
+
+      }
+      .panel-body{
+         border-left: 1px solid #dddddd;
+         border-right: 1px solid #dddddd;
+         border-bottom: 1px solid #dddddd;
+         padding: 10px;
+      }
+      .cs_info_config {
+         background-color: white;
+
+         .service_more_information {
+            display: none;
+         }
+
+      }
+      .cp_wrapper {
+         //padding: 0 10px 10px;
+         background-color: white;
+         //border-left: 1px solid #dddddd;
+         //border-right: 1px solid #dddddd;
+         //border-bottom: 1px solid #dddddd;
+         .cp_title_wrapper {
+            background-color: lighten($grey, 10%);
+            padding-left: 10px;
+         }
+         .cost-package-title {
+            color: $white;
+            font-size: 17px;
+            display: inline-block;
+            width: 85%;
+         }
+         .cost-package-tools {
+            display: inline-block;
+            width: 14%;
+            text-align: right;
+            .btn-default {
+               background-color: transparent;
+               border-color: transparent;
+            }
+            .fa {
+               font-size: 20px;
+            }
+         }
+         .cost-package-body {
+            .table {
+               margin-bottom: 0;
+            }
+            table th {
+               background: #E0E0E0;
+               color: $black;
+               border: #ccc solid 1px;
+               &.action {
+                  width: 40px;
+                  text-align: center;
+               }
+            }
+            .not-cost-package-available,
+            .add-cost-package-area {
+               background-color: white;
+               border: 1px solid #dddddd;
+               color: $black;
+               text-align: center;
+               padding: 20px;
+               &:not(.add-disabled):hover {
+                  background-color: $light-grey;
+                  cursor: pointer;
+               }
+               &.add-disabled {
+                  display: none;
+               }
+            }
+            .not-cost-package-available {
+               &:hover {
+                  cursor: default !important;
+                  background-color: #e6e6e6 !important;
+               }
+            }
+         }
+      }
+      // cost package configuration tables
+      .cp_confi {
+         .wp_detail_summary th {
+            background-color: #78DCF8 !important
+         }
+         th {
+            width: 130px;
+         }
+         th + th {
+            width: 880px;
+         }
+         th + th + th {
+            width: 99px;
+         }
+         th + th + th + th {
+            width: 100px;
+         }
+         th + th + th + th + th {
+            width: 47px !important;
+         }
+         td {
+            vertical-align: middle;
+         }
+         .cp-parent {
+            background-color: $light-grey;
+            td:last-child {
+               text-align: center;
+            }
+         }
+         .cp-child {
+            td:first-child {
+               padding-left: 13px;
+               .fa {
+                  margin-right: 8px;
+               }
+            }
+         }
+      }
+      .cp-container {
+         > td {
+            padding: 0px;
+         }
+         .cp-parent, .cp-child {
+            td {
+               width: 130px;
+            }
+            td + td {
+               width: 880px;
+            }
+            td + td + td {
+               width: 100px;
+            }
+            td + td + td + td {
+               width: 100px;
+            }
+            td + td + td + td + td {
+               width: 100px;
+            }
+            td:last-child{
+               width: 45px !important;
+            }
+         }
+
+      }
+   }
+}
+
+.modal {
+   .modal-header {
+      .loading-icon {
+         position: absolute;
+         right: 50px;
+         top: 15px;
+         font-size: 20px;
+      }
+      &.bg-primary{
+         .close{
+            color: white;
+            opacity: 1;
+         }
+      }
+   }
+   &#voa-information,
+   &#modal-cost-package-properties {
+
+      .modal-body {
+         overflow-y: scroll;
+         max-height: 400px;
+      }
+   }
+}
+
+.wbs-modal-add{
+   .form-group{
+      .control-label{
+         display: block;
+      }
+   }
+}
+
+// SSR, Contract and Invoice Inboxes by JuanPa
+
+.relatify {
+  position: relative;
+}
+.inbox-title {
+  display: inline-block;
+  float: left;
+}
+.header-main-btn {
+  cursor: pointer;
+  display: inline-block;
+  float: right; 
+}
+.inbox-filter {
+  clear: both;
+  margin: 80px auto 50px;
+}
+.filter-reset {
+  margin-top: 26px;
+}

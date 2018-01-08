@@ -1,0 +1,41 @@
+/***********************************
+Mixins
+************************************/
+/*clearfix*/
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/*Tiles generator*/
+@mixin tile-box{
+	background-color: $blanco;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(92,92,92,0.20);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(92,92,92,0.20);
+	box-shadow: 0px 0px 5px 0px rgba(92,92,92,0.20);
+	
+}
+
+/*Border radius*/
+@mixin radius($radius) {
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin transition($time) {
+	transition: all $time;	
+	-webkit-transition: all $time;
+}

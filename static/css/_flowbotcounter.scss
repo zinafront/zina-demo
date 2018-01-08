@@ -1,0 +1,18 @@
+//Override to navbar to show flowbot counter approaching to 2 million transactions
+.navbar#navbar {
+  &.fwc {
+    height: 55px;
+    .top-central {
+      #message-center {
+        @media screen and (max-width: 937px) {
+          display: none;
+        }
+        #counter-legend {
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

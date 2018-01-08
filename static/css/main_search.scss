@@ -1,0 +1,38 @@
+/* Tooltip container */
+    .ui-tooltip {
+        position: fixed;
+        display: inline-block !important;
+        border: 1px solid #ac2925; /* If you want dots under the hoverable text */
+        background-color: #c9302c;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        &:hover{
+            visibility: visible;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 10%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #ac2925 transparent;
+        }
+    }
+/* Buttons style */
+    .btn-danger {
+        color: #fff!important;
+        background-color: #d9534f !important;
+        border-color: #d43f3a !important;
+        &:hover {
+            color: #fff!important;
+            background-color: #c9302c !important;
+            border-color: #ac2925 !important;
+        }
+    }
+
+        
+        

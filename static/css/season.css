@@ -1,0 +1,61 @@
+/*SEASON SCHEMES STYLESHEET*/
+/* line 1, season.scss */
+.seasonDisplay {
+  display: none; }
+
+/* line 4, season.scss */
+.season-container {
+  height: 150px;
+  position: absolute;
+  right: 0;
+  top: 37px;
+  overflow: hidden;
+  width: 82%; }
+  /* line 10, season.scss */
+  .season-container .season01, .season-container .season02 {
+    opacity: 1; }
+  /* line 13, season.scss */
+  .season-container .season01#image01, .season-container .season02#image01 {
+    height: auto;
+    left: 0;
+    position: absolute;
+    width: 115%; }
+  /* line 19, season.scss */
+  .season-container .season01#image02, .season-container .season02#image02 {
+    height: 95%;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+  /* line 25, season.scss */
+  .season-container .season01#image03 {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 50%; }
+  .season-container .season02#image03 {
+    height: auto;
+    left: 40vw;
+    position: relative;
+    width: 346px;
+  }
+  /* line 31, season.scss */
+  .season-container .season01#image04 {
+    bottom: -12px;
+    height: 100%;
+    left: 0%;
+    position: absolute; }
+.season-container.newYearScheme {
+    background: url('../img/season/dusk.png');
+    background-size: cover;
+    height: 200px;
+    top: 0;
+    width: 100%;
+}
+header .navbar.newYearScheme {
+  background: rgba(0,0,0,0);
+  box-shadow: none;
+}
+.zinawfm-logo.newYearScheme {
+  top: -20px;
+  position: relative;
+}

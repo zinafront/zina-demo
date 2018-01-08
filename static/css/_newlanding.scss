@@ -1,0 +1,608 @@
+.landing {
+  background: #565656;
+  .slides-pagination {
+    bottom: -10px !important;
+  }
+  #myAccess {
+    #myModalLabel {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+}
+.cancel-padding-r {
+  padding-right:0 !important;
+}
+.nw-land-header {
+  // Navbar
+  .nl-navbar {
+    background: rgb(40,40,40); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(40,40,40,1) 0%, rgba(73,73,73,1) 30%, rgba(73,73,73,1) 70%, rgba(40,40,40,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(40,40,40,1) 0%,rgba(73,73,73,1) 30%,rgba(73,73,73,1) 70%,rgba(40,40,40,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(40,40,40,1) 0%,rgba(73,73,73,1) 30%,rgba(73,73,73,1) 70%,rgba(40,40,40,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#282828',GradientType=1 ); /* IE6-9 */    box-sizing: border-box;
+    height: 50px;
+    padding: 7px 0;
+    position: fixed;
+    z-index: 1000;
+    .nl-zina-logo {
+      height: auto;
+      left: -20px;
+      margin-top: 5px;
+      position: relative;
+      width: 110px;
+    }
+    .main-menu {
+      .dropdown {
+        &.open {
+          background: none !important;
+        }
+      }
+      li {
+        .login-btn {
+          border: 1px solid white;
+          @include radius(5px);
+          @include transition(0.3s);
+          height: 37px;
+          margin-left: 10px;
+          text-align: center;
+          padding: 0 15px !important;
+          &:hover, &:focus, &:active {
+            background-color: #ffc107;
+            border: 1px solid #ffc107;
+            color: #494949;
+            text-decoration: none;
+          }
+          &.logged-in {
+            background-color: #5285B8;
+            border: 1px solid #5285B8;
+            &:hover, &:focus {
+              background-color: #4fa7ff;
+              border: 1px solid #4fa7ff;
+              color: white;
+            }
+          }
+        }
+        a{
+          padding: 0 15px !important;
+          text-transform: uppercase;
+          line-height: 37px;
+        }
+      }
+      .nl-login-menu {
+        @include transition(0.3s);
+        display: none;
+        padding: 15px;
+        user-select: none;
+        ul {
+          background-color: rgba(0,0,0,0.7);
+          float: right;
+          padding: 15px 0 !important;
+          user-select: none;
+          li {
+            @include transition(0.3s);
+            display: block;
+            height: 40px;
+            user-select: none;
+            width: 150px;
+            &:hover {
+              background-color: #ffc107;
+            }
+            &:hover a {
+              color: black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      #nl-dropdown-menu {
+        transition: all 0.3s ease !important;
+        background-color: rgba(73,73,73,0.7);
+        float: right;
+        margin-top: 5px !important;
+        padding: 15px 0 !important;
+        text-align: right;
+        li {
+          @include transition(0.3s);
+          display: block;
+          height: 40px;
+          margin-right: 0 !important;
+          &:hover {
+            background-color: #ffc107;
+          }
+          &:hover a {
+            color: black;
+            text-decoration: none;
+          }
+          a {
+            padding: 5px 15px !important;
+            &:hover, &:focus {
+              background: initial !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  //Header banner
+  .nl-header {
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    .nl-banner-list {
+      height: 100%;
+      list-style: none;
+      li {
+        height: 100%;
+        position: relative;
+      }
+    }
+    .banner-slider, .unslider {
+      height: 100%;
+    }
+    .unslider {
+        .unslider-arrow {
+          background-image: url(../img/slider-arrow-right.png);
+          border-radius: 32px;
+          height: 32px;
+          left: auto;
+          overflow: hidden;
+          right: 10px;
+          text-indent: -999em;
+          top: 50%;
+          transition: all .3s ease;
+          width: 32px;
+          z-index: 4;
+          &:hover {
+            background-color: #ffc107;
+            border: 1px solid #ffc107;
+            opacity: 1;
+          }
+          &.prev {
+            left: 10px;
+            right: auto;
+            -ms-transform: rotate(-180deg);
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+          }
+        }
+        .unslider-nav {
+          ol {
+            bottom: 10px;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            z-index: 6;
+            li {
+                border-radius: 50%;
+                border: 1px solid #aaa;
+                height: 15px;
+                overflow: hidden;
+                width: 15px;
+                &.unslider-active {
+                  background: white;
+                  border: 1px solid white;
+                  color: #fff;
+                }
+            }
+          }
+        }
+    }
+    .nl-slide-image {
+      left: 0;
+      position: relative;
+      width: 100%;
+      z-index: 0;
+    }
+    .image-overlay {
+      background-color: rgba(0,0,0,0.3);
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      .zina-overlay {
+        width: 100%;
+      }
+    }
+    .content-overlay {
+      height: 100%;
+      padding: 20px 40px;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      .nl-slide-title {
+        color: #ffffff;
+        font-family: $nokiafonth-ultra;
+        font-size: 60px;
+        font-weight: initial;
+        margin-top: 80px; 
+        &#nl-nocounter-slide-title {
+          margin-top: 245px;
+        }
+      }
+      .nl-slide-text {
+        color: #ffffff;
+        font-family: $nokiafonth-ultra;
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 50px;
+        padding-left: 60px;
+        @media screen and (max-width:1199px) {
+          font-size: 18px;
+          margin-top: 25px;
+        }
+        a {
+          color: #337ab7;
+          text-decoration: none;
+          transition: all .3s ease;
+          &:hover {
+            color: #0089ff;
+            text-decoration: underline;
+          }
+        }
+        &#nl-nocounter-slide-text {
+          margin-top: 220px;
+        }
+      }
+      .nl-tool-logo {
+        bottom: 0;
+        height: 140px;
+        padding: 20px;
+        position: absolute;
+        width: auto;
+        &.pull-left {
+          left: 0;
+          right: initial;
+        }
+        &.pull-right {
+          left: initial;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+//Zina summary
+.nl-summary {
+  background-color: #ffffff;
+  height: auto;
+  overflow: hidden;
+  .nl-paragraph {
+      display: block;
+      font-family: $nokiafonth-ultra, Arial, Helvetica, Sans-serif;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    .nl-text {
+      padding: 0 15px;
+      font-size: 20px;
+      line-height: 1.5;
+      span {
+        display: inline-block;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//Hardfacts
+.nl-hardfacts {
+  background-color: #e0e0e3;
+  display: block;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  overflow: hidden;
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+     font-size: 14px;
+  }
+  h3, h4 {
+    margin-left: 13px;
+  }
+}
+
+//Testimonials
+.nl-testimonials {
+  background-color: #908e9b;
+  display: block;
+  overflow: hidden;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  h3 {
+    color: #f5f5f5;
+    font-size: 28px;
+    margin-left: 13px;
+  }
+  #slides-test {
+    height: 420px !important;
+    .img-user {
+      @include radius(50%);
+      border: 5px solid #f5f5f5;
+      height: 170px;
+      margin-left: 7%;
+      padding: 5px;
+      width: 170px;
+    }
+    .txt-user {
+      float: right;
+      font-size: 15px;
+      width: 70%;
+      h3 {
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+      .user-range, .user-txt {
+        color: #f5f5f5;
+        font-family: $nokiafonth-ultra, Arial, Helvetica, Sans-serif;
+      }
+    }
+  }
+  .slides-pagination a {
+    border-color: #f5f5f5 !important;
+    &.current {
+      background-color: #f5f5f5 !important;
+    }
+  }
+}
+
+//Customer Teams
+.nl-customers {
+  background-color: #4d4c5e;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  overflow: hidden;
+  h3 {
+    color: #f5f5f5;
+    font-size: 28px;
+    margin-left: 13px;
+  }
+  .customers {
+    padding-top: 40px;
+    img {
+      width: 100%;
+    }
+  }
+  .zina-cts {
+    padding: 20px 0;
+    text-align: center;
+    li {
+      vertical-align: top;
+      img {
+        display: block;
+        width: 100%;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//Footer
+.nw-land-footer {
+  background-color: #020828;
+  font-size: 14px;
+  height: 70px;
+  margin: 0;
+  margin-top: 25px;
+  padding-top: 25px;
+  .nl-footer {
+    margin: 0px auto;
+    height: 100px;
+    width: 97%;
+    .list-inline {
+      display: inline-block;
+      margin-top: 10px;
+      text-align: left;
+    }
+    .nokia-logo {
+      display: inline-block;
+      float: right;
+      width: 115px;
+    }
+  }
+}
+
+// The counter
+#getting-started {
+    margin-top: 50px;
+    text-align: center;
+    @media screen and (max-width: 1199px){
+      // transform: scale(0.8);
+    }
+}
+.cd-digit {
+  display: inline-block;
+  padding: 10px 3px;
+  position: relative;
+  &.inside {
+    padding: 10px 2px;
+    .cd-digit-frame {
+      background: #ffffff; /* Old browsers */
+      background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f9f9f9 52%, #cccccc 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 50%,#f9f9f9 52%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#f9f9f9 52%,#cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+      color: black;
+      font-size:24px;
+      padding: 0 2px;
+      &.success {
+        font-weight:bold;
+      }
+    }
+  }
+}
+.cd-digit-frame {
+  background: rgb(12,12,12); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(12,12,12,1) 14%, rgba(25,25,25,1) 49%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(12,12,12,1) 14%,rgba(25,25,25,1) 49%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(12,12,12,1) 14%,rgba(25,25,25,1) 49%,rgba(0,0,0,1) 52%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0c0c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 60px;
+  padding: 10px 10px 10px 9px;
+  width: auto;
+  &.success {
+    background: rgb(12,12,12); /* Old browsers */
+    background: -moz-linear-gradient(top, #ffc800 14%, #ff9900 49%, #ff8a00 52%, #633c03 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffc800 14%, #ff9900 49%, #ff8a00 52%, #633c03 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffc800 14%, #ff9900 49%, #ff8a00 52%, #633c03 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0c0c', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    color: black;
+    font-weight:bold;
+  }
+}
+.cd-digit-name {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  font-family: $nokiafonth-ultra ;
+}
+// FLAGS
+.flag-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  margin: 5px 0px;
+  width: 25px;
+}
+.flag-icon:before {
+  content: "\00a0";
+}
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+.flag-icon-ar {
+  background-image: url(../img/flags/ar.png);
+}
+.flag-icon-bo {
+  background-image: url(../img/flags/bo.png);
+}
+.flag-icon-br {
+  background-image: url(../img/flags/br.png);
+}
+.flag-icon-cl {
+  background-image: url(../img/flags/cl.png);
+}
+.flag-icon-co {
+  background-image: url(../img/flags/co.png);
+}
+.flag-icon-mx {
+  background-image: url(../img/flags/mx.png);
+}
+
+//New login modal - ZINADogi
+.zd-login-popup {
+  //DogiColors to buttons & alerts
+  .alert-danger {
+    background: #dd4b39;
+    border-color: #d73925;
+  }
+  .btn-success {
+    background: #00a65a;
+    border-color: #008d4c;
+    &:hover {
+      background: #4ab74a;
+      border-color: #4ab74a;
+    }
+  }
+  .btn-default {
+    background: #042035;
+    border-color: #041624;
+    &:hover {
+      background: #093252;
+      border-color: #093252;
+    }
+  }
+  .modal-dialog {
+    margin: 10px auto;
+    width: 400px !important;
+    .modal-header {
+      border-bottom: 0;
+      padding: 0 30px;
+      hr {
+        margin: 0 auto;
+        width: 80%;
+      }
+      .zina-login-logo {
+        box-sizing: content-box;
+        height: 30px;
+        padding: 20px;
+      }
+      .fa {
+        font-size: 14px;
+        position: absolute;
+        top: 20px;
+      }
+    }
+    .modal-body {
+      padding: 0 30px;
+      h5 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .alert-danger {
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      .form-control {
+        display: inline-block;
+        margin-bottom: 10px;
+        position: relative;
+        right: 3px;
+        width: 297px;
+      }
+      .btn-logform, .btn-logform[disabled] {
+        background: #eaeaea;
+        border: 1px solid #ccc;
+        color: #999;
+        cursor: default;
+        left: 3px;
+        opacity: 1;
+        position: relative;
+        user-select: none;
+        vertical-align: top;
+        width: 36.5px;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+.form-shadow-error {
+  span, input {
+    border-color: #dd4b39 !important;
+    outline: 0 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(221,75,57,.6) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(221,75,57,.6) !important;
+  }
+}
+
+.counter-btm-img {
+    display: block;
+    margin-top: 50px;
+    margin: 0 auto;
+    width: 40%;
+}

@@ -1,0 +1,112 @@
+/*//////////////////////////////////////////////////////
+///////////// STATITSTICS FLIPPING CARDS ///////////////
+/////////////////////////////////////////////////////*/
+
+.flip-container {
+  height: 370px;
+  overflow: hidden;
+  perspective: 800px;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.flip-card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+  width: 95%;
+}
+
+.flip-card:hover figure {
+  background: rgba(0, 0, 0, 0.95);
+  margin: 15% auto 0;
+  width: 60%;
+}
+
+.flip-card article {
+  backface-visibility: hidden;
+  display: block;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+.flip-card figure {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 50%;
+  border: 7px solid white;
+  box-sizing: content-box;
+  transition: 0.3s;
+  margin: 20% auto 0;
+  width: 50%;
+  img {
+    width: 100%;
+  }
+}
+
+.flip-card hgroup {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 120px;
+  height: 150px;
+  margin: 0;
+  padding: 30px 0;
+  position: absolute;
+  transition: 0.6s;
+  width: 100%;
+}
+
+.flip-card h3 {
+  font-size: 50px !important;
+  line-height: 50px;
+}
+
+.flip-card .flip-front {
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.front-1 {
+  background: url('../images/statistics-background.jpg') 0;
+}
+
+.front-2 {
+  background: url('../images/statistics-background.jpg') 50%;
+}
+
+.front-3 {
+  background: url('../images/statistics-background.jpg') 100%;
+}
+
+.flip-card .flip-back {
+  background-size: cover;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  transform: rotateY(180deg);
+  width: 100%;
+}
+
+.flip-card:hover hgroup {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.back-1 {
+  background: url('../images/statistics-background-flip.jpg') 100%;
+}
+
+.back-2 {
+  background: url('../images/statistics-background-flip.jpg') 50%;
+}
+
+.back-3 {
+  background: url('../images/statistics-background-flip.jpg') 0%;
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}

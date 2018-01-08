@@ -1,0 +1,116 @@
+/* <h4>'s container decoration, colors and BG */
+/*.panel-header {
+  height: 25px;
+  background:#ff9900;
+  color: #F00;
+  display: block;
+  font-size: 1em;
+  position:relative;
+  padding: 0.7em 0em 0.5em 1.5em;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #d19405;
+  background: #fece2f url(../img/panels_bg.png) 50% 50% repeat-x;
+  font-weight: bold;
+  color: #4c3000;
+}*/
+
+/* Aligns and colors the link text. Also keep the right width so status icons get
+aligned to the right. */
+
+
+/*.panel-header  a {
+  padding-left: 2.2em;
+  display: block;
+  /* Width 100% ensures that if other CSS class are set to the <a> element, like 
+  'no_cpos', icon status get aligned to the right.  
+  width: 100%;
+  color: #4c3000;
+  text-decoration: none;
+}
+
+.panel-header a.nf_link {
+    color: #606;
+    padding-left: 0;
+}
+
+.panel-header a.nf_link:hover {
+    text-decoration: underline;
+}
+
+.panel-header a.cpo_link {
+    color: #606;
+    padding-left: 0;
+}
+
+.panel-header a.cpo_link:hover {
+    text-decoration: underline;
+}
+
+
+.panel-header ul {
+    width:100%;
+}
+
+
+.panel-header ul li label{
+    display: block;
+    padding-top: 5px;
+}
+
+.panel-header ul li {
+    float: left;
+    margin-left: 10px;
+}
+
+.panel-header ul li.align-right {
+    float: right;
+    margin-right: 25px;
+}
+*/
+
+/* Errors <h4> container decoration, colors and BG */
+.error {
+  border: 1px solid #d15000;
+  background: #fece2f url(../img/panels_bg_red.png) 50% 50% repeat-x;  
+}
+
+/* Errors <h4>.<a>, colors and BG */
+.error a{
+  font-size: 1em;
+  color: #4c0000;
+  text-decoration: none;
+}
+
+/* <h4> toggle colors and icon */
+.toggle{
+  display: none;
+    position: absolute;
+    top: 0.6em;
+    left: 0.7em;
+    width: 15px;
+    height: 20px;
+    background: url('../css/images/ui-icons_bd7b00_256x240.png') no-repeat 0 0;
+    background-position: -30px -16px;
+}
+
+.toggle-opened{
+    position: absolute;
+    top: 0.6em;
+    left: 0.7em;
+    width: 15px;
+    height: 20px;
+    background: url('../css/images/ui-icons_bd7b00_256x240.png') no-repeat 0 0;
+    background-position: -62px -16px;
+}
+
+/* <h4> with errors toggle colors and icon */
+.toggle-error{
+    position: absolute;
+    top: 0.5em;
+    left: 1.2em;
+    width: 10px;
+    height: 15px;
+    background: url('../tree/ui/images/ui-icons_cd0a0a_256x240.png') no-repeat 0 0;
+    background-position: -36px -142px;
+}

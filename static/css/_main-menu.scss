@@ -1,0 +1,243 @@
+#MainMenu{
+	.dropdown-menu {
+		background-color: $blanco;
+		border: darken($gris-claro, 5%) solid 1px;
+		display: block;
+		position: relative;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		position: relative;
+		width: 100%;
+		z-index:99996;
+		@include radius(2px);
+		li{
+			border-bottom: #E8E8E8 solid 1px;
+			border-top: $blanco solid 1px;
+			position: relative;
+			&:first-child{
+				border-top: none;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+
+			a{
+				padding: 8px 20px 8px 10px;
+			}
+		}
+
+		.dropdown-submenu{
+			border-bottom: #E8E8E8 solid 1px;
+			border-top: #fff solid 1px;
+			line-height: 1.2em;
+
+			&:hover{
+				background-color: $gris-claro;
+			}
+			
+			// // Colored Li over on the menu
+			// &:hover{
+			// 	background-color: $main-color;
+			// 	color: $blanco;
+			// 	>a{
+			// 		color: $blanco;
+			// 	}
+			// }
+
+			.dropdown-submenu-container{
+				background: $gris-claro;
+				border-width: 1px 1px 1px 0;
+				border-style: solid;
+				border-color: darken($gris-claro, 10%);
+				padding: 10px;
+
+				@include radius(0px 2px 2px 0px);
+
+				li{
+					list-style: none;
+				}
+
+				.dropdown-submenu-subitems{
+					padding: 0px 0px 5px 0px;
+					margin-bottom: 20px;
+					
+					>a, span, .single-link a{
+						color: $main-color;
+						// border-bottom: darken($gris-claro, 10%) solid 1px;
+						display: block;
+						font-family: $nokiafont-bold;
+						text-decoration: none;
+						margin-bottom: 5px;
+					}
+					a{
+						color: $main-color;
+						padding: 0px;
+					}
+					ul{
+						border: none;
+						list-style: none;
+						margin: 0;
+						padding: 0;	
+					}
+
+					li{
+						border: none;
+						list-style: none;
+						padding: 2px 5px 2px 0px;
+						a{
+							color: $negro;
+
+							&:hover{
+								color: $azul;
+								background: none;
+							}
+						}
+					}
+				}
+			}
+
+			.single, .doble, .fullsize{
+				display: none;
+				top: 0;
+				left: 100%;
+				margin-top: -2px;
+				position: absolute;
+				padding: 10px;
+				z-index: 1000;
+				@include radius(0px 2px 2px 0px);
+				li{
+					color: $main-color;
+					border: none;
+					display: block;
+					text-decoration: none;
+					margin-bottom: 5px;
+					padding: 0 0 10px 0;
+				}
+
+				a{
+					color: $negro;
+					display: block;
+					text-decoration: none;
+					padding: 0;
+					&:hover{
+						color: $azul;
+						background: none;
+					}
+				}
+			}
+
+			.single{
+				width: 305px;
+				a{
+					color: $negro;
+					&:hover{
+						color: $azul;
+						background: none;
+					}
+				}
+			}
+
+			.doble{
+				width: 610px;
+			}
+			.fullsize{
+				width: 1100px;
+				/* Small devices (tablets, 768px and up) */
+				@media (min-width: $screen-sm-min) {
+				}
+				/* Medium devices (desktops, 992px and up) */
+				@media (min-width: $screen-md-min) {
+					width: 800px;
+				}
+			}
+
+			&:hover .dropdown-submenu-container{
+				display: block;
+			}
+
+			span.glyphicon{
+				color: darken($gris-claro,30%);
+				position: absolute;
+				right: 10px;
+				top: 30%;
+			}
+		}
+
+
+		// .dropdown-submenu{
+		// 	&:hover{
+		// 		background-color: $main-color;
+		// 		color: $blanco;
+		// 		>a{
+		// 			color: $blanco;
+		// 		}
+		// 		.dropdown-menu{
+		// 			color: $negro;
+		// 			display: block;
+		// 		}
+		// 		span{
+		// 			color: $blanco !important;
+		// 		}
+		// 	}
+		// 	span.glyphicon{
+		// 		color: darken($gris-claro,30%);
+		// 		position: absolute;
+		// 		right: 20px;
+		// 		top: 30%;
+		// 	}
+		// 	.dropdown-menu{
+		// 		border: none;
+		// 		display: none;
+		// 		position: absolute;
+		// 		top: 0;
+		// 		left: 100%;
+		// 		margin-top: -5px;
+		// 		margin-left: 0px;
+		// 		-webkit-box-shadow: 2px 2px 8px 0 #BFBFBF;
+		// 		box-shadow: 2px 2px 8px 0 #BFBFBF;
+		// 		li{
+		// 			a{ 
+		// 				padding: 8px 20px; 
+		// 				&:hover{
+		// 					background-color: $azul;
+		// 				}
+		// 			}
+					
+		// 		}
+		// 	}
+		// 	.dropdown-menu-subitems{
+		// 		ul{
+					
+		// 			display: none;
+		// 			margin: 0;
+		// 			min-width: 300px;
+		// 			padding:0;	
+		// 			position: absolute;
+		// 			top: 0;
+		// 			left: 100%;
+		// 		}
+		// 		li{
+		// 			background-color: $gris-claro;
+		// 			list-style:none;
+		// 			width: 100%;
+		// 			display: block;
+		// 		}
+		// 		a{
+		// 			display: block;
+		// 			padding-left: 15px;
+		// 		}
+		// 		&:hover{
+		// 			background-color: $azul;
+		// 			color: $blanco;
+
+		// 			ul{
+		// 				display: block;
+		// 			}
+		// 		}	
+
+		// 	}
+		// }
+	}
+}

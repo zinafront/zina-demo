@@ -1,0 +1,18 @@
+#cria_ssr{
+  textarea{
+    height: 80px;
+  }
+  .errorlist{
+  color: #d43f3a;
+  }
+}
+.small-box {
+  overflow: hidden;
+  &.summary {
+    .inner {
+      h3 {
+        font-size: 23px !important;
+      }
+    }
+  }
+}

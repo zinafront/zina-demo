@@ -1,0 +1,78 @@
+.cpo-actions {
+  .btn {
+    margin-bottom: 5px;
+    @media screen and (max-width:1199px) {
+          margin-bottom: 5px;
+          width: 10vw;
+          font-size: 12px;
+          padding: 5px;
+    }
+  }
+}
+.cpo-history {
+  .fa {
+    margin-right: 5px;
+    color: #5285B8;
+  }
+  a {
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: underline;
+  }
+}
+.cpo-items {
+  .label {
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 0;
+  }
+  .cpo-cancel-check {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+}
+.cpo-reasons {
+  #headingReasons {
+    margin-bottom: 10px;
+  }
+  .cpo-reasons-posted {
+    margin-bottom: 10px;
+    img {
+      width: 14vh;
+    }
+    &:nth-last-child(2){
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.tile-box-padding {
+  h3 {
+   //padding-bottom: 10px;
+  }
+}
+
+#reparseCpo, #revalidateCpo {
+  .huge {
+    color: #ec971f !important;
+    font-size: 80px;
+    padding-bottom: 20px;
+  }
+}
+
+#opportunity_modal {
+  .modal-dialog {
+    width: 1200px;
+    .ac_input { 
+      width: 30%;
+    }
+    .table-responsive {
+      max-height: 320px;
+      overflow-x: hidden;
+      input:not([type='checkbox']) {
+        width: 120px !important;
+      }
+    }
+  }
+}

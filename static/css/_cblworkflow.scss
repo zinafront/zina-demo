@@ -1,0 +1,81 @@
+#workflow-button {
+  min-width: 78px;
+}
+#workflow-inbox {
+  tr {
+    td {
+      text-align: center;
+      span {
+        font-size: 12px;
+        font-weight: normal;
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+}
+.panel-appflow {
+  .panel-heading {
+    background: #5285B8 !important;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .panel-body {
+    font-size: 12px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 837px;
+
+    ul {
+      list-style: none;
+      white-space: nowrap;
+      padding-bottom: 10px;
+      .fa-arrow-circle-right {
+        font-size: 20px;
+        position: relative;
+        vertical-align: middle;
+        left: -33px;
+        top: -100px;
+        &.approved {
+          color: #449d44;
+          transform: rotate(-90deg);
+        }
+        &.rejected {
+          color: #c9302c;
+          transform: rotate(90deg);
+        }
+      }
+      .panel-workflow-step {
+        background: #fafafa;
+        border-radius: 5px;
+        border: 1px solid #dadada;
+        height: auto;
+        width: 100%;
+        .table {
+          margin-bottom: 0;
+          tbody {
+            .label {
+              font-size: 95%;
+              padding: .25em .6em 0.10em;
+            }
+            tr {
+              td {
+                white-space: initial;
+              }
+            }
+          }
+        }
+        .step-comment-head {
+          display: block;
+          margin-left: 8px;
+          margin-bottom: 10px;
+        }
+        .step-comment {
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+}

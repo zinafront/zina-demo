@@ -1,0 +1,68 @@
+/*** BASE: header, side menu and footer ***/
+html, body {
+  height: 0; }
+
+.title, .user, .searchform, #left, .breadcumb_container, .base_footer, header, #header, #main-menu, .breadcrumb, .dropdown, #main-menu, .breadcrumb {
+  display: none;
+  float: left;
+  position: relative;
+  width: 0px;
+  /* Menu width */
+  right: 0px;
+  /* Menu width */
+  margin-left: 0%; }
+
+#container {
+  margin: 10px;
+  padding: 10px; }
+
+#header {
+  background-image: none;
+  height: 50px; }
+
+.main_content_area {
+  /* width: 100%; */
+  margin: 0px;
+  /* max-width: 100%; */
+  float: none; }
+
+#ft_documentation, .ttt_edit_button, .str_workflow_approval_form, .print_button, #mm_str_comment, footer {
+  display: none; }
+
+#taf-config {
+  font-size: 12px;
+  font-family: arial; }
+  #taf-config .col-xs-12, #taf-config .col-sm-12, #taf-config .col-md-12, #taf-config .col-lg-12 {
+    padding: 0px; }
+  #taf-config .logo {
+    height: auto;
+    width: 80px; }
+  #taf-config h1, #taf-config .panel-heading, #taf-config .title-wrapper, #taf-config .leyend, #taf-config .unslider-arrow, #taf-config .unslider-nav, #taf-config .btn-print, #taf-config hr {
+    display: none;
+    height: 0px; }
+  #taf-config .panel-body, #taf-config .panel, #taf-config .with-nav-tabs, #taf-config .panel-default {
+    border: none;
+    padding: 0px; }
+  #taf-config .unslider {
+    padding: 0px; }
+  #taf-config .taf-slider {
+    overflow: initial; }
+  #taf-config .unslider-wrap {
+    position: relative;
+    float: none; }
+    #taf-config .unslider-wrap.unslider-carousel > li {
+      float: none;
+      position: relative;
+      width: 100%;
+      page-break-inside: avoid;
+      page-break-after: always; }
+    #taf-config .unslider-wrap label {
+      margin-bottom: 0px; }
+    #taf-config .unslider-wrap td {
+      padding: 4px; }
+    #taf-config .unslider-wrap .signature {
+      height: 50px; }
+    #taf-config .unslider-wrap .txt-info {
+      font-size: 10px; }
+
+/*# sourceMappingURL=print.css.map */

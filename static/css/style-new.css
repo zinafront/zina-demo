@@ -1,0 +1,418 @@
+/*@imports*/
+/***********************************
+Mixins
+************************************/
+/*Tiles generator*/
+/*Border radius*/
+/***********************************
+common settings
+************************************/
+/***********************************
+Font-face config
+************************************/
+@font-face {
+  font-family: 'NokiaPureTWebLight';
+  src: url("fonts/NokiaPureTWeb_Lt.eot");
+  src: url("fonts/NokiaPureTWeb_Lt.eot?#iefix") format("embedded-opentype"), url("fonts/NokiaPureTWeb_Lt.woff") format("woff"), url("fonts/NokiaPureTWeb_Lt.ttf") format("truetype"), url("fonts/NokiaPureTWeb_Lt.svg#NokiaPureTWebLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NokiaPureTWebRegular';
+  src: url("fonts/NokiaPureTWeb_Rg.eot");
+  src: url("fonts/NokiaPureTWeb_Rg.eot?#iefix") format("embedded-opentype"), url("fonts/NokiaPureTWeb_Rg.woff") format("woff"), url("fonts/NokiaPureTWeb_Rg.ttf") format("truetype"), url("fonts/NokiaPureTWeb_Rg.svg#NokiaPureTWebRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NokiaPureTWebBold';
+  src: url("fonts/NokiaPureTWeb_Bd.eot");
+  src: url("fonts/NokiaPureTWeb_Bd.eot?#iefix") format("embedded-opentype"), url("fonts/NokiaPureTWeb_Bd.woff") format("woff"), url("fonts/NokiaPureTWeb_Bd.ttf") format("truetype"), url("fonts/NokiaPureTWeb_Bd.svg#NokiaPureTWebBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/***********************************
+HTML config
+************************************/
+body {
+  background-color: #f7f7f7;
+  color: #444;
+  font-family: "NokiaPureTWebRegular";
+}
+
+h3 {
+  margin-top: 0;
+}
+
+strong {
+  font-family: "NokiaPureTWebBold";
+}
+
+/*Avoid doble padding on nested containers*/
+.row .container-fluid {
+  padding: 0px;
+}
+
+/***********************************
+Menu components
+************************************/
+/*Drop down*/
+.dropdown-menu {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.dropdown-menu li a:focus, .dropdown-menu li a:hover {
+  background-color: #074E8F;
+  color: #fff !important;
+}
+
+/***********************************
+Forms
+************************************/
+.input-group-addon {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/*Form Buttons*/
+button[type="submit"] {
+  color: #fff !important;
+  border: none;
+}
+
+.btn-default {
+  background-color: #5285B8;
+  color: #fff;
+}
+.btn-default:focus, .btn-default:hover {
+  background-color: #074E8F;
+  color: #fff !important;
+}
+
+.btn-filtre .btn {
+  background-color: #F2F2F2;
+  border-color: #ccc;
+}
+
+.form-control, .btn {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.form-group .control-label {
+  font-family: "NokiaPureTWebBold";
+}
+
+/***********************************
+Extras
+************************************/
+/*custom breadcrumb*/
+.breadcrumb {
+  background-color: transparent;
+  border-top: #d8d8d8 solid 1px;
+  border-bottom: #d8d8d8 solid 1px;
+  font-size: 12px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+.breadcrumb a {
+  color: #777777;
+}
+.breadcrumb a:hover {
+  color: #5285B8;
+  text-decoration: none;
+}
+
+/***********************************
+HEADER
+************************************/
+.premier-content {
+  height: 0px;
+}
+
+.open-premier {
+  background-color: #fff;
+  height: 30px;
+  margin-top: -5px;
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+header .navbar {
+  background: #5285B8;
+  color: #fff;
+  border-radius: 0;
+  min-height: 35px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+header .navbar .hello {
+  margin-top: 8px;
+  margin-right: 30px;
+}
+header .navbar .pull-right .btn {
+  background-color: transparent;
+  padding: 0;
+  margin: 5px 5px 0px 5px;
+}
+header .navbar .pull-right .glyphicon {
+  color: #F2F2F2;
+  font-size: 25px;
+}
+header .navbar .pull-right .dropdown-menu .glyphicon {
+  color: #727272;
+  font-size: 14px;
+}
+header .navbar .pull-right .dropdown-menu a:hover .glyphicon {
+  color: #fff;
+}
+header .logo img {
+  height: auto;
+  max-width: 250px;
+  width: 100%;
+}
+header .input-group {
+  margin-top: 40px;
+}
+header .nav.nav-pills {
+  float: right;
+}
+header .nav.nav-pills li {
+  text-align: center;
+}
+header .nav.nav-pills li a {
+  color: #727272;
+}
+header .nav.nav-pills li a:hover {
+  color: #074E8F;
+}
+header .nav.nav-pills li span {
+  display: block;
+  font-size: 30px;
+}
+header .nav.nav-pills .active a {
+  background-color: #074E8F;
+  color: #fff;
+}
+header .nav.nav-pills .active a:hover {
+  color: #e5e5e5;
+}
+
+/***********************************
+MAIN SECTION
+************************************/
+#main-section {
+  padding: 30px 0;
+  /*TILES*/
+}
+#main-section #sidebar {
+  margin-bottom: 30px;
+}
+#main-section #sidebar .nav-tabs {
+  border-bottom: none;
+}
+#main-section #sidebar .dropdown-menu {
+  background-color: #fff;
+  border: #e5e5e5 solid 1px;
+  display: block;
+  position: relative;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+#main-section #sidebar .dropdown-menu li {
+  border-bottom: #E8E8E8 solid 1px;
+  border-top: #fff solid 1px;
+  position: relative;
+}
+#main-section #sidebar .dropdown-menu li:first-child {
+  border-top: none;
+}
+#main-section #sidebar .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+#main-section #sidebar .dropdown-menu li a {
+  padding: 8px 20px;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu:hover {
+  background-color: #074E8F;
+  color: #fff;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu:hover > a {
+  color: #fff;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu:hover .dropdown-menu {
+  color: #444;
+  display: block;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu:hover span {
+  color: #fff !important;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu span.glyphicon {
+  color: #a5a5a5;
+  position: absolute;
+  right: 20px;
+  top: 30%;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu .dropdown-menu {
+  border: none;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -5px;
+  margin-left: 0px;
+  -webkit-box-shadow: 2px 2px 8px 0 #BFBFBF;
+  box-shadow: 2px 2px 8px 0 #BFBFBF;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu .dropdown-menu li a {
+  padding: 8px 20px;
+}
+#main-section #sidebar .dropdown-menu .dropdown-submenu .dropdown-menu li a:hover {
+  background-color: #5285B8;
+}
+#main-section .tile-box-padding {
+  padding: 10px;
+  min-height: 175px;
+  background-color: #fff;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
+}
+#main-section .tile-box-padding .input-group {
+  margin-bottom: 20px;
+}
+#main-section .tile-box {
+  padding: 10px 0;
+  min-height: 100px;
+  background-color: #fff;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
+}
+#main-section .resume .tile-header {
+  padding: 0 10px 0 10px;
+}
+#main-section .resume .tile-header a {
+  color: #444;
+}
+#main-section .resume .tile-header .stage {
+  float: left;
+}
+#main-section .resume .tile-header .ticket-number {
+  float: right;
+}
+#main-section .resume .tile-title {
+  padding: 5px 10px;
+  height: 80px;
+}
+#main-section .resume .tile-title a {
+  color: #444;
+  font-family: "NokiaPureTWebBold";
+  text-decoration: none;
+}
+#main-section .resume .tile-date {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  padding: 0 10px;
+  text-align: right;
+}
+#main-section .resume .glyphicon {
+  font-size: 14px;
+  opacity: 1;
+  font-weight: 400;
+  filter: alpha(opacity=100);
+}
+#main-section .resume.open .glyphicon {
+  color: #52A746;
+}
+#main-section .resume.open:hover {
+  background-color: #52A746;
+  color: #fff;
+}
+#main-section .resume.open:hover .glyphicon {
+  color: #fff;
+}
+#main-section .resume.open:hover a {
+  color: #fff;
+}
+#main-section .resume.open .tile-title a:hover {
+  color: #e3f2e0;
+}
+#main-section .resume.assigned .glyphicon {
+  color: #5285B8;
+}
+#main-section .resume.assigned:hover {
+  background-color: #5285B8;
+  color: #fff;
+}
+#main-section .resume.assigned:hover .glyphicon {
+  color: #fff;
+}
+#main-section .resume.assigned:hover a {
+  color: #fff;
+}
+#main-section .resume.assigned .tile-title a:hover {
+  color: #d1deec;
+}
+#main-section .resume.closed .glyphicon {
+  color: #8c8c8c;
+}
+#main-section .resume.closed:hover {
+  background-color: #a5a5a5;
+  color: #fff;
+}
+#main-section .resume.closed:hover .glyphicon {
+  color: #fff;
+}
+#main-section .resume.closed:hover a {
+  color: #fff;
+}
+#main-section .resume.closed .tile-title a:hover {
+  color: #F2F2F2;
+}
+
+/***********************************
+FOOTER
+************************************/
+footer {
+  background-color: #074E8F;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+footer .logoFooter {
+  text-align: right;
+}
+footer .logoFooter img {
+  max-width: 100px;
+  height: auto;
+}
+footer span {
+  display: block;
+  text-align: left;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style-new.css.map */

@@ -1,0 +1,41 @@
+.smr-head-span {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.smr-tile-heading {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.smr-cancel-padding {
+  padding: 0 !important;
+}
+
+.smr-cancel-padding-l {
+  padding-left: 0;
+}
+
+.smr-cancel-padding-r {
+  padding-right: 0;
+}
+
+#smr_form, #vendor_form {
+  .form-group {
+    margin-bottom: 12px !important;
+  }
+}
+
+.smr-hr {
+  border-top: 1px solid #cfcfcf;
+  margin: 30px 20px;
+}
+
+.smr-empty-form-group {
+  height: 41.6px;
+  overflow: hidden;
+}
+
+.save_smr {
+  margin-top: 7px;
+}

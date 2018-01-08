@@ -1,0 +1,74 @@
+/***********************************
+page error 404 
+************************************/
+
+.bg-404{
+	background: url(../img/errors-404-500/404-bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	font-family: $nokiafont-regular;
+
+	.logo-white{
+		padding: 60px 0;	
+	}
+	.error-404{
+		/* IE 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+		/* Netscape */
+		-moz-opacity: 0.6;
+		/* Safari 1.x */
+		-khtml-opacity: 0.6;
+		/* Good browsers */
+		opacity: 0.6;
+		color: $blanco;
+		font-size: 40px;
+
+		span{
+			display: block;
+			color: $blanco;
+			font-size: 160px;
+			line-height: 0.8;
+			font-family: $nokiafont-bold;
+		}
+	}
+	.legend{
+		display: block;
+		color: $blanco;
+		font-size: 20px;
+		padding: 20px 0;
+	}
+	.legend-dark{
+		color: $blanco;
+		font-size: 16px;
+		padding: 20px;
+		@include background-opacity(darken($negro, 50%), 0.5);
+		@include radius(3px);	
+	}
+
+
+	.menu-nav{
+		text-align: center;
+		width: 100%;
+		margin: 20px auto 0 auto;
+		padding: 5px 0;
+		max-width: 500px;
+		@include background-opacity(darken($negro, 50%), 0.5);
+		@include radius(3px);
+		li{
+			display: inline-block;
+			padding: 5px 10px;
+			a{
+				color: $blanco;
+				&:hover{
+					color: darken($blanco, 50%);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	
+}
