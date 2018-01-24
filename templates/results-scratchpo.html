@@ -180,14 +180,16 @@
               <div class="col-md-12">
                 <ol class="breadcrumb">
                   <li><a href="">Home</a></li>
-                  <li class="active">Data Importer</li>
-                  <li class="active">Importer</li>
+                  <li class="active">Scratch PO Creation</li>
+                  <li class="active">Scratch PO Creation Upload File</li>
+                  <li class="active">Scratch PO Creation validating</li>
+                  <li class="active">Scratch PO Creation Tracking</li>
                 </ol>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Generic Data Importer</h1>
+                <h1>Scartch PO Creation Tracking</h1>
               </div>
             </div>
             <!-- Contents -->
@@ -4558,7 +4560,7 @@
               <hr>
               
               <div class="text-right">
-                <a href="/importers/scratchponam/upload-file/" class="btn btn-info"> Import a new scratchPoNams
+                <a href="data-importer-scratchpo.html" class="btn btn-info"> Import a new scratchPo
                 file</a>
               </div>
               
@@ -4614,7 +4616,15 @@
     $(window).scroll(function(){
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
-    })
+    });
+     $(function(){
+      $('#collapse-all').on('click', function () {
+          $('#accordion .panel-collapse').collapse('hide');
+      });
+      $('#expand-all').on('click', function () {
+          $('#accordion .panel-collapse').collapse('show');
+      });
+    });
   </script>
 </body>
 </html>

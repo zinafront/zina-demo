@@ -326,7 +326,7 @@
                   <hr>
                   
                   <div class="text-right">
-                    <a href="/importers/massivewbsimporterwithrevisionnam/upload-file/" class="btn btn-info"> Import a new Work Breakdown Structures
+                    <a href="data-importer-wbs.html" class="btn btn-info"> Import a new Work Breakdown Structures
                     file</a>
                   </div>
                   
@@ -382,7 +382,15 @@
     $(window).scroll(function(){
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
-    })
+    });
+     $(function(){
+      $('#collapse-all').on('click', function () {
+          $('#accordion .panel-collapse').collapse('hide');
+      });
+      $('#expand-all').on('click', function () {
+          $('#accordion .panel-collapse').collapse('show');
+      });
+    });
   </script>
 </body>
 </html>

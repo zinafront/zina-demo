@@ -246,7 +246,7 @@
                     <div class="col-md-12">
                       <div class="pull-right">
                         
-                        <input class="btn btn-success" style="border:none;" type="submit" name="process_importer" value="Process" tabindex="4">
+                        <a class="btn btn-success" style="border:none;" href="results-wbs.html" name="process_importer" value="Process" tabindex="4">Process</a>
                         <input name="file_upload_history" type="hidden" value="361723">
                         
                         
@@ -402,11 +402,11 @@
                 <hr>
                 <div class="text-right">
                   <p>Only validated Work Breakdown Structures will be processed</p>
-                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                 <a href="data-importer-wbs.html" class="btn btn-info" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                   Import a new Work Breakdown Structures file
-                  </button>
+                  </a>
                   
-                  <input class="btn btn-success" type="submit" name="process_importer" value="Process" tabindex="5">
+                  <a class="btn btn-success" style="border:none;" href="results-wbs.html" name="process_importer" value="Process" tabindex="4">Process</a>
                   <input name="file_upload_history" type="hidden" value="361723">
                   
                 </div>
@@ -524,7 +524,17 @@
     $(window).scroll(function(){
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
-    })
+    });
+    $(function(){
+      $('#collapse-all').on('click', function () {
+            $('#accordion_success .panel-collapse').collapse('hide');
+            $('#accordion_errors .panel-collapse').collapse('hide');
+        });
+        $('#expand-all').on('click', function () {
+            $('#accordion_success .panel-collapse').collapse('show');
+            $('#accordion_errors .panel-collapse').collapse('show');
+        });
+      });
   </script>
 </body>
 </html>
