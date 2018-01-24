@@ -180,14 +180,14 @@
               <div class="col-md-12">
                 <ol class="breadcrumb">
                   <li><a href="">Home</a></li>
-                  <li class="active">Data Importer</li>
-                  <li class="active">Importer</li>
+                  <li class="active">Scratch PO Creation</li>
+                  <li class="active">Scratch PO Creation Upload File</li>
                 </ol>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Generic Data Importer</h1>
+                <h1>Scratch PO Creation</h1>
               </div>
             </div>
             <!-- Contents -->
@@ -212,7 +212,14 @@
                             <div class="file-caption-name" title="Upload xls,xlsx file here"><span class="glyphicon glyphicon-file kv-caption-icon"></span>Upload xls,xlsx file here</div>
                           </div>
                           <div class="input-group-btn">
-                            <div class="btn btn-primary btn-file"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
+                            <div class="btn btn-primary btn-file" data-toggle="modal" data-target="#uploader-modal"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
+                          </div>
+                          <div id="uploader-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <img src="../static/img/gifs/scratchpo.gif" style="width:800px;">
+                              </div>
+                            </div>
                           </div>
                         </div></span>
                         
@@ -262,9 +269,9 @@
                     
                     <div class="form-group">
                       
-                      <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-import"></span>
+                      <a class="btn btn-primary" href="validations-scratch.html"><span class="glyphicon glyphicon-import"></span>
                       Import file
-                      </button>
+                      </a>
                       
                     </div>
                   </form>
@@ -273,7 +280,7 @@
               <div class="col-md-5">
                 <div class="">
                   <div class="bs-callout" id="callout-overview-not-both">
-                    Please, follow <a href="/importers/scratchponam/download-template/">this template file</a> to avoid validation errors.
+                    Please, follow <a href="../static/files/scratch_po.xls">this template file</a> to avoid validation errors.
                   </div>
                   <div class="bs-callout" id="callout-overview-not-both">
                     Fields marked with <span class="mandatory">*</span> are <strong>required</strong>
@@ -373,6 +380,18 @@
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
     })
+  </script>
+  <script>
+    $(function(){
+      $('#uploader-modal').on('show.bs.modal', function(){
+          var myModal = $(this);
+          clearTimeout(myModal.data('hideInterval'));
+          myModal.data('hideInterval', setTimeout(function(){
+              myModal.modal('hide');
+              $('.file-caption-name').text('scratch_po.xls');
+          }, 2624));
+      });
+  });
   </script>
 </body>
 </html>
