@@ -9,14 +9,13 @@
   <!-- CSS References -->
   <link rel="stylesheet" href="../static/css/bootstrap.min.css">
   <link rel="stylesheet" href="../static/css/fileinput.min.css">
-  <link rel="stylesheet" href="../static/css/datepicker.css">
   <link rel="stylesheet" href="../static/css/multi-select-2-cols.css">
+  <link rel="stylesheet" href="../static/css/bootstrap-multiselect.css">
   <link rel="stylesheet" href="../static/css/bootstrap-multiselect.css">
   <link rel="stylesheet" href="../static/css/style.css">
   <link rel="stylesheet" href="../static/css/dataTables.bootstrap.css">
   <link rel="stylesheet" href="../static/css/notification/bootstrap-notifications.min.css  ">
   <link rel="stylesheet" href="../static/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../static/css/bootstrap-tour.min.css">
 </head>
 <body>
   <header>
@@ -69,11 +68,6 @@
         <div class="pull-right hello">
           Welcome, <strong>ZINA User</strong>
         </div>
-      </section>
-      <section class="top-central">
-          <div class="hide" id="global-search-top"></div>
-              <span id="getting-started"></span>
-          </div>
       </section>
     </nav>
     <div id="header">
@@ -157,7 +151,7 @@
               <div id="sidebar" class="sidebar-nav span3">
                 <ul class="nav nav-tabs nav-stacked">
                   <ul id="ul_basis" class="dropdown-menu">
-                    <li class="dropdown-submenu" id="contract-menu">
+                    <li class="dropdown-submenu">
                       <a href="#" tabindex="-1">Robotic Process Automation RPA</a><span class="glyphicon glyphicon-chevron-right"></span>
                       <ul class="dropdown-submenu-container doble" id="contractMenuBox">
                         <li class="dropdown-submenu-subitems col-md-6">
@@ -193,65 +187,57 @@
               <div class="col-md-12">
                 <ol class="breadcrumb">
                   <li><a href="">Home</a></li>
-                  <li class="active">Massive WBS Creation</li>
-                  <li class="active">Massive WBS Creation Upload File</li>
+                  <li class="active">Robotic Process Automation RPA</li>
                 </ol>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Massive WBS Creation</h1>
+                <h1>Robotic Process Automation RPA</h1>
               </div>
             </div>
-            <!-- Contents -->
             <div class="row">
-              <div class="col-md-7">
-                <div class="tile-box-padding">
-                  <form method="POST" enctype="multipart/form-data"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="XyiyYLdu2nN43LQbykXnMUk5DMl9Tl6D"></div>
-                  <div class="">                    
-                    <div class="form-group">                      
-                      <label class="control-label">Uploaded file</label>
-                      <span class="file-input file-input-new">
-                        <div class="kv-upload-progress hide"></div>
-                        <div class="input-group ">
-                          <div tabindex="-1" class="form-control file-caption  kv-fileinput-caption">
-                            <div class="file-caption-name" title="Upload xls,xlsx file here"><span class="glyphicon glyphicon-file kv-caption-icon"></span>Upload xls,xlsx file here</div>
-                          </div>
-                          <div class="input-group-btn">
-                            <div class="btn btn-primary btn-file" data-toggle="modal" data-target="#uploader-modal"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
-                          </div>
-                          <div id="uploader-modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog" style="width:800px;">
-                              <div class="modal-content">
-                                <img src="../static/img/gifs/wbs.gif" style="width:800px;">
-                              </div>
-                            </div>
-                          </div>
-                        </div></span>                        
-                      </div>                      
-                      <div class="form-group">                        
-                        <label class="control-label">Customer team</label>
-                        <select id="id_customer_team" name="customer_team" class="form-control" tabindex="5">
-                          <option value="" selected="selected">---------</option>
-                          <option value="92">Customer Team 1</option>
-                        </select>                        
-                      </div>                      
-                    </div>
-                    <div class="form-group">
-                       <a class="btn btn-primary" href="validations-wbs.html"><span class="glyphicon glyphicon-import"></span>
-                      Import file
-                      </a>
-                    </div>
-                  </form>
+              <div class="col-md-3">
+                <div class="small-box small-box-info" style="background-color:#3170dc !important;">
+                  <div class="inner">
+                    <span style="font-size: 24px;">SPO Creation</span>
+                    <p>&nbsp;</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-warning"></i>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-5">
-                <div>
-                  <div class="bs-callout" id="callout-overview-not-both">
-                    Please follow <a href="../static/files/wbs.xls">this template file</a> to avoid validation errors.
+              <div class="col-md-3">
+                <div class="small-box small-box-info" style="background-color:#3170dc !important;">
+                  <div class="inner">
+                    <span style="font-size: 24px;">SPO Alignment in IPM</span>
+                    <p>&nbsp;</p>
                   </div>
-                  <div class="bs-callout" id="callout-overview-not-both">
-                    Fields marked with <span class="mandatory">*</span> are <strong>required</strong>.
+                  <div class="icon">
+                    <i class="fa fa-warning"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="small-box small-box-info" style="background-color:#3170dc !important;">
+                  <div class="inner">
+                    <span style="font-size: 24px;">ZI Partner Creation</span>
+                    <p>&nbsp;</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-warning"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="small-box small-box-info" style="background-color:#3170dc !important;">
+                  <div class="inner">
+                    <span style="font-size: 24px;">WBS Creation</span>
+                    <p>&nbsp;</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fa fa-warning"></i>
                   </div>
                 </div>
               </div>
@@ -261,22 +247,9 @@
       </div>
     </div>
   </section>
-  <footer>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-5 col-xs-6">
-          <span><a class="copyright" href="https://intranet.nokia.com/sites/global/Pages/Home.aspx"></a></span>
-        </div>
-        <div class="col-md-2 pull-right logoFooter col-xs-6">
-          <a href=" http://company.nokia.com/en" target="-blank">
-            <img src="../static/img/NOKIA_LOGO_WHITE.png" alt="Powered by NOKIA">
-          </a>
-        </div>
-      </div>
-  </div>
-  </footer>
   <script src="../static/js/jquery-1.10.2.min.js"></script>
   <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/bootstrap-tour.min.js"></script>
   <script src="../static/js/bootbox.min.js"></script>
   <script src="../static/js/multiple_select_all.js"></script>
   <script src="../static/js/bootstrap-datepicker.js"></script>
@@ -295,23 +268,5 @@
   <script src="../static/js/notifications/push.js"></script>
   <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
   <script src="../static/js/js.cookie.js"></script>
-  <script src="../static/js/bootstrap-tour.min.js"></script>
-  <script>
-    $(function(){
-      $('#min, #max').datepicker();
-    });
-  </script>
-  <script>
-    $(function(){
-      $('#uploader-modal').on('show.bs.modal', function(){
-          var myModal = $(this);
-          clearTimeout(myModal.data('hideInterval'));
-          myModal.data('hideInterval', setTimeout(function(){
-              myModal.modal('hide');
-              $('.file-caption-name').text('wbs.xls');
-          }, 2763));
-      });
-  });
-  </script>
 </body>
 </html>
