@@ -3,7 +3,7 @@ $(function(){
     steps: [{
       element: "#template-file-link",
       title: "Template file",
-      content: "At any importer, you will find in the right side the template accepted by the file uploader. Click on the link below to download the template example.",
+      content: "Inside any importer, you will find in the right side the template accepted by the file uploader. Click on the link below to download the template example.",
       placement: "top",
       template: "<div class='popover tour'>"+
           "<div class='arrow'></div>"+
