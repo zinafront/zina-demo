@@ -173,6 +173,11 @@
                             </ul>
                         </li>
                         <li class="dropdown-submenu-subitems col-md-6">
+                          <span>B2B SPO</span>
+                          <ul>
+                            <li><a href="data-importer-calloff.html">B2B SPO with Post-SSR</a></li>
+                          </ul>
+                          <br>
                           <span>ZI Partner</span>
                           <ul>
                             <li><a href="data-importer-zimassive.html">Massive ZI Partner Creation</a></li>
@@ -210,7 +215,7 @@
                 <div class="col-md-12">
                   <div class="tile-box-padding">
                     <form method="post" action="/importers/scratchponam/process-file/361724/"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="XyiyYLdu2nN43LQbykXnMUk5DMl9Tl6D"></div>
-                    <h3 style="display:inline-block">Validation Summary</h3>
+                    <h3 style="display:inline-block" id="summary-title">Validation Summary</h3>
                     <small>&nbsp;-&nbsp;</small>
                     <small>Please don't forget to click on Process button to go ahead with the transaction.</small>
                     <div class="row">
@@ -248,7 +253,7 @@
                       <div class="col-md-12">
                         <div class="pull-right">
                           
-                          <a class="btn btn-success" style="border:none;" href="results-scratchpo.html" name="process_importer" value="Process" tabindex="4">Process</a>
+                          <a class="btn btn-success" style="border:none;" href="results-scratchpo.html" name="process_importer" value="Process" tabindex="4" id="validation_process_top">Process</a>
                           <input name="file_upload_history" type="hidden" value="361724">
                           
                           
@@ -4643,11 +4648,11 @@
                     <hr>
                     <div class="text-right">
                       <p>Only validated scratchPoNams will be processed</p>
-                      <a href="data-importer-scratchpo.html" class="btn btn-info" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <a href="data-importer-scratchpo.html" class="btn btn-info" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="back-to-data-importer">
                       Import a new scratchPoNams file
                       </a>
                       
-                      <a class="btn btn-success" style="border:none;" href="results-scratchpo.html" name="process_importer" value="Process" tabindex="5">Process</a>
+                      <a class="btn btn-success" style="border:none;" href="results-scratchpo.html" name="process_importer" value="Process" tabindex="5" id="validation_process_bottom">Process</a>
                       <input name="file_upload_history" type="hidden" value="361724">
                       
                     </div>
@@ -4771,6 +4776,7 @@
   <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
   <script src="../static/js/js.cookie.js"></script>
   <script src="../static/js/bootstrap-tour.min.js"></script>
+  <script src="../static/js/validations-tour.js"></script>
   <script>
     $(function(){
       $('#min, #max').datepicker();

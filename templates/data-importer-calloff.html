@@ -198,212 +198,66 @@
               <div class="col-md-12">
                 <ol class="breadcrumb">
                   <li><a href="">Home</a></li>
-                  <li class="active">Data Importer</li>
-                  <li class="active">Importer</li>
+                  <li class="active">B2B SPO with Post-SSR</li>
+                  <li class="active">B2B SPO with Post-SSR Upload File</li>
                 </ol>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Generic Data Importer</h1>
+                <h1>B2B SPO with Post-SSR</h1>
               </div>
             </div>
             <!-- Contents -->
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-7">
                 <div class="tile-box-padding">
-                  
-                  <div class="alert alert-success">File successfully processed</div>
-                  
+                  <form method="POST" enctype="multipart/form-data"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="XyiyYLdu2nN43LQbykXnMUk5DMl9Tl6D"></div>
+                  <div class="">                    
+                    <div class="form-group">                      
+                      <label class="control-label">Uploaded file</label>
+                      <span class="file-input file-input-new">
+                        <div class="kv-upload-progress hide"></div>
+                        <div class="input-group ">
+                          <div tabindex="-1" class="form-control file-caption  kv-fileinput-caption">
+                            <div class="file-caption-name" title="Upload xls,xlsx file here"><span class="glyphicon glyphicon-file kv-caption-icon"></span>Upload xls,xlsx file here</div>
+                          </div>
+                          <div class="input-group-btn">
+                            <div class="btn btn-primary btn-file" data-toggle="modal" data-target="#uploader-modal"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
+                          </div>
+                          <div id="uploader-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog" style="width:800px;">
+                              <div class="modal-content">
+                                <img src="../static/img/gifs/salesorder.gif" style="width:800px;">
+                              </div>
+                            </div>
+                          </div>
+                        </div></span>                        
+                      </div>                      
+                      <div class="form-group">                        
+                        <label class="control-label">Customer team</label>
+                        <select id="id_customer_team" name="customer_team" class="form-control" tabindex="5">
+                          <option value="" selected="selected">---------</option>
+                          <option value="92">Customer Team 1</option>
+                        </select>                        
+                      </div>                      
+                    </div>
+                    <div class="form-group">
+                      <a class="btn btn-primary" href="validations-calloff.html"><span class="glyphicon glyphicon-import"></span>
+                      Import file
+                      </a>
+                    </div>
+                  </form>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              
-              <div class="col-md-12">
-                <div class="tile-box-padding">
-                  <!-- Finish view content -->
-                  <div class="">
-                    <h3 class="pull-left">Tracking Summary</h3>
-                    <div class="pull-right">
-                      <span id="last-update-icon" class="fa fa-spin fa-refresh" style="display: none;"></span>
-                      <em>
-                      <strong>
-                      Latest update
-                      <span data-container="body" class="popover-info" data-toggle="popover" data-placement="top" data-content="This page is updated every 30 seconds automatically" title="" data-original-title="Information"><span class="fa fa-info-circle"></span></span>
-                      </strong>
-                      <span id="last-update">24/01/2018 06:39:12</span>
-                      </em>
-                    </div>
-                    <div class="clearfix"></div>
+              <div class="col-md-5">
+                <div>
+                  <div class="bs-callout" id="callout-overview-not-both">
+                    Please follow <a href="../static/files/sales_order_b2b.xlsx">this template file</a> to avoid validation errors.
                   </div>
-                  <div class="row">
-                    <div class="col-md-3">
-                      <div class="small-box small-box-default">
-                        <div class="inner">
-                          <h3><span id="total">1</span></h3>
-                          <p>Total Zip ID Partners</p>
-                        </div>
-                        <div class="icon">
-                          <span class="fa fa-hashtag"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="small-box small-box-info">
-                        <div class="inner">
-                          <h3><span id="total_waiting">1</span></h3>
-                          <p>On Waiting</p>
-                        </div>
-                        <div class="icon">
-                          <span class="fa fa-clock-o"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="small-box small-box-success">
-                        <div class="inner">
-                          <h3><span id="total_created">0</span></h3>
-                          <p>Created on SAP</p>
-                        </div>
-                        <div class="icon">
-                          <span class="fa fa-check"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="small-box small-box-danger">
-                        <div class="inner">
-                          <h3><span id="total_rejected">0</span></h3>
-                          <p>Rejected</p>
-                        </div>
-                        <div class="icon">
-                          <span class="fa fa-warning"></span>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="bs-callout" id="callout-overview-not-both">
+                    Fields marked with <span class="mandatory">*</span> are <strong>required</strong>.
                   </div>
-                  <div class="progress">
-                    <div id="progress" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0.0%;">
-                      <span>0% Completed</span>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="text-right">
-                    <a id="collapse-all" href="javascript:void(0);">Collapse all</a> / <a id="expand-all" href="javascript:void(0);">Expand all</a>
-                  </div>
-                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    
-                    
-                    
-                    <div class="panel panel-info" id="panel-3005129">
-                      <div class="panel-heading" role="tab" id="headingOne">
-                        <a role="button" data-toggle="collapse" href="#accordion-0" aria-expanded="true" aria-controls="">
-                          <h4 class="panel-title">
-                          <span class="fa fa-clock-o"></span>
-                          Job 1:  Waiting to be executed
-                          </h4>
-                        </a>
-                        
-                        
-                      </div>
-                      <div id="accordion-0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="">
-                        <div class="panel-body">
-                          <div class="row message-area"></div>
-                          <div class="row">
-                            
-                            <div class="col-md-6">
-                              <strong>Site Name: </strong> 10040865
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Site Code: </strong> 10040865
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Zip Code: </strong> 65721
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Street: </strong> 947 FARMER BRANCH ROAD
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Number: </strong>
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Complement: </strong>
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Neighborhood: </strong>
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>State: </strong> MO
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Town: </strong> Ozark
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Incoterm: </strong> DDU
-                            </div>
-                            
-                            <div class="col-md-6">
-                              <strong>Incoterm text: </strong> OZARK
-                            </div>
-                            
-                          </div>
-                          <div class="row">
-                            <div class="col-md-12">
-                              <table class="table table-bordered table-responsive table-condensed">
-                                <thead>
-                                  <tr>
-                                    
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                          
-                          <hr>
-                          <h4>Extra Params</h4>
-                          <div class="row">
-                            
-                            <div class="col-md-6">
-                              <strong>Project: </strong>
-                            </div>
-                            
-                          </div>
-                          <table class="table table-bordered table-responsive table-condensed">
-                            <thead>
-                              <tr>
-                                
-                              </tr>
-                            </thead>
-                            <tbody>
-                              
-                            </tbody>
-                          </table>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    
-                  </div>
-                  <hr>
-                  
-                  <div class="text-right">
-                    <a href="/importers/massiveziimporternam/upload-file/" class="btn btn-info"> Import a new Zip ID Partners
-                    file</a>
-                  </div>
-                  
                 </div>
               </div>
             </div>
@@ -457,6 +311,18 @@
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
     })
+  </script>
+  <script>
+    $(function(){
+      $('#uploader-modal').on('show.bs.modal', function(){
+          var myModal = $(this);
+          clearTimeout(myModal.data('hideInterval'));
+          myModal.data('hideInterval', setTimeout(function(){
+              myModal.modal('hide');
+              $('.file-caption-name').text('sales_order_b2b.xlsx');
+          }, 2438));
+      });
+  });
   </script>
 </body>
 </html>

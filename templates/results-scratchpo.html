@@ -159,7 +159,7 @@
                   <ul id="ul_basis" class="dropdown-menu">
                     <li class="dropdown-submenu" id="contract-menu">
                       <a href="#" tabindex="-1">Robotic Process Automation RPA</a><span class="glyphicon glyphicon-chevron-right"></span>
-                      <ul class="dropdown-submenu-container doble" id="contractMenuBox">
+                     <ul class="dropdown-submenu-container doble" id="contractMenuBox">
                         <li class="dropdown-submenu-subitems col-md-6">
                           <span>SPO</span>
                           <ul>
@@ -173,6 +173,11 @@
                             </ul>
                         </li>
                         <li class="dropdown-submenu-subitems col-md-6">
+                          <span>B2B SPO</span>
+                          <ul>
+                            <li><a href="data-importer-calloff.html">B2B SPO with Post-SSR</a></li>
+                          </ul>
+                          <br>
                           <span>ZI Partner</span>
                           <ul>
                             <li><a href="data-importer-zimassive.html">Massive ZI Partner Creation</a></li>
@@ -202,13 +207,13 @@
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Scartch PO Creation Tracking</h1>
+                <h1 id="results-title">Scartch PO Creation Tracking</h1>
               </div>
             </div>
             <!-- Contents -->
             <div class="row">
               <div class="col-md-12">
-                <div class="tile-box-padding">
+                <div class="tile-box-padding" id="transaction_results">
                   
                   <div class="alert alert-success">File successfully processed</div>
                   
@@ -221,7 +226,7 @@
             <div class="tile-box-padding">
               <!-- Finish view content -->
               <div class="">
-                <h3 class="pull-left">Tracking Summary</h3>
+                <h3 class="pull-left" id="results-tracking-summary">Tracking Summary</h3>
                 <div class="pull-right">
                   <span id="last-update-icon" class="fa fa-spin fa-refresh" style="display: none;"></span>
                   <em>
@@ -280,7 +285,7 @@
                   </div>
                 </div>
               </div>
-              <div class="progress">
+              <div class="progress" id="progress-bar-container">
                 <div id="progress" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0.0%;">
                   <span>0% Completed</span>
                 </div>
@@ -4573,7 +4578,7 @@
               <hr>
               
               <div class="text-right">
-                <a href="data-importer-scratchpo.html" class="btn btn-info"> Import a new scratchPo
+                <a href="data-importer-scratchpo.html" class="btn btn-info" id="back-to-data-importer"> Import a new scratchPo
                 file</a>
               </div>
               
@@ -4601,8 +4606,8 @@
   </footer>
   <div id="SapModal" class="modal fade" role="dialog">
     <div class="modal-dialog" style="width:1200px;">
-      <div class="modal-content">
-        <iframe width="1200" height="675" src="https://www.youtube.com/embed/wRUUsTzVuHY?start=2&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="modal-content" id="sap-modal-video">
+        
       </div>
     </div>
   </div>
@@ -4627,6 +4632,7 @@
   <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
   <script src="../static/js/js.cookie.js"></script>
   <script src="../static/js/bootstrap-tour.min.js"></script>
+  <script src="../static/js/results-tour.js"></script>
   <script>
     $(function(){
       $('#min, #max').datepicker();
@@ -4638,7 +4644,7 @@
       $("#global-search-top .input-group").detach().appendTo('#global-search');
     });
      $(function(){
-      $('#SapModal').modal();
+      //$('#SapModal').modal();
       $('#collapse-all').on('click', function () {
           $('#accordion .panel-collapse').collapse('hide');
       });

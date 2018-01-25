@@ -173,6 +173,11 @@
                             </ul>
                         </li>
                         <li class="dropdown-submenu-subitems col-md-6">
+                          <span>B2B SPO</span>
+                          <ul>
+                            <li><a href="data-importer-calloff.html">B2B SPO with Post-SSR</a></li>
+                          </ul>
+                          <br>
                           <span>ZI Partner</span>
                           <ul>
                             <li><a href="data-importer-zimassive.html">Massive ZI Partner Creation</a></li>
@@ -225,7 +230,7 @@
                             <div class="file-caption-name" title="Upload xls,xlsx file here"><span class="glyphicon glyphicon-file kv-caption-icon"></span>Upload xls,xlsx file here</div>
                           </div>
                           <div class="input-group-btn">
-                            <div class="btn btn-primary btn-file" data-toggle="modal" data-target="#uploader-modal"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
+                            <div class="btn btn-primary btn-file" id="data-importer-upload" data-toggle="modal" data-target="#uploader-modal"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
                           </div>
                           <div id="uploader-modal" class="modal fade" role="dialog">
                             <div class="modal-dialog" style="width:800px;">
@@ -242,15 +247,13 @@
                       
                       <div class="form-group">
                         
-                        <label class="control-label">Customer team</label>
+                        <label class="control-label" id="data-importer-customer-team">Customer team</label>
                         <select id="id_customer_team" name="customer_team" class="form-control" tabindex="5">
                           <option value="">---------</option>
                           <option value="92" selected="selected">AT&amp;T</option>
-                          <option value="14">Claro Argentina</option>
-                          <option value="17">Claro Colombia</option>
-                          <option value="59">Locop Ecuador</option>
-                          <option value="52">Locop Mexico</option>
-                          <option value="10">Telefonica Ecuador</option>
+                          <option value="14">Customer Team 1</option>
+                          <option value="17">Customer Team 2</option>
+                          <option value="59">Customer Team 3</option>
                         </select>
                         
                       </div>
@@ -282,7 +285,7 @@
                     
                     <div class="form-group">
                       
-                      <a class="btn btn-primary" href="validations-scratch.html"><span class="glyphicon glyphicon-import"></span>
+                      <a class="btn btn-primary" href="validations-scratch.html" id="data-importer-proceed"><span class="glyphicon glyphicon-import"></span>
                       Import file
                       </a>
                       
@@ -293,7 +296,7 @@
               <div class="col-md-5">
                 <div class="">
                   <div class="bs-callout" id="callout-overview-not-both">
-                    Please, follow <a href="../static/files/scratch_po.xls">this template file</a> to avoid validation errors.
+                    Please, follow <a href="../static/files/scratch_po.xls" id="template-file-link">this template file</a> to avoid validation errors.
                   </div>
                   <div class="bs-callout" id="callout-overview-not-both">
                     Fields marked with <span class="mandatory">*</span> are <strong>required</strong>
@@ -383,6 +386,7 @@
   <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
   <script src="../static/js/js.cookie.js"></script>
   <script src="../static/js/bootstrap-tour.min.js"></script>
+  <script src="../static/js/data-importer-tour.js"></script>
   <script>
     $(function(){
       $('#min, #max').datepicker();
