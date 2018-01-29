@@ -51,17 +51,20 @@ $(function(){
     },
     ],
     template: "<div class='popover tour'>"+
-  "<div class='arrow'></div>"+
-  "<h3 class='popover-title'></h3>"+
-  "<div class='popover-content'></div>"+
-  "<div class='popover-navigation'>"+
-    "<button class='btn btn-default' data-role='prev'>« Prev</button>"+
-    "<button class='btn btn-default' data-role='next'>Next »</button>"+
-  "</div>"+
-"</div>",
+    "<div class='arrow'></div>"+
+    "<h3 class='popover-title'></h3>"+
+    "<div class='popover-content'></div>"+
+    "<div class='popover-navigation'>"+
+      "<button class='btn btn-default' data-role='prev'>« Prev</button>"+
+      "<button class='btn btn-default' data-role='next'>Next »</button>"+
+    "</div>"+
+  "</div>",
     storage: false,
   });
 
-  ride.init();
-  ride.start();
+  $viewport = $(window).width();
+  if ($viewport > 500) {
+    ride.init();
+    ride.start();
+  }
 });
