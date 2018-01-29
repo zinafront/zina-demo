@@ -53,6 +53,9 @@ $(function(){
     storage: false,
   });
 
-  ride.init();
-  ride.start();
+  $viewport = $(window).width();
+  if ($viewport > 500) {
+    ride.init();
+    ride.start();
+  }
 });
