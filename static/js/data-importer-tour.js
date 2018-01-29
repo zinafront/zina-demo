@@ -23,7 +23,7 @@ $(function(){
     {
       element: "#data-importer-customer-team",
       title: "Select additional options",
-      content: "Select customer teams, and activate/deactivate other options before continuing.",
+      content: "Select customer team, and activate/deactivate other options before continuing.",
       placement: "right"
     },
     {

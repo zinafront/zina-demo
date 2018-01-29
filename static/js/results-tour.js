@@ -1,9 +1,10 @@
 $(function(){
   var ride = new Tour({
-    steps: [{
-      element: "#results-title",
-      title: "Transaction live results",
-      content: "The following video is an example of what the robot does in SAP.",
+    steps: [
+    {
+      element: "#transaction_results",
+      title: "File processing results",
+      content: "This area will show the result of the processing of the file, namely, the upload and sending of the file to SAP.",
       placement: "top",
       template: "<div class='popover tour'>"+
           "<div class='arrow'></div>"+
@@ -13,18 +14,6 @@ $(function(){
             "<button class='btn btn-default' data-role='next'>Next »</button>"+
           "</div>"+
         "</div>",
-      onNext: function(ride){
-        $('#SapModal').modal();
-        $yt_iframe= '<iframe width="1200" height="675" src="https://www.youtube.com/embed/wRUUsTzVuHY?start=2&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-        $('#sap-modal-video').html($yt_iframe);
-
-      }
-    },
-    {
-      element: "#transaction_results",
-      title: "File processing results",
-      content: "This area will show the result of the processing of the file, namely, the upload and sending of the file to SAP.",
-      placement: "top"
     },
     {
       element: "#results-tracking-summary",
