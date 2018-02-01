@@ -12,6 +12,7 @@ $(function(){
           "<div class='popover-content'></div>"+
           "<div class='popover-navigation'>"+
             "<button class='btn btn-default' data-role='next'>Next »</button>"+
+            "<button class='btn btn-default' data-role='end'>End tour</button>"+
           "</div>"+
         "</div>",
     },
@@ -24,7 +25,7 @@ $(function(){
     {
       element: "#progress-bar-container",
       title: "Progress bar",
-      content: "This bar will graphically show the completion of the creation process as well as the respective percentage.",
+      content: "This bar will graphically show the completion of the creation process as well as the respective percentage. Keep in mind that in actual process, this bar will refresh every 30 seconds.",
       placement: "top",
 
     },
@@ -57,6 +58,7 @@ $(function(){
     "<div class='popover-navigation'>"+
       "<button class='btn btn-default' data-role='prev'>« Prev</button>"+
       "<button class='btn btn-default' data-role='next'>Next »</button>"+
+      "<button class='btn btn-default' data-role='end'>End tour</button>"+
     "</div>"+
   "</div>",
     storage: false,

@@ -11,6 +11,7 @@ $(function(){
           "<div class='popover-content'></div>"+
           "<div class='popover-navigation'>"+
             "<button class='btn btn-default' data-role='next'>Next »</button>"+
+            "<button class='btn btn-default' data-role='end'>End tour</button>"+
           "</div>"+
         "</div>",
     },
@@ -43,6 +44,7 @@ $(function(){
           "<div class='popover-content'></div>"+
           "<div class='popover-navigation'>"+
             "<button class='btn btn-default' data-role='prev'>« Prev</button>"+
+            "<button class='btn btn-default' data-role='end'>End tour</button>"+
           "</div>"+
         "</div>",
     },
@@ -54,6 +56,7 @@ $(function(){
   "<div class='popover-navigation'>"+
     "<button class='btn btn-default' data-role='prev'>« Prev</button>"+
     "<button class='btn btn-default' data-role='next'>Next »</button>"+
+    "<button class='btn btn-default' data-role='end'>End tour</button>"+
   "</div>"+
 "</div>",
     storage: false,
