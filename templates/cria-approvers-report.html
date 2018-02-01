@@ -152,8 +152,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 col-lg-2">
-          <div id="main-menu">
-            <div id="MainMenu">
+          <div id="MainMenu">
               <div id="sidebar" class="sidebar-nav span3"  style="height: 60vh;background: white;border: #e5e5e5 solid 1px;">
                 <ul class="nav nav-tabs nav-stacked">
                   <ul id="ul_basis" class="dropdown-menu">
@@ -195,7 +194,6 @@
                             <li><a href="cpo-inbox.html">All Customer Purchase Orders</a></li>
                             <li><a href="cpo-detail.html">CPO Detail</a></li>
                             <li><a href="cpo-item.html">CPO Item</a></li>
-                            <!-- <li><a href="http://127.0.0.1:8321/reports/customer_purchase_orders/">CPO Report</a></li> -->
                           </ul>
                         </li>
                       </ul>
@@ -210,16 +208,16 @@
                             <li><a href="cria-detail-billable.html">CR Detail</a></li>
                           </ul>
                           <br>
-                          <!-- <span>Reports</span>
+                          <span>Reports</span>
                             <ul>
-                              <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_report/">Change Requests Report</a></li>
-                            <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_workflow_approval_report/">Approval Report</a></li>
-                            </ul> -->
+                              <li><a href="#">Change Requests Report</a></li>
+                            <li><a href="#">Approvers Report</a></li>
+                            </ul>
                         </li>
                         <li class="dropdown-submenu-subitems col-md-6">
                           <span>CR SPO</span>
                           <ul>
-                            <li><a href="data-importer-scratchpo.html">Create Scratch PO for Change Request</a></li>
+                            <li><a href="data-importer-scratchpo.html"></a>Create Scratch PO for Change Request</li>
                           </ul>
                         </li>
                       </ul>
@@ -227,7 +225,6 @@
                   </ul>
                 </ul>
               </div>
-            </div>
           </div>
         </div>
         <div class="col-md-9 col-lg-10">
@@ -236,110 +233,49 @@
               <div class="col-md-12">
                 <ol class="breadcrumb">
                   <li><a href="">Home</a></li>
-                  <li class="active">Importer Scratch PO Alignment in IPM</li>
-                  <li class="active">Importer Scratch PO Alignment in IPM Upload File</li>
+                  <li class="active">CRIA Tool</li>
+                  <li class="active">CRIA Tool Inbox</li>
                 </ol>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Importer Scratch PO Alignment in IPM</h1>
+                <h1>CRIA Tool Inbox</h1>
               </div>
             </div>
             <!-- Contents -->
             <div class="row">
-              
-              <div class="col-md-7">
-                <div class="tile-box-padding">
-                  <form method="POST" enctype="multipart/form-data"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="XyiyYLdu2nN43LQbykXnMUk5DMl9Tl6D"></div>
-                  <div class="">
-                    
-                    
-                    
-                    
-                    <div class="form-group">
-                      
-                      <label class="control-label">Uploaded file</label>
-                      <span class="file-input file-input-new">
-                        <div class="kv-upload-progress hide"></div>
-                        <div class="input-group ">
-                          <div tabindex="-1" class="form-control file-caption  kv-fileinput-caption">
-                            <span class="file-caption-ellipsis" title="Upload xls,xlsx file here">…</span>
-                            <div class="file-caption-name" title="Upload xls,xlsx file here"><span class="glyphicon glyphicon-file kv-caption-icon"></span>Upload xls,xlsx file here</div>
-                          </div>
-                          <div class="input-group-btn">
-                            <div class="btn btn-primary btn-file" data-toggle="modal" data-target="#uploader-modal"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
-                          </div>
-                          <div id="uploader-modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog" style="width:800px;">
-                              <div class="modal-content">
-                                <img src="../static/img/gifs/spoalign.gif" style="width:800px;">
-                              </div>
-                            </div>
-                          </div>
-                        </div></span>
                         
-                      </div>
-                      
-                      
-                    </div>
-                    
-                    
-                    
-                    <div class="form-group">
-                      
-                      <a class="btn btn-primary" href="validations-scratchalign.html"><span class="glyphicon glyphicon-import"></span>
-                      Import file
-                      </a>
-                      
-                    </div>
-                  </form>
+    <div class="col-md-8">
+        <div class="tile-box-padding">
+            <div class="approval-form">
+            <form action="." method="post" class="form-approval">
+                
+                
+                
+
+<div class="row"><div class="col-md-12"><div class="form-group"><label for="id_flow_type" id="id_flow_type_label" class="control-label">CR Type</label><select id="id_flow_type" name="flow_type" class="form-control" tabindex="4"><option value="" selected="selected">All Business Cases</option><option value="101">Business case for billable change request without customer PO</option><option value="102">Business case for non-billable change request</option><option value="108">Business case for non-billable change request unplanned</option><option value="103">Business case for billable change request non back to back customer PO</option><option value="104">Advanced CR Billable</option><option value="109">Approved Value Leakage</option><option value="105">Non B2B Services</option><option value="106">Cost base line</option></select></div></div><div class="form-group"><div class="col-md-3"><label class="control-label required" for="id_customer_teams">
+            Customer teams</label></div><div class="col-md-9"><ul class="select-all select-all-scroll"><li class="select-all-header"><input type="checkbox" id="customer_teams_all" tabindex="5"> <input type="text" class="search" tabindex="6"></li><li class="select-all-body"><ul><li><label for="id_customer_teams_0"><input type="checkbox" name="customer_teams" value="19" id="id_customer_teams_0" tabindex="7"> <span>AMX Mexico</span></label></li><li><label for="id_customer_teams_1"><input type="checkbox" name="customer_teams" value="42" id="id_customer_teams_1" tabindex="8"> <span>Avantel</span></label></li><li><label for="id_customer_teams_2"><input type="checkbox" name="customer_teams" value="16" id="id_customer_teams_2" tabindex="9"> <span>Claro Argentina</span></label></li><li><label for="id_customer_teams_3"><input type="checkbox" name="customer_teams" value="8" id="id_customer_teams_3" tabindex="10"> <span>Claro Brazil</span></label></li><li><label for="id_customer_teams_4"><input type="checkbox" name="customer_teams" value="10" id="id_customer_teams_4" tabindex="11"> <span>Claro Chile</span></label></li><li><label for="id_customer_teams_5"><input type="checkbox" name="customer_teams" value="14" id="id_customer_teams_5" tabindex="12"> <span>Claro Colombia</span></label></li><li><label for="id_customer_teams_6"><input type="checkbox" name="customer_teams" value="18" id="id_customer_teams_6" tabindex="13"> <span>Claro Ecuador</span></label></li><li><label for="id_customer_teams_7"><input type="checkbox" name="customer_teams" value="41" id="id_customer_teams_7" tabindex="14"> <span>Claro Paraguay</span></label></li><li><label for="id_customer_teams_8"><input type="checkbox" name="customer_teams" value="15" id="id_customer_teams_8" tabindex="15"> <span>Claro Peru</span></label></li><li><label for="id_customer_teams_9"><input type="checkbox" name="customer_teams" value="44" id="id_customer_teams_9" tabindex="16"> <span>Claro Uruguay</span></label></li><li><label for="id_customer_teams_10"><input type="checkbox" name="customer_teams" value="22" id="id_customer_teams_10" tabindex="17"> <span>Locop Argentina</span></label></li><li><label for="id_customer_teams_11"><input type="checkbox" name="customer_teams" value="20" id="id_customer_teams_11" tabindex="18"> <span>Locop Bolivia</span></label></li><li><label for="id_customer_teams_12"><input type="checkbox" name="customer_teams" value="21" id="id_customer_teams_12" tabindex="19"> <span>Locop Brazil</span></label></li><li><label for="id_customer_teams_13"><input type="checkbox" name="customer_teams" value="25" id="id_customer_teams_13" tabindex="20"> <span>Locop Colombia</span></label></li><li><label for="id_customer_teams_14"><input type="checkbox" name="customer_teams" value="46" id="id_customer_teams_14" tabindex="21"> <span>Locop Ecuador</span></label></li><li><label for="id_customer_teams_15"><input type="checkbox" name="customer_teams" value="39" id="id_customer_teams_15" tabindex="22"> <span>Locop Mexico</span></label></li><li><label for="id_customer_teams_16"><input type="checkbox" name="customer_teams" value="28" id="id_customer_teams_16" tabindex="23"> <span>Locop Peru</span></label></li><li><label for="id_customer_teams_17"><input type="checkbox" name="customer_teams" value="29" id="id_customer_teams_17" tabindex="24"> <span>Locop Venezuela</span></label></li><li><label for="id_customer_teams_18"><input type="checkbox" name="customer_teams" value="37" id="id_customer_teams_18" tabindex="25"> <span>Nextel Argentina</span></label></li><li><label for="id_customer_teams_19"><input type="checkbox" name="customer_teams" value="38" id="id_customer_teams_19" tabindex="26"> <span>Nextel Brazil</span></label></li><li><label for="id_customer_teams_20"><input type="checkbox" name="customer_teams" value="30" id="id_customer_teams_20" tabindex="27"> <span>Nextel Chile</span></label></li><li><label for="id_customer_teams_21"><input type="checkbox" name="customer_teams" value="31" id="id_customer_teams_21" tabindex="28"> <span>Nextel Mexico</span></label></li><li><label for="id_customer_teams_22"><input type="checkbox" name="customer_teams" value="23" id="id_customer_teams_22" tabindex="29"> <span>Oi</span></label></li><li><label for="id_customer_teams_23"><input type="checkbox" name="customer_teams" value="40" id="id_customer_teams_23" tabindex="30"> <span>Sky Brazil</span></label></li><li><label for="id_customer_teams_24"><input type="checkbox" name="customer_teams" value="35" id="id_customer_teams_24" tabindex="31"> <span>Telefonica Argentina</span></label></li><li><label for="id_customer_teams_25"><input type="checkbox" name="customer_teams" value="36" id="id_customer_teams_25" tabindex="32"> <span>Telefonica Brazil</span></label></li><li><label for="id_customer_teams_26"><input type="checkbox" name="customer_teams" value="32" id="id_customer_teams_26" tabindex="33"> <span>Telefonica Chile</span></label></li><li><label for="id_customer_teams_27"><input type="checkbox" name="customer_teams" value="33" id="id_customer_teams_27" tabindex="34"> <span>Telefonica Colombia</span></label></li><li><label for="id_customer_teams_28"><input type="checkbox" name="customer_teams" value="34" id="id_customer_teams_28" tabindex="35"> <span>Telefonica Ecuador</span></label></li><li><label for="id_customer_teams_29"><input type="checkbox" name="customer_teams" value="24" id="id_customer_teams_29" tabindex="36"> <span>Telefonica Mexico</span></label></li><li><label for="id_customer_teams_30"><input type="checkbox" name="customer_teams" value="27" id="id_customer_teams_30" tabindex="37"> <span>Telefonica Peru</span></label></li><li><label for="id_customer_teams_31"><input type="checkbox" name="customer_teams" value="26" id="id_customer_teams_31" tabindex="38"> <span>Telefonica Venezuela</span></label></li><li><label for="id_customer_teams_32"><input type="checkbox" name="customer_teams" value="9" id="id_customer_teams_32" tabindex="39"> <span>Tim Brazil</span></label></li></ul></li></ul></div></div><div class="form-group"><div class="col-md-3"><label class="control-label required" for="id_status">
+            Status</label></div><div class="col-md-9"><ul class="select-all select-all-scroll"><li class="select-all-header"><input type="checkbox" id="status_all" tabindex="40"> <input type="text" class="search" tabindex="41"></li><li class="select-all-body"><ul><li><label for="id_status_0"><input type="checkbox" name="status" value="101" id="id_status_0" tabindex="42"> <span>Approved</span></label></li><li><label for="id_status_1"><input type="checkbox" name="status" value="103" id="id_status_1" tabindex="43"> <span>Rejected</span></label></li><li><label for="id_status_2"><input type="checkbox" name="status" value="102" id="id_status_2" tabindex="44"> <span>Pending approval</span></label></li><li><label for="id_status_3"><input type="checkbox" name="status" value="104" id="id_status_3" tabindex="45"> <span>Waiting IPM Update</span></label></li><li><label for="id_status_4"><input type="checkbox" name="status" value="100" id="id_status_4" tabindex="46"> <span>Not sent</span></label></li></ul></li></ul></div></div><div class="form-group"><label for="id_start_date" class="control-label">Start date</label><div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span><!--<input type="input" class="form-control datepicker" id="inputDate" placeholder="MM/DD/YYYY">--><input id="id_start_date" type="text" name="start_date" class="form-control startDate" tabindex="47"> </div></div><div class="form-group"><label for="id_end_date" class="control-label">End date</label><div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span><!--<input type="input" class="form-control datepicker" id="inputDate" placeholder="MM/DD/YYYY">--><input id="id_end_date" type="text" name="end_date" class="form-control endDate" tabindex="48"> </div></div></div>
+
+                
+                <div class="form-group form-approval">
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-tasks"></span> Generate report</button>
                 </div>
-              </div>
-              <div class="col-md-5">
-                <div class="">
-                  <div class="bs-callout" id="callout-overview-not-both">
-                    Please, follow <a href="../static/files/spo_align.xls">this template file</a> to avoid validation errors.
-                  </div>
-                  <div class="bs-callout" id="callout-overview-not-both">
-                    Fields marked with <span class="mandatory">*</span> are <strong>required</strong>
-                  </div>
-                  
-                  
-                  
-                  <div class="bs-callout" id="callout-overview-not-both">
-                    <h4>Stats</h4>
-                    <ul>
-                      <li><strong>Total: </strong>46899</li>
-                      <li><strong>Not sent: </strong>279</li>
-                      <li><strong>In progress: </strong>259</li>
-                      <li><strong>Successful: </strong>38379</li>
-                      <li><strong>Failed: </strong>7982</li>
-                    </ul>
-                  </div>
-                  
-                  
-                </div>
-              </div>
-              <div class="modal fade" id="download_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Download templates</h4>
-                    </div>
-                    <div class="modal-body">
-                      <div class="alert alert-danger">
-                        <strong>Missing Columns: </strong> <span id="columns-with-errors"></span>
-                      </div>
-                      <div class="bs-callout" id="callout-overview-not-both">
-                        Please, follow <a href="/importers/spoalignipmimporterwithrevision/download-template/">this template file</a> to avoid validation errors.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </form>
             </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="tile-box-padding">
+            <div class="alert alert-info">
+                <span class="mandatory">*</span> = Required
+            </div>
+        </div>
+    </div>
+    
+
+                    </div>
           </div>
         </div>
       </div>
@@ -357,7 +293,7 @@
           </a>
         </div>
       </div>
-  </div>
+    </div>
   </footer>
   <script src="../static/js/jquery-1.10.2.min.js"></script>
   <script src="../static/js/bootstrap.min.js"></script>
@@ -390,18 +326,6 @@
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
     })
-  </script>
-  <script>
-    $(function(){
-      $('#uploader-modal').on('show.bs.modal', function(){
-          var myModal = $(this);
-          clearTimeout(myModal.data('hideInterval'));
-          myModal.data('hideInterval', setTimeout(function(){
-              myModal.modal('hide');
-              $('.file-caption-name').text('spo_align.xls');
-          }, 1974));
-      });
-  });
   </script>
 </body>
 </html>

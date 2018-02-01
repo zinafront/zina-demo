@@ -152,8 +152,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 col-lg-2">
-          <div id="main-menu">
-            <div id="MainMenu">
+          <div id="MainMenu">
               <div id="sidebar" class="sidebar-nav span3"  style="height: 60vh;background: white;border: #e5e5e5 solid 1px;">
                 <ul class="nav nav-tabs nav-stacked">
                   <ul id="ul_basis" class="dropdown-menu">
@@ -188,29 +187,38 @@
                     </li>
                     <li class="dropdown-submenu">
                       <a href="#" tabindex="-1">Customer Purchase Orders</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container single" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-12">
+                          <span>CPO</span>
+                          <ul>
+                            <li><a href="cpo-inbox.html">All Customer Purchase Orders</a></li>
+                            <li><a href="cpo-detail.html">CPO Detail</a></li>
+                            <li><a href="cpo-item.html">CPO Item</a></li>
+                            <!-- <li><a href="http://127.0.0.1:8321/reports/customer_purchase_orders/">CPO Report</a></li> -->
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">CRIA Tool</a><span class="glyphicon glyphicon-chevron-right"></span>
                       <ul class="dropdown-submenu-container doble" id="contractMenuBox">
                         <li class="dropdown-submenu-subitems col-md-6">
-                          <span>SPO</span>
+                          <span>CRIA Tool</span>
                           <ul>
-                            <li><a href="data-importer-scratchpo.html">Scratch PO Creation</a></li>
-                            <li><a href="data-importer-scratchalign.html">SPO Alignment in IPM</a></li>
+                            <li><a href="cria-inbox.html">CRIA Tool Inbox</a></li>
+                            <li><a href="cria-detail-billable.html">CR Detail</a></li>
                           </ul>
                           <br>
-                          <span>WBS</span>
+                          <!-- <span>Reports</span>
                             <ul>
-                              <li><a href="data-importer-wbs.html">Massive WBS Creation</a></li>
-                            </ul>
+                              <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_report/">Change Requests Report</a></li>
+                            <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_workflow_approval_report/">Approval Report</a></li>
+                            </ul> -->
                         </li>
                         <li class="dropdown-submenu-subitems col-md-6">
-                          <span>B2B SPO</span>
+                          <span>CR SPO</span>
                           <ul>
-                            <li><a href="data-importer-calloff.html">B2B SPO with Post-SSR</a></li>
-                          </ul>
-                          <br>
-                          <span>ZI Partner</span>
-                          <ul>
-                            <li><a href="data-importer-zimassive.html">Massive ZI Partner Creation</a></li>
-                            <li><a href="data-importer-ziupdate.html">ZI Update</a></li>
+                            <li><a href="data-importer-scratchpo.html">Create Scratch PO for Change Request</a></li>
                           </ul>
                         </li>
                       </ul>
@@ -219,7 +227,6 @@
                 </ul>
               </div>
             </div>
-          </div>
         </div>
         <div class="col-md-9 col-lg-10">
           <div class="container-fluid">
@@ -228,232 +235,295 @@
                 <ol class="breadcrumb">
                   <li><a href="">Home</a></li>
                   <li class="active">Customer Purchase Orders</li>
-                  <li class="active">CPO Inbox</li>
                 </ol>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Customer Purchase Order Inbox</h1>
+                <h1>Customer Purchase Orders</h1>
               </div>
             </div>
             <!-- Contents -->
             <div class="row">
               <div class="col-md-12">
-                <div class="tile-box-padding" id="filtersCPO">
-                  <div class="collapse in" id="displayFliter1">
-                    <div class="tab-content">
-                      <div class="tab-pane fade in active" id="tab1default">
-                        <div class="row">
-                          <form>
-                            <div class="col-md-3 form-group">
-                              <label>CPO number:</label>
-                              <input type="number" id="search_cpo_number" class="column_filter form-control filter">
-                            </div>
-                            <div class="col-md-3 form-group">
-                              <label>Customer:</label>
-                              <select name="customer_team" id="select_customer_team" class="form-control filter">
-                                <option value="">------------</option>
-                                <option>Claro Colombia</option>
-                                <option>Oi Brazil</option>
-                                <option>AT&amp;T</option>
-                            </select>
-                            </div>
-                            <div class="col-md-3 form-group">
-                              <label>Date start</label>
-                              <div class="input-group">
-                                <input type="text" id="min" class="form-control dpicker filter" data-date-format="yyyy-mm-dd" value=""   pattern="" title=""><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <div class="collapse in" id="displayFilter1">
+                  <div class="panel with-nav-tabs panel-default">
+                      <div class="panel-body">
+                          <div class="tab-content">
+                              <div class="tab-pane fade in active" id="tab1default">
+                                  <div class="row">
+                                      <form>
+                                          <div class="col-md-3 form-group">
+                                              <label for="">CPO number:</label>
+                                              <input type="text" name="cpo_number" id="search_cpo_number" class="column_filter form-control filter" pattern="" title="" tabindex="4">
+                                          </div>
+                                          <div class="col-md-3 form-group">
+                                              <label for="">Customer:</label>
+                                              <select name="customer_team" id="select_customer_team" class="form-control filter" tabindex="5">
+                                                  <option value="">------------</option>
+                                                  
+                                                      <option value="17">Customer Team 1</option>
+                                                  
+                                                      <option value="14">Customer Team 2</option>
+                                                  
+                                                      <option value="22">Customer Team 3</option>
+                                                  
+                                              </select>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <label for="">Date start</label>
+                                              <div class="input-group">
+                                                  <input type="text" name="" id="min" class="form-control dpicker filter" data-date-format="yyyy-mm-dd" value="" pattern="" title="" tabindex="6">
+                                                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <label for="">Date end</label>
+                                              <div class="input-group">
+                                                  <input type="text" name="" id="max" class="form-control dpicker filter" value="" data-date-format="yyyy-mm-dd" pattern="" title="" tabindex="7">
+                                                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                              </div>
+                                          </div>
+                                      </form>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-12 text-right form-inline">
+                                          <a href="/cpos/"><button type="button" id="reset_filter" class="btn btn-danger"><span class="glyphicon glyphicon-refresh"></span> Reset filter</button></a>
+                                          <button type="button" id="filter_button" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Filter</button>
+                                      </div>
+                                  </div>
+                                  
                               </div>
-                            </div>
-                            <div class="col-md-3 form-group">
-                              <label>Date end</label>
-                              <div class="input-group">
-                                <input type="text" id="max" class="form-control dpicker filter" data-date-format="yyyy-mm-dd" value=""   pattern="" title=""><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-12 text-right form-inline">
-                            <a href="#" id="resetFilterCPO"><button type="button" id="reset_filter" class="btn btn-danger"><span class="glyphicon glyphicon-refresh"></span> Reset filter</button></a>
-                            <button type="button" id="applyFilterCPO" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Filter</button>
+                              <div class="tab-pane fade" id="tab2default">Default 2</div>
+                              <div class="tab-pane fade" id="tab3default">Default 3</div>
+                              <div class="tab-pane fade" id="tab4default">Default 4</div>
+                              <div class="tab-pane fade" id="tab5default">Default 5</div>
                           </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="tile-box-padding">
+                  <div class="text-right">
+                    
+                    <div class="col-md-12 " style="padding: 0;">
+                      <div class="dropdown pull-right">
+                        <div class="btn-group menu-dropdown" id="select_change_status">
+                          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <i class="fa fa-list-ul"></i> Actions <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu pull-right">
+                            <li><a role="menuitem" tabindex="-1" href="/cpos/correction_needed/" id="select_change_status_rejected">
+                              <span class="glyphicon glyphicon-th-list"></span> List correction needed items</a>
+                            </li>
+                            <li><a role="menuitem" tabindex="-1" href="/cpos/rejected_list/" id="select_change_status_rejected">
+                              <span class="glyphicon glyphicon-th-list"></span> List rejected CPOs</a>
+                            </li>
+                            
+                            <li><a role="menuitem" tabindex="-1" href="#" id="select_change_status_accepted">
+                              <span class="glyphicon glyphicon-check"></span> Accept Selected CPOs</a>
+                            </li>
+                            <li><a role="menuitem" tabindex="-1" href="#" id="select_change_status_rejected">
+                              <span class="glyphicon glyphicon-minus"></span> Reject Selected CPOs</a>
+                            </li>
+                            
+                            
+                            <li><a role="menuitem" tabindex="-1" href="/cpos/add_manually/" id="select_change_status_rejected">
+                              <span class="glyphicon glyphicon-plus"></span> Reject Selected CPOs</a>
+                            </li>
+                            
+                          </ul>
                         </div>
                       </div>
                     </div>
+                    
                   </div>
-                </div>
-                <ul class="nav nav-tabs nav-justified" role="tablist">
-                  <li class="tab-li active" role="presentation" id="li_tab_not_taken"><a id="tab-history" href="#cont-tab-not-taken" aria-controls="home" role="tab" data-toggle="tab">CPOs without opportunity number</a></li>
-                  <li class="tab-li" role="presentation" id="li_tab_taken"><a id="tab-errors" href="#cont-tab-taken" aria-controls="home" role="tab" data-toggle="tab">CPOs with Opportunity number</a></li>
-                </ul>
-                <div class="tab-content tile-box-padding">
-                  <div class="tab-content">
-                    <div id="cont-tab-not-taken" class="tab-pane active" role="tabpanel">
-                      <div class="text-right">
-                        <a href="#" class="btn btn-primary" id="assign_cpo_to_owner" data-toggle="modal" data-target="#opportunity_modal">
-                          <span class="glyphicon glyphicon-th-list"></span> Link Opportunity
-                        </a>
-                      </div>
-                      <div class="table-responsive" style="margin-top: 15px;">
-                        <table class="table table-hover table-bordered" id="cpo_table" style="margin-top:15px;">
-                          <thead>
-                            <tr>
-                              <th><input type="checkbox" name="select_all_cpos_take" id="select_all_cpos_take"></th>
-                              <th>Customer Team</th>
-                              <th>Customer Purchase Order</th>
-                              <th>CPO Date</th>
-                              <th>Received Date</th>
-                              <th>CPO Total Value</th>
-                            </tr>
-                          </thead>
-                          <tbody id="not_taken_cpo_table">
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#" id="cpoNumExample">4500198782</a></td>
-                              <td class="text-center">2018-01-30</td>
-                              <td class="text-center">2018-01-05</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500198945</a></td>
-                              <td class="text-center">2018-01-10</td>
-                              <td class="text-center">2018-01-05</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500198940</a></td>
-                              <td class="text-center">2018-01-10</td>
-                              <td class="text-center">2018-01-05</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500198413</a></td>
-                              <td class="text-center">2018-12-22</td>
-                              <td class="text-center">2018-01-03</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500198438</a></td>
-                              <td class="text-center">2018-12-22</td>
-                              <td class="text-center">2018-01-03</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <div id="cont-tab-taken" class="tab-pane" role="tabpanel">
-                      <div class="text-right">
-                        <a class="btn btn-primary" data-toggle="modal" data-target="#unlink_bl_modal"><i class="fa fa-chain-broken"></i>&nbsp;&nbsp;Unlink opportunities</a>
-                      </div>
-                      <div class="table-responsive" style="margin-top: 15px;">
-                        <table class="table table-hover table-bordered" id="cpo_table" style="margin-top:15px;">
-                          <thead>
-                            <tr>
-                              <th><input type="checkbox" name="select_all_cpos_take" id="select_all_cpos_take"></th>
-                              <th>Customer Team</th>
-                              <th>Customer Purchase Order</th>
-                              <th>CPO Date</th>
-                              <th>Received Date</th>
-                              <th>CPO Total Value</th>
-                            </tr>
-                          </thead>
-                          <tbody id="not_taken_cpo_table">
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500158860</a></td>
-                              <td class="text-center">2018-01-10</td>
-                              <td class="text-center">2017-06-29</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500158854</a></td>
-                              <td class="text-center">2018-01-10</td>
-                              <td class="text-center">2017-06-30</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500159208</a></td>
-                              <td class="text-center">2018-01-10</td>
-                              <td class="text-center">2017-07-12</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500158844</a></td>
-                              <td class="text-center">2018-01-01</td>
-                              <td class="text-center">2017-06-29</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">
-                                <input type="checkbox" name="cpos_for_taken">
-                              </td>
-                              <td class="text-center">Claro Colombia</td>
-                              <td class="text-center"><a href="#">4500178653</a></td>
-                              <td class="text-center">2018-01-01</td>
-                              <td class="text-center">2017-06-29</td>
-                              <td class="text-right">USD $XXXXXX</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                  <br>
+                  <div class="row">
+                  </div>
+                  <br>
+                  <div id="id_error_cpos_status" class="alert alert-danger" hidden=""></div>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="cpo_table">
+                      <thead>
+                        <tr>
+                          
+                          <th><input type="checkbox" name="select_all_cpos" id="select_all_cpos" tabindex="8"></th>
+                          
+                          
+                          <th>Aging</th>
+                          
+                          <th>CPO number</th>
+                          <th>Contract</th>
+                          
+                          <th>Customer</th>
+                          <th>Plant</th>
+                          <th>Received Date</th>
+                          <th>CPO Date</th>
+                          <th>CPO Status</th>
+                        </tr>
+                      </thead>
+                      <tbody id="not_taken_cpo_table">
+                        
+                        
+                        <tr>
+                          
+                          <td class="text-center">
+                            <input type="checkbox" name="cpos_for_accept" value="390483" tabindex="9">
+                          </td>
+                          
+                          
+                          <td class="text-center"><div class="zd-label zd-label-mediumseagreen"><i class="fa fa-check-circle"></i></div></td>
+                          
+                          <td class="text-center"><a href="cpo-detail.html">4500198782</a></td>
+                          <td class="text-center">23517</td>
+                          
+                          <td>Customer Team 1</td>
+                          <td class="text-center">CO81</td>
+                          <td class="text-center">2018-01-05</td>
+                          <td class="text-center">2018-01-30</td>
+                          <td class="text-center"></td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                          
+                          <td class="text-center">
+                            <input type="checkbox" name="cpos_for_accept" value="394879" tabindex="10">
+                          </td>
+                          
+                          
+                          <td class="text-center"></td>
+                          
+                          <td class="text-center"><a href="cpo-detail.html">4400002969</a></td>
+                          <td class="text-center">None</td>
+                          
+                          <td>Customer Team 2</td>
+                          <td class="text-center">None</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center"></td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                          
+                          <td class="text-center">
+                            <input type="checkbox" name="cpos_for_accept" value="394875" tabindex="11">
+                          </td>
+                          
+                          
+                          <td class="text-center"></td>
+                          
+                          <td class="text-center"><a href="cpo-detail.html">4502921904</a></td>
+                          <td class="text-center">4600022123</td>
+                          
+                          <td>Customer Team 3</td>
+                          <td class="text-center">ALU3</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center"></td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                          
+                          <td class="text-center">
+                            <input type="checkbox" name="cpos_for_accept" value="394878" tabindex="12">
+                          </td>
+                          
+                          
+                          <td class="text-center"></td>
+                          
+                          <td class="text-center"><a href="cpo-detail.html">4502921906</a></td>
+                          <td class="text-center">4600022123</td>
+                          
+                          <td>Customer Team 3</td>
+                          <td class="text-center">ALU3</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center"></td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                          
+                          <td class="text-center">
+                            <input type="checkbox" name="cpos_for_accept" value="394885" tabindex="13">
+                          </td>
+                          
+                          
+                          <td class="text-center"></td>
+                          
+                          <td class="text-center"><a href="cpo-detail.html">4502922074</a></td>
+                          <td class="text-center">4600024402</td>
+                          
+                          <td>Customer Team 3</td>
+                          <td class="text-center">ALU3</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center"></td>
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                          
+                          <td class="text-center">
+                            <input type="checkbox" name="cpos_for_accept" value="394886" tabindex="14">
+                          </td>
+                          
+                          
+                          <td class="text-center"></td>
+                          
+                          <td class="text-center"><a href="cpo-detail.html">4502922075</a></td>
+                          <td class="text-center">4600024402</td>
+                          
+                          <td>Customer Team 3</td>
+                          <td class="text-center">ALU3</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center">2018-01-29</td>
+                          <td class="text-center"></td>
+                        </tr>
+                        
+                        
+                        
+                        
+                        
+                      </tbody>
+                    </table>
+                    <div>
+                      <span class="step-links">
+                        <div class="text-center">
+                          <ul class="pagination">
+                            <li>
+                              
+                            </li>
+                            <li class="active"><a class="page-link" data-page="1" href="">1</a></li>
+                            <li><a class="page-link" href="" data-page="2">2</a></li><li><a class="page-link" href="" data-page="3">3</a></li><li><a class="page-link" href="" data-page="4">4</a></li><li><a class="page-link" href="" data-page="5">5</a></li><li><a class="page-link" href="" data-page="6">6</a></li><li><a class="page-link" href="" data-page="7">7</a></li><li class="ellipsis disabled"><a href="">...</a></li><li><a class="page-link" data-page="5919" href="">5919</a></li>
+                            <li>
+                              
+                              <a class="page-link" data-page="2" href="" aria-label="Next">
+                                <span aria-hidden="true">Next</span>
+                              </a>
+                              
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="current">
+                          Showing page 1 of 5919.
+                        </span>
+                      </span>
                     </div>
                   </div>
-                </div>
-                <div class="modal fade" id="unlink_bl_modal">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Unlink Opportunities</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div id="unlink_opportunity_modal_error" class="control-label alert-danger"></div>
-                        <label id="unlink_opportunity_modal_success" class="control-label alert-success"></label>
-                        <h4>You are about to unlink all the BLs from the selected CPO's. Are you sure?</h4>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
-                        <button type="button" class="btn btn-primary" id="unlink_cpo_item_to_opportunity_inbox"><span class="glyphicon glyphicon-refresh"></span> Yes, I understand</button>
-                      </div>
-                    </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
@@ -496,7 +566,7 @@
   <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
   <script src="../static/js/js.cookie.js"></script>
   <script src="../static/js/bootstrap-tour.min.js"></script>
-  <script src="../static/js/tours/cpo-inbox-tour.js"></script>
+
   <script>
     $(function(){
       $('#min, #max').datepicker();

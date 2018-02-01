@@ -152,18 +152,73 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 col-lg-2">
-          <div id="main-menu">
-            <div id="MainMenu">
-              <div id="sidebar" class="sidebar-nav span3">
+          <div id="MainMenu">
+              <div id="sidebar" class="sidebar-nav span3"  style="height: 60vh;background: white;border: #e5e5e5 solid 1px;">
                 <ul class="nav nav-tabs nav-stacked">
                   <ul id="ul_basis" class="dropdown-menu">
-                    <li class="dropdown-submenu" id="contract-menu">
-                      <a href="#" tabindex="-1">Contract management</a><span class="glyphicon glyphicon-chevron-right"></span>
-                      <ul class="dropdown-submenu-container single" id="contractMenuBox">
-                        <li class="dropdown-submenu-subitems">
-                          <span>Customer Purchase Orders</span>
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">Robotic Process Automation RPA</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container doble" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>SPO</span>
                           <ul>
-                            <li><a href="#">CPO Inbox</a></li>
+                            <li><a href="data-importer-scratchpo.html">Scratch PO Creation</a></li>
+                            <li><a href="data-importer-scratchalign.html">SPO Alignment in IPM</a></li>
+                          </ul>
+                          <br>
+                          <span>WBS</span>
+                            <ul>
+                              <li><a href="data-importer-wbs.html">Massive WBS Creation</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>B2B SPO</span>
+                          <ul>
+                            <li><a href="data-importer-calloff.html">B2B SPO with Post-SSR</a></li>
+                          </ul>
+                          <br>
+                          <span>ZI Partner</span>
+                          <ul>
+                            <li><a href="data-importer-zimassive.html">Massive ZI Partner Creation</a></li>
+                            <li><a href="data-importer-ziupdate.html">ZI Update</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">Customer Purchase Orders</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container single" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-12">
+                          <span>CPO</span>
+                          <ul>
+                            <li><a href="cpo-inbox.html">All Customer Purchase Orders</a></li>
+                            <li><a href="cpo-detail.html">CPO Detail</a></li>
+                            <li><a href="cpo-item.html">CPO Item</a></li>
+                            <!-- <li><a href="http://127.0.0.1:8321/reports/customer_purchase_orders/">CPO Report</a></li> -->
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">CRIA Tool</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container doble" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>CRIA Tool</span>
+                          <ul>
+                            <li><a href="cria-inbox.html">CRIA Tool Inbox</a></li>
+                            <li><a href="cria-detail-billable.html">CR Detail</a></li>
+                          </ul>
+                          <br>
+                          <!-- <span>Reports</span>
+                            <ul>
+                              <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_report/">Change Requests Report</a></li>
+                            <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_workflow_approval_report/">Approval Report</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>CR SPO</span>
+                          <ul>
+                            <li><a href="data-importer-scratchpo.html">Create Scratch PO for Change Request</a></li>
                           </ul>
                         </li>
                       </ul>
@@ -172,7 +227,6 @@
                 </ul>
               </div>
             </div>
-          </div>
         </div>
         <div class="col-md-9 col-lg-10">
           <div class="container-fluid">
@@ -204,7 +258,7 @@
                           <tbody>
                             <tr>
                                 <td><strong>Customer</strong></td>
-                                <td id="customer-name">Claro Colombia</td>
+                                <td id="customer-name">Customer Team 1</td>
                             </tr>
                             <tr>
                                 <td><strong>CPO Number </strong></td>
@@ -244,7 +298,7 @@
                             </tr>
                             <tr>
                                 <td><strong>Requester information</strong></td>
-                                <td>ANGELA HERRERA</td>
+                                <td>Requester Name</td>
                             </tr>
                             <tr>
                                 <td><strong>Plant (origin)</strong></td>
@@ -373,17 +427,17 @@
                       <div class="col-md-9 text-right">
                         <span class="label label-default" style="padding:5px 10px;" id="CPONetVAl">CPO NET VALUE: USD $ XXXXXX</span>
                       </div>
-                      <div class="col-md-12 no-left-padding text-right">
+                     <!--  <div class="col-md-12 no-left-padding text-right">
                         <a href="#" class="btn btn-primary" id="assign_cpo_items_to_owner"><i class="fa fa-link"></i>&nbsp;&nbsp;Link opportunity</a>
                         <a class="btn btn-primary" data-toggle="modal" data-target="#unlink_bl_modal" id="CPOUnlink"><i class="fa fa-chain-broken"></i>&nbsp;&nbsp;Unlink opportunities</a>
                         <button class="btn btn-primary" style="border:none;" id="CPOSave"><i class="fa fa-check"></i>&nbsp;&nbsp;Save Changes</button>
-                      </div>
+                      </div> -->
                       <div class="col-md-12">
                         <div class="table-responisve" style="margin-top:15px;">
                           <table id="cpo_item_table" class="table table-hover table-bordered" data-show_opportunity_link_form="False" show_opportunity_link_form="False">
                             <thead>
                                 <tr>
-                                    <th><input type="checkbox" name="select_all_cpo_items" id="select_all_cpo_items" tabindex="7"></th>
+                                    <!-- <th><input type="checkbox" name="select_all_cpo_items" id="select_all_cpo_items" tabindex="7"></th> -->
                                     <th>Item</th>
                                     <th>Site</th>
                                     <th>Description</th>
@@ -391,15 +445,15 @@
                                     <th>Unit value</th>
                                     <th>Total value</th>
                                     <th>Proposal</th>
-                                    <th>NF</th>
+                                   <!--  <th>NF</th> -->
                                 </tr>
                             </thead>
                             <tbody id="cpo_items_table">
                                 
                                 <tr>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         <input type="checkbox" name="cpos_items_to_link" value="1621450" tabindex="8">
-                                    </td>
+                                    </td> -->
                                     <td class="text-center">
                                         <a href="/cpos/4500197106-387645/1/">1</a>
                                     </td>
@@ -428,7 +482,7 @@
                                                      "></i>
                                         </a>
                                     </td>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
                                             <i class="fa 
                                                              fa-question-circle text-primary
@@ -436,13 +490,13 @@
                                                              
                                                 "></i>
                                         </a>
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 
                                 <tr>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         <input type="checkbox" name="cpos_items_to_link" value="1621451" tabindex="9">
-                                    </td>
+                                    </td> -->
                                     <td class="text-center">
                                         <a href="/cpos/4500197106-387645/2/">2</a>
                                     </td>
@@ -471,7 +525,7 @@
                                                      "></i>
                                         </a>
                                     </td>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
                                             <i class="fa 
                                                              fa-question-circle text-primary
@@ -479,13 +533,13 @@
                                                              
                                                 "></i>
                                         </a>
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 
                                 <tr>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         <input type="checkbox" name="cpos_items_to_link" value="1621452" tabindex="10">
-                                    </td>
+                                    </td> -->
                                     <td class="text-center">
                                         <a href="/cpos/4500197106-387645/3/">3</a>
                                     </td>
@@ -514,7 +568,7 @@
                                                      "></i>
                                         </a>
                                     </td>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
                                             <i class="fa 
                                                              fa-question-circle text-primary
@@ -522,13 +576,13 @@
                                                              
                                                 "></i>
                                         </a>
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 
                                 <tr>
-                                    <td class="text-center">
+                                   <!--  <td class="text-center">
                                         <input type="checkbox" name="cpos_items_to_link" value="1621453" tabindex="11">
-                                    </td>
+                                    </td> -->
                                     <td class="text-center">
                                         <a href="/cpos/4500197106-387645/4/">4</a>
                                     </td>
@@ -557,7 +611,7 @@
                                                      "></i>
                                         </a>
                                     </td>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
                                             <i class="fa 
                                                              fa-question-circle text-primary
@@ -565,7 +619,7 @@
                                                              
                                                 "></i>
                                         </a>
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 
                             </tbody>
@@ -717,7 +771,6 @@
   <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
   <script src="../static/js/js.cookie.js"></script>
   <script src="../static/js/bootstrap-tour.min.js"></script>
-  <script src="../static/js/tours/cpo-detail-tour.js"></script>
   <script>
     $(function(){
       $('#min, #max').datepicker();
