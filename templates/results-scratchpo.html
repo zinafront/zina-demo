@@ -378,7 +378,7 @@
                 
                 
                 
-                <div class="panel panel-info" id="panel-3005147">
+                <div class="panel panel-info current-panel" id="panel-3005147">
                   <div class="panel-heading" role="tab" id="headingOne">
                     <a role="button" data-toggle="collapse" href="#accordion-0" aria-expanded="true" aria-controls="">
                       <h4 class="panel-title">
@@ -4717,6 +4717,7 @@
   <script src="../static/js/js.cookie.js"></script>
   <script src="../static/js/bootstrap-tour.min.js"></script>
   <script src="../static/js/tours/results-tour.js"></script>
+  <script src="../static/js/results_simulation.js"></script>
   <script>
     $(function(){
       $('#min, #max').datepicker();
@@ -4743,6 +4744,12 @@
       $yt_iframe= '<iframe width="1200" height="675" src="https://www.youtube.com/embed/fhNRhjSURRg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
       $('#sap-modal-video').html($yt_iframe);
      })
+  </script>
+  <script>
+    modal = $('#SapModal');
+    modal.on("hidden.bs.modal", function () {
+      resultsSimulation();
+    });
   </script>
 </body>
 </html>
