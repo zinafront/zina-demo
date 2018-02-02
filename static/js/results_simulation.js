@@ -25,7 +25,7 @@ var resultsSimulation = function(){
             if(percentual >= 100) {
                 $('.progress-bar').removeClass('progress-bar-info');
                 $('.progress-bar').addClass('progress-bar-success');
-                $('.progress-bar').css('color','white');
+                percentage.css('color','white');
             }
         }
     },1000);
