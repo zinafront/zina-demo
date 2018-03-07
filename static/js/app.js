@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).width() > 480) {
             if ($(window).scrollTop() > num) {
+                $(".demo-logo").hide();
                 $("#navbar .nav-bar-logo").fadeIn("fast");
                 $("#navbar").addClass("fixed", 300);
                 $("#global-search .input-group").detach().appendTo('#global-search-top');
@@ -16,6 +17,7 @@ $(document).ready(function () {
                 $("#message-center").addClass('hide');
                 $("#navbar").removeClass('fwc');
             } else {
+                $(".demo-logo").show();
                 $("#navbar .nav-bar-logo").hide();
                 $("#navbar").removeClass("fixed");
                 $("#global-search-top .input-group").detach().appendTo('#global-search');

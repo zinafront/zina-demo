@@ -1,0 +1,120 @@
+/***********************************
+Nokia colors
+************************************/
+/***********************************
+Font-face config
+************************************/
+@font-face {
+  font-family: 'NokiaPureTWebLight';
+  src: url("../fonts/NokiaPureTWeb_Lt.eot");
+  src: url("../fonts/NokiaPureTWeb_Lt.eot?#iefix") format("embedded-opentype"), url("../fonts/NokiaPureTWeb_Lt.woff") format("woff"), url("../fonts/NokiaPureTWeb_Lt.ttf") format("truetype"), url("../fonts/NokiaPureTWeb_Lt.svg#NokiaPureTWebLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'NokiaPureTWebRegular';
+  src: url("../fonts/NokiaPureTWeb_Rg.eot");
+  src: url("../fonts/NokiaPureTWeb_Rg.eot?#iefix") format("embedded-opentype"), url("../fonts/NokiaPureTWeb_Rg.woff") format("woff"), url("../fonts/NokiaPureTWeb_Rg.ttf") format("truetype"), url("../fonts/NokiaPureTWeb_Rg.svg#NokiaPureTWebRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'NokiaPureTWebBold';
+  src: url("../fonts/NokiaPureTWeb_Bd.eot");
+  src: url("../fonts/NokiaPureTWeb_Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/NokiaPureTWeb_Bd.woff") format("woff"), url("../fonts/NokiaPureTWeb_Bd.ttf") format("truetype"), url("../fonts/NokiaPureTWeb_Bd.svg#NokiaPureTWebBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'nokia_pure_headlinelight';
+  src: url("../fonts/nokiapureheadline_light-webfont.woff2") format("woff2"), url("../fonts/nokiapureheadline_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'nokia_pure_headlineultraLt';
+  src: url("../fonts/nokiapureheadline_ultralight-webfont.woff2") format("woff2"), url("../fonts/nokiapureheadline_ultralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/* line 96, demo-landing-styles.scss */
+body .btn {
+  border-color: #fff;
+  border-radius: 300px;
+  border: 1px solid;
+  color: #fff;
+  font-family: Lato,Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 12px 15px;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  /* line 107, demo-landing-styles.scss */
+  body .btn:hover, body .btn:active, body .btn:focus, body .btn:focus-within {
+    color: #00173e;
+    border-color: #fdcc52;
+    background-color: #fdcc52; }
+/* line 113, demo-landing-styles.scss */
+body#demo-landing {
+  background: url(../img/demo-landing-background.jpg);
+  background-size: 100%; }
+  /* line 117, demo-landing-styles.scss */
+  body#demo-landing header .zina-logo {
+    margin: 40px 0;
+    width: 100%; }
+    /* line 120, demo-landing-styles.scss */
+    body#demo-landing header .zina-logo img {
+      width: 100%; }
+  /* line 124, demo-landing-styles.scss */
+  body#demo-landing header #gotoZina {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-family: Lato,Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 35px;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    /* line 136, demo-landing-styles.scss */
+    body#demo-landing header #gotoZina:hover {
+      background: rgba(0, 0, 0, 0.5);
+      text-decoration: none; }
+  /* line 144, demo-landing-styles.scss */
+  body#demo-landing section#demo-description #description-container {
+    text-align: right; }
+    /* line 147, demo-landing-styles.scss */
+    body#demo-landing section#demo-description #description-container span.description {
+      color: white;
+      display: block;
+      font-family: "nokia_pure_headlineultraLt";
+      font-size: 36px;
+      line-height: 1.2;
+      margin-top: 20vh; }
+    /* line 156, demo-landing-styles.scss */
+    body#demo-landing section#demo-description #description-container .button-group {
+      margin-top: 20px;
+      text-align: right; }
+      /* line 160, demo-landing-styles.scss */
+      body#demo-landing section#demo-description #description-container .button-group figure.flag {
+        display: inline-block;
+        width: 30px; }
+        /* line 163, demo-landing-styles.scss */
+        body#demo-landing section#demo-description #description-container .button-group figure.flag img {
+          width: 100%; }
+  @media screen and (max-width: 991px) {
+    /* line 172, demo-landing-styles.scss */
+    body#demo-landing section#demo-description #zina-screenshot figure {
+      display: none; } }
+  /* line 176, demo-landing-styles.scss */
+  body#demo-landing section#demo-description #zina-screenshot figure {
+    text-align: center;
+    margin-top: 20vh;
+    width: 100%; }
+    /* line 180, demo-landing-styles.scss */
+    body#demo-landing section#demo-description #zina-screenshot figure img {
+      width: 90%; }
+  /* line 187, demo-landing-styles.scss */
+  body#demo-landing footer {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.1em;
+    margin-top: 20vh; }

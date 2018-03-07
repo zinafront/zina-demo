@@ -1367,6 +1367,15 @@ Price list tabs
   border: 1px solid #e8d7d6;
 }
 
+.panel-warning > .panel-heading {
+  & > a {
+    color: #D99032;
+  }
+
+  background-color: #fafafa;
+  border: 1px solid #ffebd2;
+}
+
 .panel-success > .panel-heading {
   & > a {
     color: #3c763d;

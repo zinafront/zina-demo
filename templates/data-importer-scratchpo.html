@@ -21,6 +21,9 @@
 <body>
   <header>
     <nav class="navbar fwc" id="navbar" style="z-index: 1000000;">
+      <section class="demo-logo">
+        <img src="../static/img/zinawfm-interactive.png">
+      </section>
       <section class="top-logo">
         <div class="nav-bar-logo">
           <a href="#">
@@ -424,7 +427,7 @@
   <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
   <script src="../static/js/js.cookie.js"></script>
   <script src="../static/js/bootstrap-tour.min.js"></script>
-  <script src="../static/js/tours/data-importer-tour.js"></script>
+  <script src="../static/js/url-param-retrieve.js"></script>
   <script>
     $(function(){
       $('#min, #max').datepicker();
@@ -446,7 +449,18 @@
               $('.file-caption-name').text('scratch_po.xls');
           }, 2624));
       });
+      var lang = getUrlParameter('lang');
+      if (lang) {
+        if(Cookies.get('tourLang')){
+          Cookies.remove('tourLang');
+        }
+        Cookies.set('tourLang', lang);
+      }
+      else {
+        Cookies.get('tourLang');
+      }
   });
   </script>
+  <script src="../static/js/tours/data-importer-tour.js"></script>
 </body>
 </html>

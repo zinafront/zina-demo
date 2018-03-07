@@ -1,0 +1,14 @@
+body {
+	&#demo-landing {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0c1c3f+0,3bace5+100 */
+		background: url("../img/bg-pattern.png"), #0c1c3f; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+		background: url("../img/bg-pattern.png"), -webkit-linear-gradient(left, #0c1c3f 0%, #3bace5 100%);
+		background: url("../img/bg-pattern.png"), -o-linear-gradient(left, #0c1c3f 0%, #3bace5 100%);
+		background: url("../img/bg-pattern.png"), linear-gradient(to right, #0c1c3f 0%, #3bace5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		//background-color: #0c1c3f;
+		background-color: -webkit-linear-gradient(left, #0c1c3f 0%, #3bace5 100%);
+		background-color: -o-linear-gradient(left, #0c1c3f 0%, #3bace5 100%);
+		background-color: linear-gradient(to right, #0c1c3f 0%, #3bace5 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1c3f', endColorstr='#3bace5',GradientType=1 ); /* IE6-9 */
+	}
+}

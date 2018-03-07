@@ -233,7 +233,6 @@ Menu components
 /* line 267, _common.scss */
 .nav-tabs > li > a {
   cursor: pointer;
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0; }
 
 /*Drop down menu*/
@@ -246,7 +245,6 @@ Forms
 ************************************/
 /* line 284, _common.scss */
 .input-group-addon {
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 /* line 289, _common.scss */
@@ -289,7 +287,6 @@ button.btn.btn-default.fileinput-remove.fileinput-remove-button {
 /*Div to display selected file to upload*/
 /* line 329, _common.scss */
 .file-preview {
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 /* line 334, _common.scss */
@@ -304,7 +301,6 @@ button.btn.btn-default.fileinput-remove.fileinput-remove-button {
 
 /* line 349, _common.scss */
 .form-control, .btn {
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 /* line 353, _common.scss */
@@ -367,7 +363,6 @@ ul.select-all.select-all-scroll {
   display: block;
   margin-top: 2px;
   padding: 10px;
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
   /* line 426, _common.scss */
   .form-input-error .form-div-error ul {
@@ -413,7 +408,6 @@ ul.select-all.select-all-scroll {
     .multi-select .btn-group .multiselect span {
       background: #e6e6e6;
       padding: 3px 5px;
-      -webkit-border-radius: 2px;
       border-radius: 2px;
       line-height: 2.0em;
       margin: 0 3px 0px 0; }
@@ -441,7 +435,6 @@ TABLEs
   padding: 5px;
   text-align: center;
   vertical-align: middle !important;
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0; }
 /* line 534, _common.scss */
 .table th {
@@ -452,7 +445,6 @@ TABLEs
   padding: 5px;
   text-align: center;
   vertical-align: middle !important;
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0; }
 /* line 545, _common.scss */
 .table ul {
@@ -538,7 +530,6 @@ Extras
   border-top: #b2b2b2 solid 1px;
   border-bottom: #b2b2b2 solid 1px;
   font-size: 12px;
-  -webkit-border-radius: 0px;
   border-radius: 0px; }
   /* line 656, _common.scss */
   .breadcrumb a {
@@ -557,7 +548,6 @@ Extras
 /*Alerts*/
 /* line 672, _common.scss */
 .alert {
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   overflow: hidden; }
   /* line 676, _common.scss */
@@ -607,7 +597,6 @@ Extras
   margin: 0px; }
   /* line 726, _common.scss */
   .pager li a {
-    -webkit-border-radius: 2px;
     border-radius: 2px; }
 
 /*Block comments*/
@@ -616,7 +605,6 @@ Extras
   background: #f2f2f2;
   padding: 10px;
   margin-bottom: 10px;
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
   /* line 739, _common.scss */
   .container-comment:last-child {
@@ -713,7 +701,6 @@ Extras
   border-left-color: #5285B8;
   font-size: 13px;
   width: 100%;
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
   /* line 835, _common.scss */
   .bs-callout h4 {
@@ -788,7 +775,6 @@ Accordion title icons
 .grey-container {
   background: #f2f2f2;
   padding: 5px;
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
   /* line 935, _common.scss */
   .grey-container .checkbox label {
@@ -800,7 +786,8 @@ Accordion title icons
 /* line 944, _common.scss */
 .form-control[readonly] {
   border: none;
-  box-shadow: none; }
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 /* line 949, _common.scss */
 .no-border {
@@ -951,7 +938,6 @@ Accordion title icons
   /* line 1104, _common.scss */
   ul.timeline > li > .timeline-panel {
     width: calc(100% - 90px);
-    width: -moz-calc(100% - 90px);
     width: -webkit-calc(100% - 90px); }
   /* line 1109, _common.scss */
   ul.timeline > li > .timeline-badge {
@@ -983,7 +969,6 @@ Accordion title icons
   -webkit-border-radius: 2px;
   margin-bottom: 30px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
   box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2); }
 
 /* line 1140, _common.scss */
@@ -1050,7 +1035,6 @@ Accordion title icons
   border-style: solid;
   border-color: #ddd;
   padding: 20px;
-  -webkit-border-radius: 0px 0px 2px 2px;
   border-radius: 0px 0px 2px 2px; }
 
 /******************************
@@ -1058,12 +1042,10 @@ Multiselect (checkbox - list)
 ******************************/
 /* line 1216, _common.scss */
 .select-all-header {
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0; }
 
 /* line 1221, _common.scss */
 .select-all-body ul {
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px; }
 
 /******************************
@@ -1091,7 +1073,6 @@ STR displays for
   border: #cccccc solid 1px;
   margin-top: 10px;
   padding: 10px;
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
 
 /* line 1257, _common.scss */
@@ -1113,7 +1094,8 @@ Price list tabs
     /* line 1272, _common.scss */
     .price_list_tab li.active > a {
       border: none;
-      box-shadow: -1px -1px 5px -1px rgba(92, 92, 92, 0.2); }
+      -webkit-box-shadow: -1px -1px 5px -1px rgba(92, 92, 92, 0.2);
+              box-shadow: -1px -1px 5px -1px rgba(92, 92, 92, 0.2); }
 
 /* line 1280, _common.scss */
 .clearfix {
@@ -1125,7 +1107,8 @@ Price list tabs
   position: relative;
   display: block;
   margin-bottom: 20px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
   /* line 1290, _common.scss */
   .small-box > .inner {
     padding: 10px;
@@ -1151,7 +1134,6 @@ Price list tabs
   /* line 1313, _common.scss */
   .small-box .icon {
     -webkit-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
     position: absolute;
     top: -5px;
@@ -1200,90 +1182,98 @@ Price list tabs
     color: #a94442; }
 
 /* line 1370, _common.scss */
+.panel-warning > .panel-heading {
+  background-color: #fafafa;
+  border: 1px solid #ffebd2; }
+  /* line 1371, _common.scss */
+  .panel-warning > .panel-heading > a {
+    color: #D99032; }
+
+/* line 1379, _common.scss */
 .panel-success > .panel-heading {
   background-color: #fafafa;
   border: 1px solid #d6e9c6; }
-  /* line 1371, _common.scss */
+  /* line 1380, _common.scss */
   .panel-success > .panel-heading > a {
     color: #3c763d; }
 
-/* line 1378, _common.scss */
+/* line 1387, _common.scss */
 .panel-info > .panel-heading {
   background-color: #fafafa;
   border: 1px solid #d9edf7; }
-  /* line 1379, _common.scss */
+  /* line 1388, _common.scss */
   .panel-info > .panel-heading > a {
     color: #00a3cb; }
 
-/* line 1386, _common.scss */
+/* line 1395, _common.scss */
 .panel-heading {
   margin-top: 10px; }
 
-/* line 1390, _common.scss */
+/* line 1399, _common.scss */
 .accordion .panel-heading + .panel-collapse > .panel-body {
   border: none; }
 
-/* line 1394, _common.scss */
+/* line 1403, _common.scss */
 .popover-danger {
   cursor: pointer; }
 
-/* line 1398, _common.scss */
+/* line 1407, _common.scss */
 .popover .popover-title.popover-danger {
   background-color: #d05849;
   color: #fff; }
 
-/* line 1403, _common.scss */
+/* line 1412, _common.scss */
 .importer-error {
   color: #a94442; }
 
-/* line 1406, _common.scss */
+/* line 1415, _common.scss */
 .progress {
   position: relative; }
-  /* line 1408, _common.scss */
+  /* line 1417, _common.scss */
   .progress span {
     position: absolute;
     display: block;
     width: 100%;
     color: black; }
 
-/* line 1416, _common.scss */
+/* line 1425, _common.scss */
 .bs-callout {
   background-color: #fff;
   margin-bottom: 10px; }
-  /* line 1419, _common.scss */
+  /* line 1428, _common.scss */
   .bs-callout h4 {
     padding-bottom: 5px;
     border-bottom: 1px solid #F2F2F2; }
 
-/* line 1425, _common.scss */
+/* line 1434, _common.scss */
 #table_cr_wrapper .dataTables_paginate {
   text-align: center !important; }
 
-/* line 1430, _common.scss */
+/* line 1439, _common.scss */
 .no-right-padding {
   padding-right: 0 !important; }
 
-/* line 1434, _common.scss */
+/* line 1443, _common.scss */
 .no-left-padding {
   padding-left: 0 !important; }
 
-/* line 1438, _common.scss */
+/* line 1447, _common.scss */
 .btn-menu {
   margin: 10px auto 20px auto; }
-  /* line 1440, _common.scss */
+  /* line 1449, _common.scss */
   .btn-menu a:not(:last-child) {
     margin-right: 5px; }
 
-/* line 1445, _common.scss */
+/* line 1454, _common.scss */
 #id_opportunity_number_on_deck {
   width: 92% !important;
   overflow: hidden !important; }
 
-/* line 1450, _common.scss */
+/* line 1459, _common.scss */
 .configuration-accordion {
   border: 1px solid #ddd;
   margin-bottom: 5px; }
-  /* line 1451, _common.scss */
+  /* line 1460, _common.scss */
   .configuration-accordion .accordion-header {
     background-color: #5285B8;
     border: none;
@@ -1293,52 +1283,52 @@ Price list tabs
     vertical-align: middle;
     font-weight: bold;
     padding: 5px; }
-  /* line 1461, _common.scss */
+  /* line 1470, _common.scss */
   .configuration-accordion .accordion {
     border: 1px solid #ddd; }
-    /* line 1463, _common.scss */
+    /* line 1472, _common.scss */
     .configuration-accordion .accordion .card-header {
       padding: 8px 15px; }
-      /* line 1465, _common.scss */
+      /* line 1474, _common.scss */
       .configuration-accordion .accordion .card-header:hover {
         background-color: #f3f2f2; }
-      /* line 1468, _common.scss */
+      /* line 1477, _common.scss */
       .configuration-accordion .accordion .card-header .fa-chevron-down {
         font-size: 14px;
         margin-right: 10px; }
-      /* line 1472, _common.scss */
+      /* line 1481, _common.scss */
       .configuration-accordion .accordion .card-header .last-used {
         display: inline-block;
         font-size: 14px;
         font-style: italic;
         margin-right: 15px; }
-      /* line 1478, _common.scss */
+      /* line 1487, _common.scss */
       .configuration-accordion .accordion .card-header .copy-configuration-button {
         font-size: 18px;
         cursor: pointer; }
-    /* line 1483, _common.scss */
+    /* line 1492, _common.scss */
     .configuration-accordion .accordion .card-body {
       padding: 10px;
       padding-top: 0px; }
-      /* line 1486, _common.scss */
+      /* line 1495, _common.scss */
       .configuration-accordion .accordion .card-body .configuration-material-header {
         padding-left: 5px;
         padding-right: 5px;
         border-radius: 2px;
         font-weight: bold; }
-        /* line 1491, _common.scss */
+        /* line 1500, _common.scss */
         .configuration-accordion .accordion .card-body .configuration-material-header .material-description {
           display: inline-block; }
-      /* line 1495, _common.scss */
+      /* line 1504, _common.scss */
       .configuration-accordion .accordion .card-body .configuration-material {
         padding: 10px;
         background-color: #ededed;
         margin: 5px auto;
         border-radius: 2px; }
-        /* line 1500, _common.scss */
+        /* line 1509, _common.scss */
         .configuration-accordion .accordion .card-body .configuration-material .material-description {
           display: inline-block; }
-        /* line 1503, _common.scss */
+        /* line 1512, _common.scss */
         .configuration-accordion .accordion .card-body .configuration-material:hover {
           background-color: #e6e6e6; }
 
@@ -1348,9 +1338,6 @@ page error 404
 /* line 5, _page-errors.scss */
 .bg-404 {
   background: url(../img/errors-404-500/404-bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   font-family: "NokiaPureTWebRegular"; }
   /* line 14, _page-errors.scss */
@@ -1389,7 +1376,6 @@ page error 404
     background: black;
     /* The Fallback */
     background: rgba(0, 0, 0, 0.5);
-    -webkit-border-radius: 3px;
     border-radius: 3px; }
   /* line 52, _page-errors.scss */
   .bg-404 .menu-nav {
@@ -1401,7 +1387,6 @@ page error 404
     background: black;
     /* The Fallback */
     background: rgba(0, 0, 0, 0.5);
-    -webkit-border-radius: 3px;
     border-radius: 3px; }
     /* line 60, _page-errors.scss */
     .bg-404 .menu-nav li {
@@ -1423,7 +1408,6 @@ Landing page styles
   height: 433px;
   position: relative;
   overflow: hidden;
-  -webkit-border-radius: 4px;
   border-radius: 4px; }
   /* line 11, _landing.scss */
   #pop-up-news .conten-news-img img {
@@ -1487,9 +1471,10 @@ Landing page styles
   position: fixed;
   padding: 5px;
   text-align: center;
+  -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
+  -webkit-transition: padding 0.2s ease;
   transition: padding 0.2s ease;
-  -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0; }
   /* line 80, _landing.scss */
   .show-pop-up a {
@@ -1577,8 +1562,8 @@ Landing page styles
     .banner-login-form .unslider-arrow.prev {
       left: 10px;
       right: auto;
-      -ms-transform: rotate(-180deg);
-      transform: rotate(-180deg); }
+      -webkit-transform: rotate(-180deg);
+              transform: rotate(-180deg); }
   /* line 172, _landing.scss */
   .banner-login-form .unslider-nav {
     margin-top: 10px; }
@@ -1605,7 +1590,8 @@ Landing page styles
     z-index: 0 !important; }
     /* line 203, _landing.scss */
     .banner-login-form #slides li .slide-image {
-      backface-visibility: hidden !important;
+      -webkit-backface-visibility: hidden !important;
+              backface-visibility: hidden !important;
       height: auto !important;
       left: 0px !important;
       max-width: 1200px !important;
@@ -1675,7 +1661,6 @@ Landing page styles
       position: absolute;
       bottom: 10%;
       right: 20%;
-      -webkit-border-radius: 3px;
       border-radius: 3px; }
       /* line 278, _landing.scss */
       .banner-login-form .content-slides-text .btn-ghost:hover {
@@ -1700,7 +1685,6 @@ Landing page styles
     background: rgba(0, 0, 0, 0.7);
     overflow: hidden;
     padding-bottom: 10px;
-    -webkit-border-radius: 3px;
     border-radius: 3px; }
     /* line 311, _landing.scss */
     .banner-login-form .login-form .form-header {
@@ -1735,10 +1719,10 @@ Landing page styles
         -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
         -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
         outline: none;
-        -webkit-border-radius: 2px;
         border-radius: 2px; }
         /* line 347, _landing.scss */
         .banner-login-form .login-form .form-group input[type="text"]:focus, .banner-login-form .login-form .form-group input[type="password"]:focus {
@@ -1779,7 +1763,6 @@ Landing page styles
     min-height: 220px;
     padding: 10px;
     text-align: center;
-    -webkit-border-radius: 3px;
     border-radius: 3px; }
     /* line 391, _landing.scss */
     .about .stat-wrapper .stat-icon {
@@ -1805,7 +1788,6 @@ Landing page styles
 #testimonial {
   min-height: 270px;
   height: 290px;
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
   /* line 424, _landing.scss */
   #testimonial .slides-pagination a {
@@ -1981,8 +1963,6 @@ a.tooltips {
     /* line 602, _landing.scss */
     a.tooltips img:hover {
       -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
       filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
       -webkit-filter: grayscale(0%); }
@@ -2097,7 +2077,6 @@ HEADER
   width: 150px;
   z-index: 10;
   cursor: pointer;
-  -webkit-border-radius: 4px;
   border-radius: 4px; }
 
 /* line 20, _header.scss */
@@ -2108,8 +2087,8 @@ header .navbar {
   min-height: 35px;
   margin-bottom: 10px;
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease; }
   /* line 30, _header.scss */
   header .navbar.nwyear {
@@ -2125,7 +2104,6 @@ header .navbar {
       background-position: right -1px; }
     /* line 40, _header.scss */
     header .navbar.nwyear.devel {
-      -webkit-background-size: initial;
       background-size: initial; }
   /* line 45, _header.scss */
   header .navbar .nav-bar-logo {
@@ -2165,7 +2143,6 @@ header .fixed {
   width: 100%;
   z-index: 10000000;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75); }
   /* line 103, _header.scss */
   header .fixed .hello {
@@ -2209,6 +2186,7 @@ header #id-notification-panel .dropdown-menu .dropdown-toolbar .dropdown-toolbar
   display: inline-block; }
 /* line 167, _header.scss */
 header #id-notification-panel .dropdown-footer {
+  -webkit-transition: all .3s ease;
   transition: all .3s ease; }
   /* line 169, _header.scss */
   header #id-notification-panel .dropdown-footer:hover {
@@ -2288,7 +2266,6 @@ MAIN SECTION
     -webkit-border-radius: 2px;
     margin-bottom: 30px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
     box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2); }
   /* line 32, _main-section.scss */
   #main-section .tile-box-table {
@@ -2302,7 +2279,6 @@ MAIN SECTION
     -webkit-border-radius: 2px;
     margin-bottom: 30px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2);
     box-shadow: 0px 0px 5px 0px rgba(92, 92, 92, 0.2); }
   /* line 42, _main-section.scss */
   #main-section .resume .tile-header {
@@ -2474,7 +2450,6 @@ Autocomplete on WBS and other sections
 .ui-menu {
   background-color: #f2f2f2 !important;
   border: #ccc solid 1px !important;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px; }
   /* line 238, _main-section.scss */
   .ui-menu .ui-menu-item {
@@ -2536,8 +2511,8 @@ TAF
   #taf-preview-tab .unslider-arrow.prev {
     left: 10px;
     right: auto;
-    -ms-transform: rotate(-180deg);
-    transform: rotate(-180deg); }
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
 /* line 305, _main-section.scss */
 #taf-preview-tab .unslider-nav ol li {
   width: 15px;
@@ -2608,14 +2583,12 @@ footer.devel {
   border: #e5e5e5 solid 1px;
   display: block;
   position: relative;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   -webkit-box-shadow: none;
   box-shadow: none;
   position: relative;
   width: 100%;
   z-index: 99996;
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
   /* line 15, _main-menu.scss */
   #MainMenu .dropdown-menu li {
@@ -2646,7 +2619,6 @@ footer.devel {
       border-style: solid;
       border-color: #d9d9d9;
       padding: 10px;
-      -webkit-border-radius: 0px 2px 2px 0px;
       border-radius: 0px 2px 2px 0px; }
       /* line 58, _main-menu.scss */
       #MainMenu .dropdown-menu .dropdown-submenu .dropdown-submenu-container li {
@@ -2693,7 +2665,6 @@ footer.devel {
       position: absolute;
       padding: 10px;
       z-index: 1000;
-      -webkit-border-radius: 0px 2px 2px 0px;
       border-radius: 0px 2px 2px 0px; }
       /* line 110, _main-menu.scss */
       #MainMenu .dropdown-menu .dropdown-submenu .single li, #MainMenu .dropdown-menu .dropdown-submenu .doble li, #MainMenu .dropdown-menu .dropdown-submenu .fullsize li {
@@ -2921,7 +2892,8 @@ footer span {
     height: 150px;
     clip: rect(0, 75px, 150px, 0);
     background: #81CE97;
-    transform: rotate(60deg); }
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg); }
   /* line 160, _ssr.scss */
   .gt-50 #ssr_massive .tab-ssr-masive #tab1wp .ppc-progress, .gt-50 #taf-config .tab-ssr-masive #tab1wp .ppc-progress {
     clip: rect(0, 75px, 150px, 0); }
@@ -3229,7 +3201,8 @@ footer span {
 /* line 520, _ssr.scss */
 #ssr .cs_wrapper, #ssr_massive .cs_wrapper {
   margin-bottom: 5px;
-  box-shadow: none; }
+  -webkit-box-shadow: none;
+          box-shadow: none; }
   /* line 523, _ssr.scss */
   #ssr .cs_wrapper .panel-body, #ssr_massive .cs_wrapper .panel-body {
     padding: 0; }
@@ -3481,7 +3454,8 @@ footer span {
 .flip-container {
   height: 370px;
   overflow: hidden;
-  perspective: 800px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
   padding-top: 2rem;
   position: relative; }
 
@@ -3489,7 +3463,9 @@ footer span {
 .flip-card {
   height: 100%;
   position: absolute;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
   width: 95%; }
 
@@ -3501,7 +3477,8 @@ footer span {
 
 /* line 27, flipcard.scss */
 .flip-card article {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   display: block;
   height: 100%;
   margin: 0;
@@ -3512,7 +3489,9 @@ footer span {
   background: rgba(0, 0, 0, 0.65);
   border-radius: 50%;
   border: 7px solid white;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   margin: 20% auto 0;
   width: 50%; }
@@ -3528,6 +3507,7 @@ footer span {
   margin: 0;
   padding: 30px 0;
   position: absolute;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
   width: 100%; }
 
@@ -3563,7 +3543,8 @@ footer span {
   cursor: pointer;
   font-size: 20px;
   padding: 0;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   width: 100%; }
 
 /* line 94, flipcard.scss */
@@ -3584,7 +3565,8 @@ footer span {
 
 /* line 110, flipcard.scss */
 .flip-card.flipped {
-  transform: rotateY(180deg); }
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
 
 /* line 1, _newlanding.scss */
 .landing {
@@ -3605,15 +3587,15 @@ footer span {
 .nw-land-header .nl-navbar {
   background: #282828;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #282828 0%, #494949 30%, #494949 70%, #282828 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #282828 0%, #494949 30%, #494949 70%, #282828 100%);
   /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#282828), color-stop(30%, #494949), color-stop(70%, #494949), to(#282828));
   background: linear-gradient(to right, #282828 0%, #494949 30%, #494949 70%, #282828 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#282828',GradientType=1 );
   /* IE6-9 */
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 50px;
   padding: 7px 0;
   position: fixed;
@@ -3631,7 +3613,6 @@ footer span {
   /* line 42, _newlanding.scss */
   .nw-land-header .nl-navbar .main-menu li .login-btn {
     border: 1px solid white;
-    -webkit-border-radius: 5px;
     border-radius: 5px;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -3665,20 +3646,29 @@ footer span {
     -webkit-transition: all 0.3s;
     display: none;
     padding: 15px;
-    user-select: none; }
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     /* line 77, _newlanding.scss */
     .nw-land-header .nl-navbar .main-menu .nl-login-menu ul {
       background-color: rgba(0, 0, 0, 0.7);
       float: right;
       padding: 15px 0 !important;
-      user-select: none; }
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
       /* line 82, _newlanding.scss */
       .nw-land-header .nl-navbar .main-menu .nl-login-menu ul li {
         transition: all 0.3s;
         -webkit-transition: all 0.3s;
         display: block;
         height: 40px;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
         width: 150px; }
         /* line 88, _newlanding.scss */
         .nw-land-header .nl-navbar .main-menu .nl-login-menu ul li:hover {
@@ -3689,6 +3679,7 @@ footer span {
           text-decoration: none; }
   /* line 98, _newlanding.scss */
   .nw-land-header .nl-navbar .main-menu #nl-dropdown-menu {
+    -webkit-transition: all 0.3s ease !important;
     transition: all 0.3s ease !important;
     background-color: rgba(73, 73, 73, 0.7);
     float: right;
@@ -3743,6 +3734,7 @@ footer span {
     right: 10px;
     text-indent: -999em;
     top: 50%;
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
     width: 32px;
     z-index: 4; }
@@ -3755,7 +3747,6 @@ footer span {
     .nw-land-header .nl-header .unslider .unslider-arrow.prev {
       left: 10px;
       right: auto;
-      -ms-transform: rotate(-180deg);
       -webkit-transform: rotate(-180deg);
       transform: rotate(-180deg); }
   /* line 173, _newlanding.scss */
@@ -3829,6 +3820,7 @@ footer span {
       .nw-land-header .nl-header .content-overlay .nl-slide-text a {
         color: #337ab7;
         text-decoration: none;
+        -webkit-transition: all .3s ease;
         transition: all .3s ease; }
         /* line 243, _newlanding.scss */
         .nw-land-header .nl-header .content-overlay .nl-slide-text a:hover {
@@ -3908,7 +3900,6 @@ footer span {
     height: 420px !important; }
     /* line 325, _newlanding.scss */
     .nl-testimonials #slides-test .img-user {
-      -webkit-border-radius: 50%;
       border-radius: 50%;
       border: 5px solid #f5f5f5;
       height: 170px;
@@ -4013,10 +4004,9 @@ footer span {
     .cd-digit.inside .cd-digit-frame {
       background: #ffffff;
       /* Old browsers */
-      background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f9f9f9 52%, #cccccc 100%);
       /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f9f9f9 52%, #cccccc 100%);
       /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(50%, #ffffff), color-stop(52%, #f9f9f9), to(#cccccc));
       background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f9f9f9 52%, #cccccc 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 );
@@ -4032,10 +4022,9 @@ footer span {
 .cd-digit-frame {
   background: #0c0c0c;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #0c0c0c 14%, #191919 49%, black 52%, black 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #0c0c0c 14%, #191919 49%, black 52%, black 100%);
   /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14%, #0c0c0c), color-stop(49%, #191919), color-stop(52%, black), to(black));
   background: linear-gradient(to bottom, #0c0c0c 14%, #191919 49%, black 52%, black 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0c0c', endColorstr='#000000',GradientType=0 );
@@ -4050,10 +4039,9 @@ footer span {
   .cd-digit-frame.success {
     background: #0c0c0c;
     /* Old browsers */
-    background: -moz-linear-gradient(top, #ffc800 14%, #ff9900 49%, #ff8a00 52%, #633c03 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffc800 14%, #ff9900 49%, #ff8a00 52%, #633c03 100%);
     /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(14%, #ffc800), color-stop(49%, #ff9900), color-stop(52%, #ff8a00), to(#633c03));
     background: linear-gradient(to bottom, #ffc800 14%, #ff9900 49%, #ff8a00 52%, #633c03 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0c0c', endColorstr='#000000',GradientType=0 );
@@ -4151,7 +4139,8 @@ footer span {
       width: 80%; }
     /* line 549, _newlanding.scss */
     .zd-login-popup .modal-dialog .modal-header .zina-login-logo {
-      box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box;
       height: 30px;
       padding: 20px; }
     /* line 554, _newlanding.scss */
@@ -4186,7 +4175,10 @@ footer span {
       left: 3px;
       opacity: 1;
       position: relative;
-      user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
       vertical-align: top;
       width: 36.5px;
       z-index: 3; }
@@ -4489,11 +4481,13 @@ footer span {
       /* line 41, _cblworkflow.scss */
       .panel-appflow .panel-body ul .fa-arrow-circle-right.approved {
         color: #449d44;
-        transform: rotate(-90deg); }
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg); }
       /* line 45, _cblworkflow.scss */
       .panel-appflow .panel-body ul .fa-arrow-circle-right.rejected {
         color: #c9302c;
-        transform: rotate(90deg); }
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); }
     /* line 50, _cblworkflow.scss */
     .panel-appflow .panel-body ul .panel-workflow-step {
       background: #fafafa;
@@ -4654,6 +4648,65 @@ footer span {
   .navbar#navbar.fwc .top-central #message-center #counter-legend a {
     color: white; }
 
+/* line 3, _demo-custom-styles.scss */
+.navbar .top-logo .nav-bar-logo {
+  text-align: center; }
+/* line 8, _demo-custom-styles.scss */
+.navbar .demo-logo img {
+  display: inline-block;
+  left: 30px;
+  position: absolute;
+  top: 13px;
+  width: 260px; }
+
+/* line 17, _demo-custom-styles.scss */
+.popover {
+  border: 3px solid #074e8f; }
+  /* line 19, _demo-custom-styles.scss */
+  .popover .btn-demo {
+    background: #074e8f;
+    border-radius: 50%;
+    color: white;
+    padding: 1px 6px !important;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all; }
+    /* line 25, _demo-custom-styles.scss */
+    .popover .btn-demo:hover, .popover .btn-demo:active, .popover .btn-demo:focus {
+      background: #37a0ff; }
+    /* line 28, _demo-custom-styles.scss */
+    .popover .btn-demo.disabled {
+      color: #c1c1c1;
+      background: gray; }
+    /* line 32, _demo-custom-styles.scss */
+    .popover .btn-demo.demo-close {
+      position: absolute;
+      right: 4px;
+      top: 4px; }
+  /* line 39, _demo-custom-styles.scss */
+  .popover.top .arrow {
+    border-top-color: #074e8f !important; }
+    /* line 41, _demo-custom-styles.scss */
+    .popover.top .arrow:after {
+      border-top-color: #074e8f !important; }
+  /* line 47, _demo-custom-styles.scss */
+  .popover.bottom .arrow {
+    border-bottom-color: #074e8f !important; }
+    /* line 49, _demo-custom-styles.scss */
+    .popover.bottom .arrow:after {
+      border-bottom-color: #074e8f !important; }
+  /* line 55, _demo-custom-styles.scss */
+  .popover.left .arrow {
+    border-left-color: #074e8f !important; }
+    /* line 57, _demo-custom-styles.scss */
+    .popover.left .arrow:after {
+      border-left-color: #074e8f !important; }
+  /* line 63, _demo-custom-styles.scss */
+  .popover.right .arrow {
+    border-right-color: #074e8f !important; }
+    /* line 65, _demo-custom-styles.scss */
+    .popover.right .arrow:after {
+      border-right-color: #074e8f !important; }
+
 /*@import extra style for external modules*/
 /******************************
 Help desk
@@ -4670,7 +4723,6 @@ Help desk
   padding: 0px; }
 /* line 16, _help-desk.scss */
 .helpdesk .ui-corner-all {
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 /* line 19, _help-desk.scss */
 .helpdesk .ui-tabs .ui-tabs-nav {
@@ -4681,7 +4733,6 @@ Help desk
   border: none; }
 /* line 26, _help-desk.scss */
 .helpdesk .ui-corner-top {
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0; }
 /* line 29, _help-desk.scss */
 .helpdesk .ui-tabs-panel {
