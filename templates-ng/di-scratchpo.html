@@ -1,0 +1,155 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="">Home</a></li>
+        <li class="active">Scratch PO Creation</li>
+        <li class="active">Scratch PO Creation Upload File</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Scratch PO Creation</h1>
+    </div>
+  </div>
+  <!-- Contents -->
+  <div class="row">
+    
+    <div class="col-md-7">
+      <div class="tile-box-padding">
+        <form method="POST" enctype="multipart/form-data"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="XyiyYLdu2nN43LQbykXnMUk5DMl9Tl6D"></div>
+        <div class="">
+          
+          
+          
+          
+          <div class="form-group">
+            
+            <label class="control-label">Uploaded file</label>
+            <span class="file-input file-input-new">
+              <div class="kv-upload-progress hide"></div>
+              <div class="input-group ">
+                <div tabindex="-1" class="form-control file-caption  kv-fileinput-caption">
+                  <span class="file-caption-ellipsis" title="Upload xls,xlsx file here">…</span>
+                  <div class="file-caption-name" title="Upload xls,xlsx file here"><span class="glyphicon glyphicon-file kv-caption-icon"></span>Upload xls,xlsx file here</div>
+                </div>
+                <div class="input-group-btn">
+                  <div class="btn btn-primary btn-file" id="data-importer-upload" data-toggle="modal" data-target="#uploader-modal"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse … </div>
+                </div>
+                <div id="uploader-modal" class="modal fade" role="dialog">
+                  <div class="modal-dialog" style="width:800px;">
+                    <div class="modal-content">
+                      <img src="../static/img/gifs/scratchpo.gif" style="width:800px;">
+                    </div>
+                  </div>
+                </div>
+              </div></span>
+              
+            </div>
+            
+            
+            
+            <div class="form-group">
+              
+              <label class="control-label" id="data-importer-customer-team">Customer team</label>
+              <select id="id_customer_team" name="customer_team" class="form-control" tabindex="5">
+                <option value="">---------</option>
+                <option value="92" selected="selected">Customer Team 1</option>
+                <option value="14">Customer Team 2</option>
+                <option value="17">Customer Team 3</option>
+                <option value="59">Customer Team 4</option>
+              </select>
+              
+            </div>
+            
+            
+            
+            
+            <div class="form-group">
+              <label for="id_spos_aligned_in_ipm" class="control-label">
+                <input checked="checked" type="checkbox" name="spos_aligned_in_ipm" id="id_spos_aligned_in_ipm" tabindex="6">
+                Align SPOs in IPM
+              </label>
+            </div>
+            
+            
+            
+            
+            <div class="form-group">
+              <label for="id_create_wbs" class="control-label">
+                <input checked="checked" type="checkbox" name="create_wbs" id="id_create_wbs" tabindex="7">
+                Retrieve or Create WBS Level 4
+              </label>
+            </div>
+            
+            
+          </div>
+          
+          
+          
+          <div class="form-group">
+            
+            <a class="btn btn-primary" href="scratchpo-validations" id="data-importer-proceed"><span class="glyphicon glyphicon-import"></span>
+            Import file
+          </a>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="">
+      <div class="bs-callout" id="callout-overview-not-both">
+        Please, follow <a href="../static/files/scratch_po.xls" id="template-file-link">this template file</a> to avoid validation errors.
+      </div>
+      <div class="bs-callout" id="callout-overview-not-both">
+        Fields marked with <span class="mandatory">*</span> are <strong>required</strong>
+      </div>
+      
+      
+      
+      <div class="bs-callout" id="callout-overview-not-both">
+        <h4>Please take into account the following rules to complete the file to upload, so the process could be successful:</h4>
+        <strong>Mandatory fields</strong>
+        <ul>
+          <li>Group</li>
+          <li>Vendor Outline Agreement (VOA)</li>
+          <li>VOA Item Number</li>
+          <li>WBS</li>
+        </ul>
+        <p>In <strong>AW1</strong>, you can include <strong>Yes</strong> or leave it <strong>empty</strong>. This column serves to indicate if the Scratch PO is a Sellable Additional Work.</p>
+        <p>If you want to have your <strong>SPO linked in IPM</strong>, you must provide a <strong>4th</strong> level WBS in WBS column.</p>
+        <p><strong>Acc. Indicator</strong> is linked with the type of the process you're working with. It can be left <strong>empty</strong> in case it's a pure Non B2B service. Otherwise, you can use the following categories (specially when working with Change Requests SPOs)</p>
+        <ul>
+          <li><strong>9</strong> for Risk Contingency </li>
+          <li><strong>93</strong> for NCC Resources </li>
+          <li><strong>94</strong> for NCC Delivery </li>
+          <li><strong>95</strong> for NCC Execution </li>
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div class="modal fade" id="download_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="myModalLabel">Download templates</h4>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger">
+            <strong>Missing Columns: </strong> <span id="columns-with-errors"></span>
+          </div>
+          <div class="bs-callout" id="callout-overview-not-both">
+            Please, follow <a href="/importers/scratchponam/download-template/">this template file</a> to avoid validation errors.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="../static/js/tours/data-importer-tour.js"></script>

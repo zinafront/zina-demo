@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/bootstrap-tour.min.css">
+</head>
+<body>
+	<section class="cualquiermieda" style="text-align:center; margin-top: 400px;">
+		<a href="#" class="btn btn-info" id="info">Info</a>
+		<a href="#" class="btn btn-warning" id="warning">Warning</a>
+		<a href="#" class="btn btn-danger" id="danger">Danger</a>
+		<a href="#" class="btn btn-success" id="success">Success</a>
+	</section>
+
+	<script src="../static/js/jquery-1.12.4.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/bootstrap-tour.min.js"></script>
+	<script>
+		$(function(){
+			var puta = new Tour({
+				steps: [{
+					element: "#info",
+					title: "Info",
+					content: "Pues el hijueputa texto de info"
+				},
+				{
+					element: "#warning",
+					title: "warning",
+					content: "Pues el hijueputa texto de warning"
+				},
+				{
+					element: "#danger",
+					title: "danger",
+					content: "Pues el hijueputa texto de danger"
+				},
+				{
+					element: "#success",
+					title: "success",
+					content: "Pues el hijueputa texto de success"
+				}],
+			});
+			puta.init();
+			puta.restart();
+			puta.start();
+		});
+	</script>
+</body>
+</html>

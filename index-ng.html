@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="zinademo">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/demo-landing-styles.css">
+  <title>Document</title>
+</head>
+<body id="demo-landing">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <figure class="zina-logo">
+            <img src="static/img/zinawfm-interactive.png">
+          </figure>
+        </div>
+        <div class="col-xs-6 col-md-3 pull-right text-right">
+          <a href="http://zina.net.nokia.com" target="_blank" id="gotoZina">Go to <strong>ZINA</strong> Site</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="demo-description">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="description-container">
+          <span class="description" id="sp" style="display:none;">Bienvenidos a la guía interactiva de las funcionalidades de ZINA Workflow Management. Para comenzar, haz click en el idioma de tu preferencia.</span>
+          <span class="description" id="en">Welcome to ZINA Workflow Management Features interactive guide. To start, click on your preferred language.</span>
+          <span class="description" id="pt" style="display:none;">Bem-vindos à guia interativa das funcionalidades de ZINA Workflow Management. Para começar, clique no idioma da sua preferência.</span>
+          <div class="row">
+            <div class="button-group">
+              <ul class="list-inline list-unstyled">
+                <li><a href="templates-ng/data-importer-scratchpo.html?lang=en" id="lang-en" class="btn btn-outline btn-lang">
+                  <figure class="flag"><img src="static/img/us-flag.jpg"></figure>
+                  English</a></li>
+                <li><a href="templates-ng/data-importer-scratchpo.html?lang=sp" id="lang-sp" class="btn btn-outline btn-lang">
+                  <figure class="flag"><img src="static/img/sp-flag.jpg"></figure>
+                  Español</a></li>
+                <li><a href="templates-ng/data-importer-scratchpo.html?lang=pt" id="lang-pt" class="btn btn-outline btn-lang">
+                  <figure class="flag"><img src="static/img/br-flag.jpg"></figure>
+                  Português</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" id="zina-screenshot">
+          <figure>
+            <img src="static/img/zina-home-screenshot.jpg">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <span>© Nokia 2018 | ZINATeam</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="static/js/jquery-1.10.2.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script>
+    txtEn = $('#en');
+    txtSp = $('#sp');
+    txtPt = $('#pt');
+    btnLang = $('.btn-lang');
+
+    btnLang.on('mouseenter',function(){
+      if ($(this).attr("id")=="lang-sp") {
+        txtEn.hide();
+        txtPt.hide();
+        txtSp.fadeIn();
+      }
+      else if ($(this).attr("id")=="lang-pt") {
+        txtEn.hide();
+        txtSp.hide();
+        txtPt.fadeIn();
+      }
+      else if ($(this).attr("id")=="lang-en") {
+        txtPt.hide();
+        txtSp.hide();
+        txtEn.fadeIn();
+      }
+    });
+
+  </script>
+</body>
+</html>
