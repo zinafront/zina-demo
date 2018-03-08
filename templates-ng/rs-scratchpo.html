@@ -4398,38 +4398,39 @@
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
     });
-     $(function(){
-      $('#SapModal').modal();
-      $('#collapse-all').on('click', function () {
-          $('#accordion .panel-collapse').collapse('hide');
-      });
-      $('#expand-all').on('click', function () {
-          $('#accordion .panel-collapse').collapse('show');
-      });
-    });
-     $('#modal-next-button').on('click',function(){
-      $('.modal-dialog').addClass('video');
-      $('.video-prelude').hide();
-      $('.video-container').removeClass('hide');
-      $yt_iframe= '<iframe width="1200" height="675" src="https://www.youtube.com/embed/fhNRhjSURRg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-      $('#sap-modal-video').html($yt_iframe);
+    resultsSimulation();
+    //  $(function(){
+    //   $('#SapModal').modal();
+    //   $('#collapse-all').on('click', function () {
+    //       $('#accordion .panel-collapse').collapse('hide');
+    //   });
+    //   $('#expand-all').on('click', function () {
+    //       $('#accordion .panel-collapse').collapse('show');
+    //   });
+    // });
+    //  $('#modal-next-button').on('click',function(){
+    //   $('.modal-dialog').addClass('video');
+    //   $('.video-prelude').hide();
+    //   $('.video-container').removeClass('hide');
+    //   $yt_iframe= '<iframe width="1200" height="675" src="https://www.youtube.com/embed/fhNRhjSURRg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    //   $('#sap-modal-video').html($yt_iframe);
       
-     });
+    //  });
   </script>
   <script>
-    modal = $('#SapModal');
-    var prelude = $('.video-prelude p');
-    var modalnext = $('#modal-next-button');
-      var cookieLang = Cookies.get('tourLang');
-      if (cookieLang == 'sp') {
-        prelude.html("Nuestro proceso de automatización está basado en robots de software. Presiona el botón <strong><em>Siguiente</em></strong> para ver una demostración de cómo el robot funciona en SAP.");
-        modalnext.html("Siguiente");
-      }
-      else if (cookieLang == 'pt') {
-        prelude.html("Nosso processo de automação é baseado em robôs de software. Pressione o botão <strong><em>Seguinte</em></strong> abaixo, para ver uma demonstração de vídeo de como o robô funciona na SAP.");
-        modalnext.html("Seguinte");
-      }
-    modal.on("hidden.bs.modal", function () {
-      resultsSimulation();
-    });
+    // modal = $('#SapModal');
+    // var prelude = $('.video-prelude p');
+    // var modalnext = $('#modal-next-button');
+    //   var cookieLang = Cookies.get('tourLang');
+    //   if (cookieLang == 'sp') {
+    //     prelude.html("Nuestro proceso de automatización está basado en robots de software. Presiona el botón <strong><em>Siguiente</em></strong> para ver una demostración de cómo el robot funciona en SAP.");
+    //     modalnext.html("Siguiente");
+    //   }
+    //   else if (cookieLang == 'pt') {
+    //     prelude.html("Nosso processo de automação é baseado em robôs de software. Pressione o botão <strong><em>Seguinte</em></strong> abaixo, para ver uma demonstração de vídeo de como o robô funciona na SAP.");
+    //     modalnext.html("Seguinte");
+    //   }
+    // modal.on("hidden.bs.modal", function () {
+    //   resultsSimulation();
+    // });
   </script>
