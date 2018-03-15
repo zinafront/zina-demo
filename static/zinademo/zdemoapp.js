@@ -1,20 +1,19 @@
-// var app = angular.module('zinaDemo', []);
-// app.controller('myCtrl', function($scope) {
-//     $scope.firstName= "John";
-//     $scope.lastName= "Doe";
-// });
-
-var app = angular.module('zinaDemo', ['ngRoute'])
-app.config(function($routeProvider, $locationProvider) {
-  $routeProvider
-  .when("/scratchpo", {
-    templateUrl : "di-scratchpo.html",
-  })
-  .when("/scratchpo-validations", {
-    templateUrl : "va-scratchpo.html",
-  })
-  .when("/scratchpo-results", {
-    templateUrl : "rs-scratchpo.html",
-  });
-  $locationProvider.html5Mode(true);
-});
+(function(){
+  var app = angular.module('zinaDemo', ['ngRoute']);
+  app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider){
+   $routeProvider
+    .when('/guide/import-spo', {
+      templateUrl: 'guide/di-scratchpo.html'
+    })
+    .when('/guide/validate-spo', {
+      templateUrl: 'guide/va-scratchpo.html'
+    })
+    .when('/guide/results-spo', {
+      templateUrl: 'guide/rs-scratchpo.html'
+    })
+    .otherwise({
+      templateUrl: 'guide/di-scratchpo.html'
+    });
+    $locationProvider.hashPrefix('');
+  }]);
+})();

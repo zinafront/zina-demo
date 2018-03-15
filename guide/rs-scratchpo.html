@@ -4391,6 +4391,17 @@
       </div>
     </div>
   </div>
+  <div id="SapModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="video-prelude">
+          <p>Our automation process is based in software robots. Press <strong><em>Next</em></strong> button below, to see a video demonstration of how the robot works on SAP.</p>
+          <button class="btn btn-default" id="modal-next-button">Next »</button>
+        </div>
+        <div class="video-container hide" id="sap-modal-video"></div>
+      </div>
+    </div>
+  </div>
   <script src="../static/js/tours/results-tour.js"></script>
   <script src="../static/js/results_simulation.js"></script>
   <script>
@@ -4398,39 +4409,39 @@
       var win =$(window).scrollTop();
       $("#global-search-top .input-group").detach().appendTo('#global-search');
     });
-    resultsSimulation();
-    //  $(function(){
-    //   $('#SapModal').modal();
-    //   $('#collapse-all').on('click', function () {
-    //       $('#accordion .panel-collapse').collapse('hide');
-    //   });
-    //   $('#expand-all').on('click', function () {
-    //       $('#accordion .panel-collapse').collapse('show');
-    //   });
-    // });
-    //  $('#modal-next-button').on('click',function(){
-    //   $('.modal-dialog').addClass('video');
-    //   $('.video-prelude').hide();
-    //   $('.video-container').removeClass('hide');
-    //   $yt_iframe= '<iframe width="1200" height="675" src="https://www.youtube.com/embed/fhNRhjSURRg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-    //   $('#sap-modal-video').html($yt_iframe);
+    //resultsSimulation();
+     $(function(){
+      $('#SapModal').modal();
+      $('#collapse-all').on('click', function () {
+          $('#accordion .panel-collapse').collapse('hide');
+      });
+      $('#expand-all').on('click', function () {
+          $('#accordion .panel-collapse').collapse('show');
+      });
+    });
+     $('#modal-next-button').on('click',function(){
+      $('.modal-dialog').addClass('video');
+      $('.video-prelude').hide();
+      $('.video-container').removeClass('hide');
+      $yt_iframe= '<iframe width="1200" height="675" src="https://www.youtube.com/embed/fhNRhjSURRg?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      $('#sap-modal-video').html($yt_iframe);
       
-    //  });
+     });
   </script>
   <script>
-    // modal = $('#SapModal');
-    // var prelude = $('.video-prelude p');
-    // var modalnext = $('#modal-next-button');
-    //   var cookieLang = Cookies.get('tourLang');
-    //   if (cookieLang == 'sp') {
-    //     prelude.html("Nuestro proceso de automatización está basado en robots de software. Presiona el botón <strong><em>Siguiente</em></strong> para ver una demostración de cómo el robot funciona en SAP.");
-    //     modalnext.html("Siguiente");
-    //   }
-    //   else if (cookieLang == 'pt') {
-    //     prelude.html("Nosso processo de automação é baseado em robôs de software. Pressione o botão <strong><em>Seguinte</em></strong> abaixo, para ver uma demonstração de vídeo de como o robô funciona na SAP.");
-    //     modalnext.html("Seguinte");
-    //   }
-    // modal.on("hidden.bs.modal", function () {
-    //   resultsSimulation();
-    // });
+    modal = $('#SapModal');
+    var prelude = $('.video-prelude p');
+    var modalnext = $('#modal-next-button');
+      var cookieLang = Cookies.get('tourLang');
+      if (cookieLang == 'sp') {
+        prelude.html("Nuestro proceso de automatización está basado en robots de software. Presiona el botón <strong><em>Siguiente</em></strong> para ver una demostración de cómo el robot funciona en SAP.");
+        modalnext.html("Siguiente");
+      }
+      else if (cookieLang == 'pt') {
+        prelude.html("Nosso processo de automação é baseado em robôs de software. Pressione o botão <strong><em>Seguinte</em></strong> abaixo, para ver uma demonstração de vídeo de como o robô funciona na SAP.");
+        modalnext.html("Seguinte");
+      }
+    modal.on("hidden.bs.modal", function () {
+      resultsSimulation();
+    });
   </script>

@@ -4707,6 +4707,46 @@ footer span {
     .popover.right .arrow:after {
       border-right-color: #074e8f !important; }
 
+/* line 72, _demo-custom-styles.scss */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  /* line 78, _demo-custom-styles.scss */
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* line 88, _demo-custom-styles.scss */
+#SapModal .modal-dialog {
+  width: 30%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  /* line 93, _demo-custom-styles.scss */
+  #SapModal .modal-dialog.video {
+    width: 60%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+  @media screen and (max-width: 500px) {
+    /* line 88, _demo-custom-styles.scss */
+    #SapModal .modal-dialog {
+      width: 95%; }
+      /* line 101, _demo-custom-styles.scss */
+      #SapModal .modal-dialog.video {
+        width: 95%; } }
+
+/* line 107, _demo-custom-styles.scss */
+.video-prelude {
+  width: 70%;
+  margin: 15% auto;
+  text-align: center;
+  font-size: 16px; }
+
 /*@import extra style for external modules*/
 /******************************
 Help desk
