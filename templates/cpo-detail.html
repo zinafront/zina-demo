@@ -235,402 +235,967 @@
                 <ol class="breadcrumb">
                   <li><a href="">Home</a></li>
                   <li class="active">Customer Purchase Orders</li>
-                  <li class="active">4500198782</li>
+                  <li class="active">123456789</li>
                 </ol>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <h1>Customer Purchase Order 4500198782</h1>
+                <h1>Customer Purchase Order 123456789</h1>
               </div>
             </div>
             <!-- Contents -->
             <div class="row">
+              
               <div class="col-md-12">
                 <div class="tile-box-padding cpo-details">
+                  
                   <div class="row">
                     <div class="col-md-12">
-                      <h3>Basic Information</h3>
+                      <h3>
+                      Basic Information
+                      </h3>
                     </div>
                     <div class="col-sm-9 col-md-10">
                       <div class="table-responsive">
-                        <table class="table table-hover table-bordered two-col-table" id="CPOBasicInfo">
+                        <table class="table table-hover table-bordered two-col-table" id="cpo_detail" data-cpo_id="385480" data-show_modal_reject_cpo="false">
                           <tbody>
                             <tr>
-                                <td><strong>Customer</strong></td>
-                                <td id="customer-name">Customer Team 1</td>
+                              <td><strong>Customer</strong></td>
+                              <td id="customer-name" style="text-transform: capitalize;">Customer Team 1</td>
                             </tr>
                             <tr>
-                                <td><strong>CPO Number </strong></td>
-                                <td>4500197106</td>
+                              <td><strong>CPO Number </strong></td>
+                              <td>123456789</td>
                             </tr>
                             <tr>
-                                <td><strong>Provider</strong></td>
-                                <td>NOKIA SOLUTIONS AND NETWORKS OY</td>
+                              <td><strong>Provider</strong></td>
+                              <td>Nokia Inc.</td>
+                            </tr>                            
+                            <tr>
+                              <td><strong>Provider NIT</strong></td>
+                              <td>9876543210</td>
+                            </tr>                            
+                            <tr>
+                              <td><strong>Creation Date</strong></td>
+                              <td>Dec. 15, 2017, midnight</td>
                             </tr>
                             <tr>
-                                <td><strong>Provider NIT</strong></td>
-                                <td>444441850</td>
+                              <td><strong>Received Date</strong></td>
+                              <td>Dec. 22, 2017, 10:05 a.m.</td>
                             </tr>
                             <tr>
-                                <td><strong>Creation Date</strong></td>
-                                <td>Dec. 19, 2017, midnight</td>
+                              <td><strong>Currency</strong></td>
+                              <td>USD</td>
                             </tr>
                             <tr>
-                                <td><strong>Received Date</strong></td>
-                                <td>Dec. 26, 2017, 3:20 p.m.</td>
+                              <td><strong>Value</strong></td>
+                              <td>XX,XXX.XX</td>
                             </tr>
+                            
                             <tr>
-                                <td><strong>Currency</strong></td>
-                                <td>USD</td>
+                              <td><strong>Payment conditions</strong></td>
+                              <td>Expiration in 60 days</td>
                             </tr>
+                            
                             <tr>
-                                <td><strong>Value</strong></td>
-                                <td>USD $XXXXXX</td>
+                              <td><strong>Creation user</strong></td>
+                              <td>Zina</td>
                             </tr>
+                            
                             <tr>
-                                <td><strong>Payment conditions</strong></td>
-                                <td>PAGO 50% A 30 DÍAS, 50% A 180 DÍAS</td>
+                              <td><strong>Requester information</strong></td>
+                              <td>REQUESTER FULL NAME</td>
                             </tr>
+                            
+                            
                             <tr>
-                                <td><strong>Creation user</strong></td>
-                                <td>Zina</td>
+                              <td><strong>Plant (origin)</strong></td>
+                              <td>XXXX</td>
                             </tr>
+                            
                             <tr>
-                                <td><strong>Requester information</strong></td>
-                                <td>Requester Name</td>
+                              <td><strong>Status</strong></td>
+                              <td>Validated</td>
                             </tr>
-                            <tr>
-                                <td><strong>Plant (origin)</strong></td>
-                                <td>FI85</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Status</strong></td>
-                                <td>Default</td>
-                            </tr>
+                            
+                            
+                            
+                            
                           </tbody>
                         </table>
                       </div>
                     </div>
-                    <div class="col-sm-3 col-md-2 cpo-actions no-left-padding text-center" id="CPOActions">
-                      <a data-toggle="modal" data-target="#upload_file" class="btn btn-default btn-block" id="CPOUpload"><i class="fa fa-upload"></i> Upload proposal file</a>
+                    <div class="col-sm-3 col-md-2 cpo-actions no-left-padding text-center">
+                      <a data-toggle="modal" data-target="#upload_file" class="btn btn-default btn-block"><i class="fa fa-upload"></i> Upload proposal file</a>
+                      
                       <hr>
-                      <a href="../static/files/4500197106.pdf" target="_blank" class="btn btn-default btn-block" id="CPODownload"><i class="fa fa-download"></i>  Download CPO</a>
-                      <a data-toggle="modal" data-target="#revalidateCpo" class="btn btn-default btn-block" id="CPORevalidate"><i class="fa fa-cogs"></i>  Revalidate CPO</a>
-                      <a data-toggle="modal" data-target="#reparseCpo" class="btn btn-info btn-block" id="CPOReparse"><i class="fa fa-refresh"></i>  Re-parse file</a>
+                      
+                      
+                      <a href="../static/files/4500197106.pdf" class="btn btn-default btn-block"><i class="fa fa-download"></i>  Download CPO</a>
+                      
+                      
+                      
+                      <a data-toggle="modal" data-target="#revalidateCpo" class="btn btn-info btn-block"><i class="fa fa-cogs"></i>  Revalidate CPO</a>
+                      
+                      
+                      
+                      
+                      <a data-toggle="modal" data-target="#reparseCpo" class="btn btn-info btn-block"><i class="fa fa-refresh"></i>  Re-parse file</a>
+                      
+                      
+                      
                       <hr>
                       <a data-toggle="modal" data-target="#chage_status_cpo_acc" class="btn btn-success btn-block" id="CPOAccept"><i class="fa fa-check"></i>  Accept CPO</a>
                       <a data-toggle="modal" data-target="#chage_status_cpo_rej" class="btn btn-danger btn-block"><i class="fa fa-close"></i>  Reject CPO</a>
                       <hr>
+                      <a href="link-opportunity.html" class="btn btn-primary  btn-block" id="assign_cpo_items_to_owner"><i class="fa fa-link"></i>&nbsp;&nbsp;Link opportunity</a>
+                      <hr>
+                      
+                      <hr>
+                      
+                    </div>
+                    <div id="upload_file" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Upload proposal file for CPO - 123456789 </h4>
+                          </div>
+                          <div class="modal-body text-center">
+                            <form action="" method="post" class="" enctype="multipart/form-data">
+                              <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="d166704659b4883a004c0a6da1d7e3c3"></div>
+                              <input name="modal-name" id="modal-name" type="hidden" value="upload_files">
+                              <input name="cpo_number" id="cpo_number" type="hidden" value="4500196565">
+                              <p><label for="id_uploaded_file">CPO Proposal File:</label> <span class="file-input file-input-new">
+                              <div class="kv-upload-progress hide"></div>
+                              <div class="input-group ">
+                                <div tabindex="-1" class="form-control file-caption  kv-fileinput-caption">
+                                  <span class="file-caption-ellipsis">…</span>
+                                  <div class="file-caption-name"></div>
+                                </div>
+                                <div class="input-group-btn">
+                                  <!-- <button type="button" title="Clear selected files" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i> Remove</button>
+                                  <button type="button" title="Abort ongoing upload" class="hide btn btn-default fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i> Cancel</button> -->
+                                  
+                                  <div class="btn btn-primary btn-file"> <i class="glyphicon glyphicon-folder-open"></i> &nbsp;Browse …</div>
+                                </div>
+                              </div></span></p>
+                              
+                              <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary" name="action" value="Upload">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                Upload file
+                                </button>
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="chage_status_cpo_rej" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <form action="." method="POST" name="reject_form">
+                          <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="d166704659b4883a004c0a6da1d7e3c3"></div>
+                          <input type="hidden" name="form" value="reject_form">
+                          <input type="hidden" name="customer_purchase_order" value="4500196565">
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">×</button>
+                              <h4 class="modal-title">Reject CPO confirmation</h4>
+                            </div>
+                            <div class="modal-body text-center">
+                              <i class="fa fa-close" style="font-size: 40px;color: #d9534f;"></i>
+                              <p>You are about to Reject CPO File. Are you sure?</p>
+                              <div class="form-group">
+                                <label>Email(s) to send notification (Only one email per line):</label>
+                                
+                                <textarea id="id_emails" class="form-control" rows="10" cols="40" name="emails"></textarea>
+                              </div>
+                              <div class="form-group">
+                                <label>Reason to be rejected:</label>
+                                
+                                <textarea id="id_body" class="form-control" rows="10" cols="40" name="body"></textarea>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                              <a href="#" class="btn btn-primary" name="action" value="Upload" data-dismiss="modal"><span class="glyphicon glyphicon-ok">&nbsp;</span>Yes, proceed</a>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div id="chage_status_cpo_acc" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Accept CPO confirmation</h4>
+                          </div>
+                          <div class="modal-body text-center">
+                            <i class="fa fa-check-circle-o s" style="font-size: 40px;color: #5cb85c;"></i>
+                            <p>You are about to Accept CPO File. Are you sure?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i>  Yes, proceed</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="revalidateCpo" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Revalidate confirmation</h4>
+                          </div>
+                          <div class="modal-body text-center">
+                            <i class="fa fa-exclamation-triangle huge"></i>
+                            <p>You are about to Revalidate CPO File. Are you sure?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i>  Yes, proceed</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="reparseCpo" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Re-parse confirmation</h4>
+                          </div>
+                          <div class="modal-body text-center">
+                            <i class="fa fa-exclamation-triangle huge"></i>
+                            <p>You are about to Re-parse CPO File. Are you sure?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i>  Yes, proceed</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="updateAdquira" class="modal fade">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Information</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Update from Adquira will remove any other data registred, do you wanna confirm this?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i> Yes, proceed</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-md-2 no-left-padding cpo-history">
-                      <table class="table table-hover table-bordered table-condensed table-striped" id="CPOHistory">
+                      <table class="table table-hover table-bordered table-condensed table-striped">
                         <thead>
                           <tr>
-                              <th><i style="color:white;" class="fa fa-clock-o"></i> CPO History</th>
+                            <th><i style="color:white;" class="fa fa-clock-o"></i> CPO History</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr><td class="no-cpo-history">
+                            <p style="padding:30px 0;" class="text-center">No files available for download yet.</p>
+                          </td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tile-box-padding cpo-contract">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>
+                    Contract Information
+                    </h3>
+                  </div>
+                  
+                  <form method="post" id="contract-form" name="contract_form">
+                    <div class="col-sm-9 col-md-10">
+                      <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="d166704659b4883a004c0a6da1d7e3c3"></div>
+                      <div class="form-group">
+                        <input type="hidden" name="form" value="contract_form">
+                        
+                        <select id="id_contract_information" name="contract_information" class="form-control" tabindex="5">
+                          <option value=''>----------</option>
+                            <option value=''>----------</option>
+                            <option value=''>001 Contract 1</option>
+                            <option value=''>002 Contract 2</option>
+                            <option value=''>003 Contract 3</option>
+                            <option value=''>004 Contract 4</option>
+                            <option value='' selected='selected'>005 Contract 5</option>
+                            <option value=''>006 Contract 6</option>
+                            <option value=''>007 Contract 7</option>
+                            <option value=''>008 Contract 8</option>
+                            <option value=''>009 Contract 9</option>
+                            <option value=''>010 Contract 10</option>
+                        </select>
+                        
+                      </div>
+                    </div>
+                    <div class="col-sm-3 col-md-2 no-left-padding text-center">
+                      <a href="#" class="btn btn-primary btn-block" value="Save">
+                      <span class="glyphicon glyphicon-ok"></span>
+                      Update contract
+                      </a>
+                    </div>
+                  </form>
+                  
+                  <div class="col-sm-9 col-md-10">
+                    <div class="table-responsive">
+                      
+                      <table id="contract_information" class="table table-hover table-bordered two-col-table">
+                        <tbody>
+                          <tr>
+                            <td><strong>Contract number</strong></td>
+                            <td>005</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Contract name</strong></td>
+                            <td>Contract 5</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Technology</strong></td>
+                            <td>WCDMA/3G</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Element</strong></td>
+                            <td>Services</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Type</strong></td>
+                            <td>Services</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Risk transfer</strong></td>
+                            <td>NA</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Start date</strong></td>
+                            <td>24/10/2014</td>
+                          </tr>
+                          <tr>
+                            <td><strong>Due date</strong></td>
+                            <td>29/09/2018</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="tile-box-padding cpo-items">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h3 style="display:inline-block;">CPO Items</h3>
+                  </div>
+                  <form method="post" id="cpo_form" name="cpo_form" class="form-inline">
+                    <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="d166704659b4883a004c0a6da1d7e3c3"></div>
+                    <div class="col-md-9 text-right">
+                      <span class="label label-success" style="padding:5px 10px;">CPO NET VALUE: USD $ XX,XXX</span>
+                      <input type="hidden" value="$ 37,600" id="hidden_test">
+                      
+                    </div>
+                    <div class="col-md-12 text-right">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="text-left">
+                            <div class="form-group">
+                              <label for="items_per_page">Shows</label>
+                              <select name="items_per_page" class="form-control" id="items_per_page" tabindex="6">
+                                <option value="10" selected="">10</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="*">all</option>
+                              </select>
+                              <label>&nbsp;Items</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="form-group cpo-cancel-check">
+                            <input type="hidden" name="form" value="cpo_form">
+                            
+                            <input type="checkbox" name="cancelled" id="id_cancelled" tabindex="7">
+                            
+                            Cancelled
+                            
+                            
+                            <input type="hidden" name="cancel_related_proposal_materials" id="id_cancel_related_proposal_materials">
+                            
+                            &nbsp;
+                          </div>
+                          
+                          <a href="#" class="btn btn-primary" style="border:none;"><i class="fa fa-check"></i>&nbsp;&nbsp;Save Changes</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="id_error_cpos_taken" class="alert alert-danger" hidden=""></div>
+                    <div class="col-md-12">
+                      <div class="table-responisve" style="margin-top:15px;">
+                        <table id="cpo_item_table" class="table table-hover table-bordered" data-show_opportunity_link_form="" show_opportunity_link_form="">
+                          <thead>
+                            <tr>
+                              <th>Item</th>
+                              <th>Site</th>
+                              <th>Description</th>
+                              <th>Quantity</th>
+                              <th>Unit value</th>
+                              <th>Total value</th>
+                            </tr>
+                          </thead>
+                          <tbody id="cpo_items_table">
+                            
+                            <tr>
+                              <td class="text-center">
+                                <input class="hidden" type="checkbox" name="cpos_items_to_link" value="1615699" checked="checked" tabindex="8">
+                                <a href="/cpos/4500196565-385480/1/">1</a>
+                              </td>
+                              <td>
+                                
+                                
+                                
+                                None
+                                
+                                
+                                
+                              </td>
+                              <td>SERVICIOS DE IMPLEMENTACION                          </td>
+                              <td class="text-center">4</td>
+                              <td class="text-center">$ XXX</td>
+                              <td class="text-center">$ X,XXX</td>
+                            </tr>
+                            
+                            <tr>
+                              <td class="text-center">
+                                <input class="hidden" type="checkbox" name="cpos_items_to_link" value="1615700" checked="checked" tabindex="9">
+                                <a href="/cpos/4500196565-385480/2/">2</a>
+                              </td>
+                              <td>
+                                
+                                
+                                
+                                None
+                                
+                                
+                                
+                              </td>
+                              <td>SERVICIOS DE IMPLEMENTACION                          </td>
+                              <td class="text-center">43</td>
+                              <td class="text-center">$ XXX</td>
+                              <td class="text-center">$ XX,XXX</td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="items-table-paginator">
+                        
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+              <div class="tile-box-padding order-in-take">
+                <div class="row">
+                  <div class="col-md-7">
+                    <h3 style="display:inline-block;">Order intake</h3>&nbsp;-&nbsp;(OPPORTUNITY NUMBER: 20180000)<br>
+                    
+                    <span class="label label-info" style="padding:5px 10px;"> OPPORTUNITY NAME:&nbsp;NAME 2018</span>
+                    <span class="label label-info" style="padding:5px 10px;"> OWNER:&nbsp;OPPORTUNITY OWNER NAME</span>
+                  </div>
+                  <div class="col-md-5 pull-right">
+                    <div class="text-right">
+                      <br>
+                      
+                      <a class="btn btn-primary" data-toggle="modal" data-target="#unlink_bl_modal"><i class="fa fa-chain-broken"></i>&nbsp;&nbsp;Unlink opportunities</a>
+                      
+                    </div>
+                    <br>
+                  </div>
+                  <div class="col-md-12">
+                    <table class="table table-hover table-bordered">
+                      <thead>
+                        <tr>
+                          <th>BG</th>
+                          <th>BU</th>
+                          <th>BL</th>
+                          <th>PO planned</th>
+                          <th>OIF Value (EUR)</th>
+                          <th>OIF Value (EUR)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                        <tr>
+                          <td>GS</td>
+                          <td>GS - Managed Services (BU)</td>
+                          <td>GS - MS Network &amp; Outsourced Svcs (BL)</td>
+                          <td>2017 - P12</td>
+                          <td class="text-center">€ XX.XXX</td>
+                          <td class="text-center">€ XX.XXX</td>
+                        </tr>
+                        
+                        <tr>
+                          <td colspan="4"></td>
+                          <td class="text-right">Total</td>
+                          <td class="text-center"><strong>€ XX.XXX</strong></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="tile-box-padding cpo-contract">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>
+                    Order Backlog
+                    </h3>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="table-responisve" style="margin-top:15px;">
+                      <table class="table table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Ordered Invoiced RRT</th>
+                            <th>Recognized Invoice pending</th>
+                            <th>Ordered NOT RRT</th>
+                            <th>Ordering pending</th>
+                            <th>Total</th>
+                            <th>OBL</th>
+                            <th>Difference</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="no-cpo-history">
-                              <p style="padding:30px 0;" class="text-center">No files available for download yet.</p>
-                            </td>
+                            <td class="text-center">XX,XXX.XX</td>
+                            <td class="text-center">X.XX</td>
+                            <td class="text-center">X.XX</td>
+                            <td class="text-center">X.XX</td>
+                            <td class="text-center">XX,XXX.XX</td>
+                            <td class="text-center">X.XX</td>
+                            <td class="text-center">X.XX</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
-                <div class="tile-box-padding cpo-contract">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <h3>Contract Information</h3>
-                    </div>
-                    <form id="CPOContract">
-                      <div class="col-sm-9 col-md-10">
-                        <div class="form-gorup">
-                          <select id="id_contract_information" name="contract_information" class="form-control" tabindex="5">
-                            <option value="">---------</option>
-                            <option value="1">3348 - Contrato de Suministro de Equipos y Prestación de Servicios para  GSM/GPRS/EDGE</option>
-                            <option value="2">23520 - Contrato de Suministro de Equipos para  GSM/GPRS/EDGE</option>
-                            <option value="3">23517 - Contrato de Suministro de Prestación de Servicios para  GSM/GPRS/EDGE</option>
-                            <option value="4">9590 - Contrato de Suministro de Equipos y Prestación de Servicios para  UMTS</option>
-                            <option value="5" selected="selected">23519 - Contrato de Suministro de Equipos  para  UMTS</option>
-                            <option value="6">23518 - Contrato de Suministro de  Prestación de Servicios para  UMTS</option>
-                            <option value="7">26562 - Contrato de Suministro de Equipos y Prestación de Servicios para  LTE</option>
-                            <option value="8">26561 - Contrato de Suministro de Equipos  para  LTE</option>
-                            <option value="9">26560 - Contrato de Suministro de  Prestación de Servicios para  LTE</option>
-                            <option value="10">10619 - Contrato de Prestacion de Servicios de Soporte y Mantenimiento Tecnico</option>
-                            <option value="11">29298 - Contrato de Servicio Unificado de Mantenimiento </option>
-                            <option value="12">3848 - Contrato de Suministro de Equipos y Prestación de Servicios para  GSM/GPRS/EDGE</option>
-                            <option value="14">21770 - Contrato de Suministro de Equipos y Prestación de Servicios FEMTO</option>
-                            <option value="15">13645 - Contrato de Suministro de Equipos y Prestación de Servicios IPRAN</option>
-                            <option value="16">23877 - Contrato de Suministro de Equipos y Prestación de Servicios METRO</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-sm-3 col-md-2 no-left-padding text-center">
-                        <button type="submit" class="btn btn-primary btn-block" id="CPOContractUpdate" value="Save">
-                          <span class="glyphicon glyphicon-ok"></span> 
-                          Update contract
-                        </button>
-                      </div>
-                    </form>
-                    <div class="col-sm-9 col-md-10">
-                      <div class="table-responsive">
-                        <table id="contract_information" class="table table-hover table-bordered two-col-table">
-                          <tbody>
-                            <tr>
-                              <td><strong>Contract number</strong></td>
-                              <td>23519</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Contract name</strong></td>
-                              <td>Contrato de Suministro de Equipos para UMTS</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Technology</strong></td>
-                              <td>WCDMA/3G</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Element</strong></td>
-                              <td>HW</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Type</strong></td>
-                              <td>Bulk</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Risk transfer</strong></td>
-                              <td>DoP</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Start date</strong></td>
-                              <td>24/10/2014</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Due date</strong></td>
-                              <td>29/09/2018</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+              </div>
+              <div class="tile-box-padding cpo-contract">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>
+                    Sales Orders
+                    </h3>
                   </div>
-                </div>
-                <div class="tile-box-padding cpo-items">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <h3 style="display:inline-block;" id="CPOItems">CPO Items</h3>
+                  <div class="col-md-12">
+                    <div class="table-responisve" style="margin-top:15px;">
+                      <table class="table table-hover table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Sales Order</th>
+                            <th>SO Created</th>
+                            <th>Customer Invoice</th>
+                            <th>Work Package</th>
+                            <th>Site Code</th>
+                            <th>WBS Element</th>
+                            <th>SO Curr.</th>
+                            <th>SO Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td class="text-center">112233445566</td>
+                            <td class="text-center">28/12/2017</td>
+                            <td class="text-center">0123</td>
+                            <td class="text-center"></td>
+                            <td class="text-center"></td>
+                            <td class="text-center">G-000000000-OR0</td>
+                            <td class="text-center">USD</td>
+                            <td class="text-center">$ XX,XXX</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
                     </div>
-                    <form>
-                      <div class="col-md-9 text-right">
-                        <span class="label label-default" style="padding:5px 10px;" id="CPONetVAl">CPO NET VALUE: USD $ XXXXXX</span>
-                      </div>
-                     <!--  <div class="col-md-12 no-left-padding text-right">
-                        <a href="#" class="btn btn-primary" id="assign_cpo_items_to_owner"><i class="fa fa-link"></i>&nbsp;&nbsp;Link opportunity</a>
-                        <a class="btn btn-primary" data-toggle="modal" data-target="#unlink_bl_modal" id="CPOUnlink"><i class="fa fa-chain-broken"></i>&nbsp;&nbsp;Unlink opportunities</a>
-                        <button class="btn btn-primary" style="border:none;" id="CPOSave"><i class="fa fa-check"></i>&nbsp;&nbsp;Save Changes</button>
-                      </div> -->
-                      <div class="col-md-12">
-                        <div class="table-responisve" style="margin-top:15px;">
-                          <table id="cpo_item_table" class="table table-hover table-bordered" data-show_opportunity_link_form="False" show_opportunity_link_form="False">
-                            <thead>
-                                <tr>
-                                    <!-- <th><input type="checkbox" name="select_all_cpo_items" id="select_all_cpo_items" tabindex="7"></th> -->
-                                    <th>Item</th>
-                                    <th>Site</th>
-                                    <th>Description</th>
-                                    <th>Quantity</th>
-                                    <th>Unit value</th>
-                                    <th>Total value</th>
-                                    <th>Proposal</th>
-                                   <!--  <th>NF</th> -->
-                                </tr>
-                            </thead>
-                            <tbody id="cpo_items_table">
-                                
-                                <tr>
-                                    <!-- <td class="text-center">
-                                        <input type="checkbox" name="cpos_items_to_link" value="1621450" tabindex="8">
-                                    </td> -->
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/1/">1</a>
-                                    </td>
-                                    <td>
-                                        
-                                            
-                                                None
-                                            
-                                        
-                                    </td>
-                                    <td>NOKIA FWHO FZ MICRO BTS 2600 FDD Kit               </td>
-                                    <td class="text-center">48</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/1/" class="red-color" alt="unknown proposal" title="unknown proposal
-                                           ">
-                                            <i class="fa 
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     fa-question-circle text-warning
-                                                     "></i>
-                                        </a>
-                                    </td>
-                                    <!-- <td class="text-center">
-                                        <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
-                                            <i class="fa 
-                                                             fa-question-circle text-primary
-                                                             
-                                                             
-                                                "></i>
-                                        </a>
-                                    </td> -->
-                                </tr>
-                                
-                                <tr>
-                                    <!-- <td class="text-center">
-                                        <input type="checkbox" name="cpos_items_to_link" value="1621451" tabindex="9">
-                                    </td> -->
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/2/">2</a>
-                                    </td>
-                                    <td>
-                                        
-                                            
-                                                None
-                                            
-                                        
-                                    </td>
-                                    <td>FTCR OD Cable RJ45 CAT5E 15m                          </td>
-                                    <td class="text-center">48</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/2/" class="red-color" alt="unknown proposal" title="unknown proposal
-                                           ">
-                                            <i class="fa 
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     fa-question-circle text-warning
-                                                     "></i>
-                                        </a>
-                                    </td>
-                                    <!-- <td class="text-center">
-                                        <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
-                                            <i class="fa 
-                                                             fa-question-circle text-primary
-                                                             
-                                                             
-                                                "></i>
-                                        </a>
-                                    </td> -->
-                                </tr>
-                                
-                                <tr>
-                                    <!-- <td class="text-center">
-                                        <input type="checkbox" name="cpos_items_to_link" value="1621452" tabindex="10">
-                                    </td> -->
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/3/">3</a>
-                                    </td>
-                                    <td>
-                                        
-                                            
-                                                None
-                                            
-                                        
-                                    </td>
-                                    <td>Sumper N Male / 7-16 DIN Male 3m FL /FZ               </td>
-                                    <td class="text-center">140</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/3/" class="red-color" alt="unknown proposal" title="unknown proposal
-                                           ">
-                                            <i class="fa 
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     fa-question-circle text-warning
-                                                     "></i>
-                                        </a>
-                                    </td>
-                                    <!-- <td class="text-center">
-                                        <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
-                                            <i class="fa 
-                                                             fa-question-circle text-primary
-                                                             
-                                                             
-                                                "></i>
-                                        </a>
-                                    </td> -->
-                                </tr>
-                                
-                                <tr>
-                                   <!--  <td class="text-center">
-                                        <input type="checkbox" name="cpos_items_to_link" value="1621453" tabindex="11">
-                                    </td> -->
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/4/">4</a>
-                                    </td>
-                                    <td>
-                                        
-                                            
-                                                None
-                                            
-                                        
-                                    </td>
-                                    <td>NOKIA FQFA Flexi Lite BTS 1900 band kit            </td>
-                                    <td class="text-center">48</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">$ XXXXXX</td>
-                                    <td class="text-center">
-                                        <a href="/cpos/4500197106-387645/4/" class="red-color" alt="unknown proposal" title="unknown proposal
-                                           ">
-                                            <i class="fa 
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     fa-question-circle text-warning
-                                                     "></i>
-                                        </a>
-                                    </td>
-                                    <!-- <td class="text-center">
-                                        <a href="/nota_fiscal/validate/?search=4500197106&amp;action=Search" alt="Nota Fiscal unknown" title="Nota Fiscal unknown">
-                                            <i class="fa 
-                                                             fa-question-circle text-primary
-                                                             
-                                                             
-                                                "></i>
-                                        </a>
-                                    </td> -->
-                                </tr>
-                                
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
+              
+              <script>
+              $(function () {
+              $("#id_cancelled").attr("init_val", $("#id_cancelled").attr("checked"));
+              $("#dialog-confirm").dialog({
+              autoOpen: false,
+              resizable: false,
+              height: 140,
+              modal: true,
+              buttons: {
+              "Yes": function () {
+              $(this).dialog("close");
+              $("input[name=cancel_related_proposal_materials]").val("cancel_related_proposal_materials");
+              window.document.cpo_form.submit();
+              },
+              "No": function () {
+              $(this).dialog("close");
+              window.document.cpo_form.submit();
+              }
+              }
+              });
+              $("form#cpo_form").submit(function (e) {
+              if ($("#id_cancelled").attr("init_val") == 'false') {
+              if ($("#id_cancelled").attr("checked") == true) {
+              e.preventDefault();
+              $("#dialog:ui-dialog").dialog("destroy");
+              $("#dialog-confirm").dialog("open");
+              }
+              }
+              })
+              });
+              function confirmUpdateME(redirect_to_url) {
+              download = confirm('Update from ME will remove any other data registred, do you wanna confirm this ?');
+              if (download) {
+              window.location.href = redirect_to_url
+              }
+              }
+              </script>
+              
+              <div class="tile-box-padding cpo-reasons">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingReasons">
+                          <h4 data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-title"><i class="panel-head-icon fa fa-chevron-right pull-left"></i>Reasons for change</h4>
+                        </div>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingReasons">
+                        <div>
+                          <!-- comment block test -->
+                          
+                          
+                          <div class="row">
+                            
+                            <form action="/comments/post/" method="post">
+                              <div class="col-md-12">
+                                <fieldset class="inlineLabels">
+                                  <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="d166704659b4883a004c0a6da1d7e3c3"></div>
+                                  <p><strong>Type your reasons below:</strong></p>
+                                  <input type="hidden" name="next" value="/cpos/17/4500196565/">
+                                  
+                                  
+                                  <input type="hidden" name="content_type" value="customer_purchase_order.customerpurchaseorder" id="id_content_type">
+                                  
+                                  
+                                  
+                                  
+                                  <input type="hidden" name="object_pk" value="385480" id="id_object_pk">
+                                  
+                                  
+                                  
+                                  
+                                  <input type="hidden" name="timestamp" value="1522068061" id="id_timestamp">
+                                  
+                                  
+                                  
+                                  
+                                  <input type="hidden" name="security_hash" value="289c0c018ee69a0912e873cfd464c57336affc99" id="id_security_hash">
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  <textarea id="id_comment" class="form-control" rows="10" cols="40" name="comment"></textarea>
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  <div class="clearfix"></div>
+                                  <br>
+                                </fieldset>
+                              </div>
+                              <div class="col-md-offset-10 col-md-2 no-left-padding text-center">
+                                <div>
+                                  <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-comment"></i> Post reason
+                                  </button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
+
+            <div class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Information</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Update from ME will remove any other data registred, do you wanna confirm this?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+                    <button type="button" onclick="window.location.href = '/cpos/17/4500196565/update/';" class="btn btn-primary"><span class="glyphicon glyphicon-refresh"></span> Update</button>
+                  </div>
+                  </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+                  <div class="modal fade" id="unlink_bl_modal">
+                    <div class="modal-dialog modal-lg ">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                          <!--<h4 class="modal-title">Unlink Opportunities</h4>-->
+                        </div>
+                        <div class="modal-body">
+                          <div id="unlink_opportunity_modal_error" class="control-label alert-danger"></div>
+                          <div id="unlink_opportunity_modal_success"></div>
+                          <h4>You are about to unlink all the BLs from the selected CPO items. Are you sure?</h4>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                          <a href="" data-dismiss="modal" class="btn btn-primary" id="unlink_cpo_item_to_opportunity_detail"><span class="glyphicon glyphicon-refresh"></span> Yes, I understand</a>
+                        </div>
+                        </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                        <script>
+                        $(document).ready(function() {
+                        var current_page = 1;
+                        var num_pages = 1;
+                        var has_next = 'False';
+                        var has_previous = 'False';
+                        var url = window.location.href;
+                        var cpo_total_value = '37.600,00';
+                        // Don't show children div until is validated
+                        $('#opportunity_modal_bl_children').hide();
+                        // Normalize CPO Value
+                        cpo_total_value = cpo_total_value.replace('.', '');
+                        cpo_total_value = cpo_total_value.replace(',', '.');
+                        cpo_total_value = parseFloat(cpo_total_value)
+                        //get the url
+                        if(url.indexOf('?')!=-1){
+                        filter = url.substr(0, url.indexOf('?'));
+                        }
+                        else{
+                        filter = url;
+                        }
+                        //render pagination nav
+                        var list = $(".pagination li:nth-child(3)");   // Get the <ul> element with id="pagination"
+                          if (has_previous == 'True' && current_page > 6) {
+                          list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                          }
+                          if (num_pages>1) {
+                          for (i = current_page - 5; i <= current_page + 5; i++) {
+                          if ((i + 1 > 0) && (i + 1 <= num_pages) && (i + 1 != 1) && (i + 1 != num_pages)) {
+                          if (current_page == i + 1)
+                          list.before('<li class="active"><a class="page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                          else
+                          list.before('<li ><a class="page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                          }
+                          }
+                          }
+                          if (has_next=='True' && current_page < num_pages && current_page < (num_pages-7)) {
+                          list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                          }
+                          $("#items_per_page").on('change', function(evt){
+                          evt.preventDefault();
+                          console.log('here')
+                          items_per_page = $('#items_per_page').val();
+                          url_get_info = url.substring(url.indexOf("cpo_items_page=")-1);
+                          base_url = url.replace(url_get_info, "");
+                          var sales_orders_part = '';
+                          var cpo_items_part = 'cpo_items_page=1&items_per_page='+items_per_page;
+                          if(url_get_info.indexOf("sales_orders_page=")!=-1){
+                          sales_orders_part = url.match(/sales_orders_page=(\d+)/);
+                          sales_orders_part = "sales_orders_page="+cpo_items_part[1];
+                          }
+                          if(sales_orders_part == ''){
+                          url = base_url + "?" + cpo_items_part;
+                          }
+                          else{
+                          url = base_url + "?" + cpo_items_part + "&" + sales_orders_part;
+                          }
+                          window.location.href=url;
+                          });
+                          // go to another page
+                          $('.page-link').click(function(ev){
+                          ev.preventDefault();
+                          items_per_page = $('#items_per_page').val();
+                          var page = this.getAttribute("data-page");
+                          url_get_info = url.substring(url.indexOf("cpo_items_page=")-1);
+                          base_url = url.replace(url_get_info, "");
+                          var cpo_items_part = '';
+                          var sales_orders_part = '';
+                          cpo_items_part = "cpo_items_page="+page+"&"+"items_per_page="+items_per_page;
+                          // Review it has not taken part
+                          if(url_get_info.indexOf("sales_orders_page=")!=-1){
+                          sales_orders_part = url.match(/sales_orders_page=(\d+)/);
+                          sales_orders_part = "sales_orders_page="+cpo_items_part[1];
+                          }
+                          if(sales_orders_part == ''){
+                          url = base_url + "?" + cpo_items_part;
+                          }
+                          else{
+                          url = base_url + "?" + cpo_items_part + "&" + sales_orders_part;
+                          }
+                          window.location.href=url;
+                          });
+                          //  Sales Order Pagination Functions
+                          var sales_order_current_page = 1;
+                          var sales_order_pages = 1;
+                          var sales_order_has_next = 'False';
+                          var sales_order_previous = 'False';
+                          var sales_order_list = $(".sales_order_pagination li:nth-child(3)");   // Get the <ul> element with id="pagination"
+                            if (sales_order_has_next == 'True' && sales_order_current_page > 6) {
+                            sales_order_list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                            }
+                            if (sales_order_pages > 1) {
+                            for (i = sales_order_current_page - 5; i <= sales_order_current_page + 5; i++) {
+                            if ((i + 1 > 0) && (i + 1 <= sales_order_pages) && (i + 1 != 1) && (i + 1 != sales_order_pages)) {
+                            if (sales_order_current_page == i + 1)
+                            sales_order_list.before('<li class="active"><a class="sales_orders_page-link page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                            else
+                            sales_order_list.before('<li ><a class="sales_orders_page-link page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                            }
+                            }
+                            }
+                            if (sales_order_previous=='True' && sales_order_current_page < sales_order_pages && sales_order_current_page < (sales_order_pages-7)) {
+                            sales_order_list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                            }
+                            // go to another page
+                            $('.sales_orders_page-link').click(function(ev){
+                            ev.preventDefault();
+                            var page = this.getAttribute("data-page");
+                            url_get_info = url.substring(url.indexOf("sales_orders_page=")-1);
+                            base_url = url.replace(url_get_info, "");
+                            var cpo_items_part = '';
+                            var sales_orders_part = '';
+                            sales_orders_part = "sales_orders_page="+page;
+                            // Review it has not taken part
+                            if(url_get_info.indexOf("cpo_items_page=")!=-1){
+                            cpo_items_part = url.match(/cpo_items_page=(\d+)/);
+                            cpo_items_part = "cpo_items_page="+cpo_items_part[1];
+                            }
+                            if(cpo_items_part == ''){
+                            url = base_url + "?" + sales_orders_part;
+                            }
+                            else{
+                            url = base_url + "?" + cpo_items_part + "&" + sales_orders_part;
+                            }
+                            window.location.href=url;
+                            });
+                            function has_interrogative_sign(url){
+                            if(url.indexOf('?')==-1){
+                            return true
+                            }else{
+                            return false
+                            }
+                            }
+                            // Functions for select's inside opportunity modal
+                            // Raise Modal to set up links
+                            $('#unlink_cpo_item_to_opportunity_detail').on('click', function(evt){
+                            evt.preventDefault();
+                            $('#unlink_opportunity_modal_error').html('');
+                            $('#unlink_opportunity_modal_success').html('');
+                            var errors = '';
+                            var unlink_url = '/cpos/unlink_cpo_items_and_opportunities/385480/';
+                            if(errors != ''){
+                          $('#unlink_opportunity_modal_error').html('<ul>'+errors+'</ul>');
+                          }
+                          else{
+                          items_to_unlink = [];
+                          $('#cpo_items_table input:checked').each(function() {
+                          items_to_unlink.push($(this).attr('value'));
+                          });
+                          $.post(unlink_url, {items_to_unlink:items_to_unlink}, function (data) {
+                          if(data.status == 200){
+                          $('#unlink_opportunity_modal_success').html(data.message);
+                          setTimeout(function(){ location.reload(); }, 800);
+                          }
+                          else{
+                          $('#unlink_opportunity_modal_error').html(data.message);
+                          }
+                          });
+                          }
+                          });
+                          });
+                          </script>
+                          <script>
+                          var chain = "Claro-colombia";
+                          var customerName = $('#customer-name');
+                          var replacement = function(value) {
+                          return value.replace(/\-/g, ' ');
+                          }
+                          chain = replacement(chain);
+                          customerName.css('text-transform', 'capitalize').html(chain);
+                          </script>
+                          <script>
+                          $(function(){
+                          $('.panel-title').click(function(){
+                          var fa = $('.panel-head-icon');
+                          fa.toggleClass('fa-chevron-right');
+                          fa.toggleClass('fa-chevron-down');
+                          });
+                          });
+                          window.save_opportunity_cpo_link = '/cpos/save_customer_purchase_order_opportunity_detail_link/'
+                          $(document).ready(function () {
+                          var show_modal_reject_cpo = $('#cpo_detail').data('show_modal_reject_cpo');
+                          if (show_modal_reject_cpo==true){
+                          $('#chage_status_cpo_rej').modal();
+                          }
+                          });
+                          </script>
+                          <script src="/static/js/generic_cpo_inbox.js"></script>
+                        </div>
           </div>
         </div>
       </div>

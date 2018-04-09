@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ZINA - Workflow Management</title>
+  <!-- CSS References -->
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/fileinput.min.css">
+  <link rel="stylesheet" href="../static/css/datepicker.css">
+  <link rel="stylesheet" href="../static/css/multi-select-2-cols.css">
+  <link rel="stylesheet" href="../static/css/bootstrap-multiselect.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="../static/css/notification/bootstrap-notifications.min.css  ">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/bootstrap-tour.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar fwc" id="navbar" style="z-index: 1000000;">
+      <section class="top-logo">
+        <div class="nav-bar-logo">
+          <a href="#">
+            <img src="../static/img/logoZina-Blanco.png">
+          </a>
+        </div>
+      </section>
+      <section class="top-icons">
+        <div class="dropdown pull-right">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenu-config" data-toggle="dropdown">
+          <span class="glyphicon glyphicon-info-sign"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+          </ul>
+        </div>
+        <div class="dropdown pull-right">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenu-config"
+          data-toggle="dropdown">
+          <span class="glyphicon glyphicon-cog"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span
+            class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-lock"></span> Change password</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-off"></span> Log out</a></li>
+          </ul>
+        </div>
+        <div class="dropdown show pull-right dropdown-notifications" id="id-notification-panel">
+          <a class="btn dropdown-toggle"  id="id-button-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-count="" data-total="" class="glyphicon glyphicon-bell" id="id-notification-icon"></i></a>
+          <div class="dropdown-menu dropdown-container notification_box" id="notification-box-id" aria-labelledby="id-button-notifications">
+            <div class="dropdown-toolbar">
+              <div class="dropdown-toolbar-actions">
+                  <a href="#" data-count-unread id="mark-all-as-read-id">Mark all as read</a>
+              </div>
+              <h3 class="dropdown-toolbar-title"><span id="span-total-unread">5</span> unread notifications</h3>
+            </div>
+            <ul class="dropdown-menu notification-list">
+            </ul>
+            <a href="{% url notifications:notification_list %}">
+              <div class="dropdown-footer text-center not-footer">View All</div>
+            </a>
+          </div>
+        </div>
+        <div class="pull-right hello">
+          Welcome, <strong>ZINA User</strong>
+        </div>
+      </section>
+      <section class="top-central">
+          <div class="hide" id="global-search-top"></div>
+              <span id="getting-started"></span>
+          </div>
+      </section>
+    </nav>
+    <div id="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 logo">
+            <a class="title" href="#">
+              <img src="../static/img/logoZina.png" class="zinawfm-logo">
+            </a>
+          </div>
+          <div class="col-md-7" id="global-search">
+            <div class="input-group">
+              <div class="input-group-btn btn-filtre">
+                <button class="btn dropdown-toggle" id="dropdown_select" data-toggle="dropdown" aria-expanded="false">
+                  Select filter <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="search_option">
+                    <a data-value="" data-name="" href="">-----------</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Schedule" href="">Schedule</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Site" href="">Site</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Work Package" href="">Work Package</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="VOA" href="">VOA</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Proposal" href="">Proposal</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Proposal Package" href="">Proposal Package</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="CPO" href="">CPO</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="SSR" href="">SSR</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="SMR" href="">SMR</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="ZI" href="">ZI</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="WBS" href="">WBS</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Invoices" href="">Invoices</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="LPR" href="">LPR</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="SPO" href="">SPO</a>
+                  </li>
+                </ul>
+              </div>
+              <input type="text" class="form-control" id="bs_search_input" placeholder="Select a filter first..." title="please select filter first" data-placement="bottom">
+              <span class="input-group-btn btn-search">
+                <button class="btn btn-default" id="bs_search_button"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="main-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-lg-2">
+          <div id="MainMenu">
+              <div id="sidebar" class="sidebar-nav span3"  style="height: 60vh;background: white;border: #e5e5e5 solid 1px;">
+                <ul class="nav nav-tabs nav-stacked">
+                  <ul id="ul_basis" class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">Robotic Process Automation RPA</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container doble" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>SPO</span>
+                          <ul>
+                            <li><a href="data-importer-scratchpo.html">Scratch PO Creation</a></li>
+                            <li><a href="data-importer-scratchalign.html">SPO Alignment in IPM</a></li>
+                          </ul>
+                          <br>
+                          <span>WBS</span>
+                            <ul>
+                              <li><a href="data-importer-wbs.html">Massive WBS Creation</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>B2B SPO</span>
+                          <ul>
+                            <li><a href="data-importer-calloff.html">B2B SPO with Post-SSR</a></li>
+                          </ul>
+                          <br>
+                          <span>ZI Partner</span>
+                          <ul>
+                            <li><a href="data-importer-zimassive.html">Massive ZI Partner Creation</a></li>
+                            <li><a href="data-importer-ziupdate.html">ZI Update</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">Customer Purchase Orders</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container single" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-12">
+                          <span>CPO</span>
+                          <ul>
+                            <li><a href="cpo-inbox.html">All Customer Purchase Orders</a></li>
+                            <li><a href="cpo-detail.html">CPO Detail</a></li>
+                            <li><a href="cpo-item.html">CPO Item</a></li>
+                            <!-- <li><a href="http://127.0.0.1:8321/reports/customer_purchase_orders/">CPO Report</a></li> -->
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">CRIA Tool</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container doble" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>CRIA Tool</span>
+                          <ul>
+                            <li><a href="cria-inbox.html">CRIA Tool Inbox</a></li>
+                            <li><a href="cria-detail-billable.html">CR Detail</a></li>
+                          </ul>
+                          <br>
+                          <!-- <span>Reports</span>
+                            <ul>
+                              <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_report/">Change Requests Report</a></li>
+                            <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_workflow_approval_report/">Approval Report</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>CR SPO</span>
+                          <ul>
+                            <li><a href="data-importer-scratchpo.html">Create Scratch PO for Change Request</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-lg-10">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="">Home</a></li>
+                  <li class="active">Customer Purchase Orders</li>
+                  <li class="active">123456789</li>
+                  <li class="active">Link Opportunity</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h1>Link Opportunity</h1>
+              </div>
+            </div>
+            <!-- Contents -->
+            <div class="row">
+  
+  <div class="col-md-12">
+    <div class="tab-content tile-box-padding">
+      <div id="opportunity_modal">
+        <form action="" method="POST" name="link_opportunity_form" id="main-form">
+          
+          <input type="hidden" name="cpo_selected" id="id_cpo_selected">
+          
+          <input type="hidden" name="selected_cpos" value="[u'385480']">
+          
+          <div>
+            <div id="opportunity_modal_last_update" class="control-label bs-callout">Last CRM update information was done on: 23/03/2018</div>
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr>
+                  <td>CPO Number</td>
+                  <td>Currency</td>
+                  <td>CPO Value</td>
+                  <td>Selected Items Value</td>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <td><a href="cpo-detail.html">123456789</a></td>
+                  <td>USD</td>
+                  <td>XX.XXX,XX</td>
+                  <td><div id="cpo-385480-items-value">None selected</div></td>
+                </tr>
+                
+                <tr>
+                  <td colspan="3"><strong class="pull-right">TOTAL</strong></td>
+                  <td><div id="total_selected">0.0</div></td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="opportunity_modal_bl_children" class="control-label bs-callout" style="display: none;">
+              <p>We have found items related to the selected BL and the period that will be linked automatically:</p>
+              <br>
+            <ul id="opportunity_modal_bl_children_info"></ul>
+          </div>
+          
+          <div id="opportunity_modal_success" class="control-label alert-success"></div>
+          <input name="modal-from-inbox" id="modal-from-inbox" type="hidden" value="True">
+          <input name="modal-name" id="modal-name" type="hidden" value="link_opportunity_form">
+          
+          
+          <div class="form-group">
+            <label for="id_customer_purchase_order_item" class="cleafix control-label required">Customer purchase order item</label>
+            <div class="clearfix">
+              <select class="form-control">
+                <option></option>
+                <a href="link-opportunity-open.html" sytle="text-decoration:none;"><option id="multilink01" value="1615699">010203040506: 1 - SERVICIOS DE IMPLEMENTACION</option></a>
+                <option id="multilink02" value="1615700">010203040506: 2 - SERVICIOS DE IMPLEMENTACION</option>
+                </select>
+              </div>
+            </div>
+            
+            <div id="opportunity-g5-error" class="alert alert-danger hidden">
+              You are trying to book an opportunity that has no Gate 5 approval date yet. Please launch the approval workflow in single CRM to be able to book it.
+            </div>
+            
+            <div class="form-group">
+              <label for="id_opportunity_number" class="cleafix control-label required">Opportunity number</label>
+              <div class="clearfix">
+                
+                <input type="text" name="opportunity_number_text" id="opportunity_number_text" value="" class="form-control ac_input" autocomplete="off" tabindex="9">
+                <div id="opportunity_number_on_deck" class="results_on_deck"><div></div></div>
+                <input type="hidden" name="opportunity_number" id="opportunity_number" value="">
+                <script type="text/javascript">
+                  jQuery(document).ready(function($){
+                  //hide the filter in opportunity view
+                  var op_number = $("#id_opportunity_number").val();
+                  if(op_number===""){
+                  if (!$('#opportunity-g5-error').hasClass('hidden')){
+                  $('#opportunity-g5-error').addClass('hidden');
+                  }
+                  $("#filter_oportunity").hide();
+                  }
+                  // Reset filter opportunity view function
+                  function reset_filter(data){
+                  $('#reset_filter_opportunity').click(function(){
+                  $('.filter').val('');
+                  selected_opportunity_data(data, "", "", "");
+                  });
+                  }
+                  //
+                  function filter_acction(data){
+                  $("#filter_button_opportunity").click(function(){
+                  var po_planned = $("#search_po_planned").val(),
+                  forecast_category = $("#search_forecast_category").val(),
+                  bl = $("#search_bl").val();
+                  selected_opportunity_data(data, po_planned, forecast_category, bl);
+                  });
+                  }
+                  $("#opportunity_number_text").autocomplete('/ajax_select/ajax_lookup/opportunity_number', {
+                  width: 320,
+                  formatItem: function(row) {
+                  return row[2]; },
+                  formatResult: function(row) {
+                  return row[1]; },
+                  dataType: "text"
+                  });
+                  function selected_opportunity_data(data, po_planned, forecast_category, bl){
+                  $.post('/cpos/search_bussiness_line_from_opportunity/', {selected_opportunity: data, po_planned:po_planned,  forecast_category:forecast_category, bl:bl}, function(data){
+                  $('#opportunity_cpo_value').html('');
+                  $('#opportunity_table tbody').html('');
+                  if(data['status'] == 200){
+                  if(!data.empty){
+                  if(!data.has_g5){
+                  if ($('#opportunity-g5-error').hasClass('hidden')){
+                  $('#opportunity-g5-error').removeClass('hidden');
+                  }
+                  }else{
+                  if (!$('#opportunity-g5-error').hasClass('hidden')){
+                  $('#opportunity-g5-error').addClass('hidden');
+                  }
+                  }
+                  $("#filter_oportunity").show();
+                  }else{
+                  if (!$('#opportunity-g5-error').hasClass('hidden')){
+                  $('#opportunity-g5-error').addClass('hidden');
+                  }
+                  }
+                  $('#opportunity_table tbody').html(data['html']);
+                  $('#oif_value').text("OIF Value ("+data['oif_currency']+")");
+                  }
+                  });
+                  }
+                  function receiveResult(event, data) {
+                  prev = $("#opportunity_number").val();
+                  if(prev) {
+                  kill_opportunity_number(prev);
+                  }
+                  $("#opportunity_number").val(data[0]);
+                  $("#opportunity_number_text").val("");
+                  addKiller_opportunity_number(data[1],data[0]);
+                  $("#opportunity_number_on_deck").trigger("added");
+                  $("#add_new_bl_modal").show();
+                  selected_opportunity_data(data[0], "","","");
+                  filter_acction(data[0]);
+                  reset_filter(data[0]);
+                  }
+                  $("#opportunity_number_text").result(receiveResult);
+                  function addKiller_opportunity_number(repr,id) {
+                  kill = "<span class='iconic' id='kill_opportunity_number'>X</span>  ";
+                  if(repr){
+                  $( "#opportunity_number_on_deck" ).empty();
+                  $( "#opportunity_number_on_deck" ).append( "<div>" + kill + repr + "</div>");
+                  } else {
+                  $( "#opportunity_number_on_deck > div" ).prepend(kill);
+                  }
+                  $("#kill_opportunity_number").click(function() { return function(){
+                  kill_opportunity_number();
+                  if (!$('#opportunity-g5-error').hasClass('hidden')){
+                  $('#opportunity-g5-error').addClass('hidden');
+                  }
+                  $("#filter_oportunity").hide();
+                  $("#opportunity_number_on_deck").trigger("killed");
+                  }}() );
+                  }
+                  function kill_opportunity_number() {
+                  $("#opportunity_number").val( '' );
+                  $( "#opportunity_number_on_deck" ).children().fadeOut(1.0).remove();
+                  $('#opportunity_table tbody').html('');
+                  $("#add_new_bl_modal").hide();
+                  }
+                  if($("#opportunity_number").val()) { // add X for initial value if any
+                  addKiller_opportunity_number(null,$("#opportunity_number").val());
+                  }
+                  $("#opportunity_number").bind('didAddPopup',function(event,id,repr) {
+                  data = Array();
+                  data[0] = id;
+                  data[1] = repr
+                  ;       receiveResult(null,data);
+                  });
+                  });
+                </script>
+
+              </div>
+            </div>
+            <div class="tile-box-padding" id="filter_oportunity">
+              <div class="collapse in" id="displayFilter1">
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id="tab1default">
+                    <div class="row">
+                      <div class="col-md-4 form-group">
+                        <label for="">PO Planned:</label>
+                        <input type="text" name="po_planned" id="search_po_planned" class="column_filter form-control filter" tabindex="10">
+                      </div>
+                      <div class="col-md-4 form-group">
+                        <label for="">Forecast Category:</label>
+                        <input type="text" name="forecast_category" id="search_forecast_category" class="column_filter form-control filter" tabindex="11">
+                      </div>
+                      <div class="col-md-4 form-group">
+                        <label for="">BL</label>
+                        <input type="text" name="bl" id="search_bl" class="column_filter form-control filter" tabindex="12">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 text-right form-inline">
+                        <button type="button" id="reset_filter_opportunity" class="btn btn-danger"><span class="glyphicon glyphicon-refresh"></span> Reset filter</button>
+                        <button type="button" id="filter_button_opportunity" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Filter</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <style>
+            .results_on_deck{
+            text-align: left !important;
+            }
+            </style>
+            <div class="form-group col-md-12">
+              
+              <input type="hidden" name="cpo_selected" id="id_cpo_selected">
+              
+            </div>
+            <div class="row">
+              <div class="form-group col-md-12">
+                <div class="table-responsive" id="opportunity_link_table">
+                  <table class="table table-hover table-bordered" id="opportunity_table">
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox" name="select_all_bl" id="select_all_bl" tabindex="13"></th>
+                        <th>Forecast</th>
+                        <th>Business Line</th>
+                        <th>Business Unit</th>
+                        <th>Business Group</th>
+                        <th>Po plan receipt</th>
+                        <th>OIF Value</th>
+                        <th>Value (EUR)</th>
+                        <th>Change OIF Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <input type="hidden" name="form-TOTAL_FORMS" value="0" id="id_form-TOTAL_FORMS"><input type="hidden" name="form-INITIAL_FORMS" value="0" id="id_form-INITIAL_FORMS"><input type="hidden" name="form-MAX_NUM_FORMS" id="id_form-MAX_NUM_FORMS">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <label id="opportunity_cpo_value" class="control-label text-danger"></label>
+          </div>
+          <div>
+            
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="checkbox" name="acknowledge_bl_value" id="id_acknowledge_bl_value" tabindex="14">
+                <label for="id_acknowledge_bl_value" class="cleafix control-label required">Let me change the BL value and acknowledge it</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a id="add_new_bl_modal" class="btn btn-primary" data-toggle="modal" data-target="#create_bl_modal" style="display: none;"><i class="fa fa-plus"></i>&nbsp;&nbsp;Create new BL</a>
+            <button type="submit" class="btn btn-primary" id="link_cpo_item_to_opportunity"><span class="fa fa-link"></span> Link CPO Items</button>
+            <a class="btn btn-success" href="/cpos/crm_sync/"><i class="glyphicon glyphicon-refresh"></i>&nbsp;&nbsp;Update Opportunity</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="create_bl_modal">
+    <div class="modal-dialog modal-lg ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">New Bussiness Line</h4>
+          <h5>The BL you are about to create,
+          will be for the current period and marked as Booked in Single CRM next time you launch the sync robot.
+          </h5>
+        </div>
+        <div class="alert alert-danger" id="new_bl_errors" style="display: none"></div>
+        <div class="alert alert-success" id="new_bl_success" style="display: none"></div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label class="cleafix control-label required" for="">BL:</label>
+              <select name="new_select_business_line" id="new_select_business_line" class="form-control filter" tabindex="15">
+                <option value="">------------</option>
+                
+                <option value="237">AA - Care Ext Life (BL)</option>
+                
+                <option value="238">AA - Comptel Care (BL)</option>
+                
+                <option value="239">AA - Hosting Maintenance (BL)</option>
+                
+                <option value="240">AA - Intial Maintenance (BL)</option>
+                
+                <option value="241">AA - Renewal Maintenance (BL)</option>
+                
+                <option value="251">AA - DE Customer Care (BL)</option>
+                
+              </select>
+            </div>
+            <div class="col-md-4 form-group">
+              <label class="cleafix control-label" for="">BU:</label>
+              <input name="new_business_unit" class="form-control" value="" id="new_business_unit" readonly="True" type="text" tabindex="16">
+              
+            </div>
+            <div class="col-md-2 form-group">
+              <label class="cleafix control-label" for="">BG:</label>
+              <input name="new_business_grup" class="form-control" value="" id="new_business_group" readonly="True" type="text" tabindex="17">
+              
+            </div>
+          </div>
+          <div class="row hidden" id="bu_bg_info">
+            <div class="col-md-3 form-group">
+              <label class="cleafix control-label required" for="">PO plan receipt:</label>
+              <input name="new_po_plan_receipt" class="form-control" value="2018 - P03" id="new_po_plan_receipt" readonly="True" type="text" tabindex="18">
+            </div>
+            <div class="col-md-3 form-group">
+              <label class="cleafix control-label required" for="" id="oif_value">OIF value:</label>
+              <input name="new_oif_value" class="form-control" value="" id="new_oif_value" type="text" tabindex="19">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <label for="">Notes:</label>
+              <textarea id="new_notes" class="form-control" rows="3" cols="60" name="new_notes"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <button type="button" class="btn btn-primary" id="add_new_bl"><span class="glyphicon glyphicon-refresh"></span> Save</button>
+          <input id="add_bl_url" type="hidden" value="/cpos/add_new_bussiness_line_from_opportunity/">
+          <input id="search_bu_bg_url" type="hidden" value="/cpos/search_bu_bg_from_bl/">
+        </div>
+        </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        
+        <script type="text/javascript">
+        $('#id_customer_purchase_order_item').multiselect('rebuild');
+        </script>
+        <script src="/static/js/generic_cpo_inbox.js"></script>
+        
+      </div>
+
+            <div class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Information</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Update from ME will remove any other data registred, do you wanna confirm this?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+                    <button type="button" onclick="window.location.href = '/cpos/17/4500196565/update/';" class="btn btn-primary"><span class="glyphicon glyphicon-refresh"></span> Update</button>
+                  </div>
+                  </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+                  <div class="modal fade" id="unlink_bl_modal">
+                    <div class="modal-dialog modal-lg ">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                          <!--<h4 class="modal-title">Unlink Opportunities</h4>-->
+                        </div>
+                        <div class="modal-body">
+                          <div id="unlink_opportunity_modal_error" class="control-label alert-danger"></div>
+                          <div id="unlink_opportunity_modal_success"></div>
+                          <h4>You are about to unlink all the BLs from the selected CPO items. Are you sure?</h4>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                          <a href="" data-dismiss="modal" class="btn btn-primary" id="unlink_cpo_item_to_opportunity_detail"><span class="glyphicon glyphicon-refresh"></span> Yes, I understand</a>
+                        </div>
+                        </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                        <script>
+                        $(document).ready(function() {
+                        var current_page = 1;
+                        var num_pages = 1;
+                        var has_next = 'False';
+                        var has_previous = 'False';
+                        var url = window.location.href;
+                        var cpo_total_value = '37.600,00';
+                        // Don't show children div until is validated
+                        $('#opportunity_modal_bl_children').hide();
+                        // Normalize CPO Value
+                        cpo_total_value = cpo_total_value.replace('.', '');
+                        cpo_total_value = cpo_total_value.replace(',', '.');
+                        cpo_total_value = parseFloat(cpo_total_value)
+                        //get the url
+                        if(url.indexOf('?')!=-1){
+                        filter = url.substr(0, url.indexOf('?'));
+                        }
+                        else{
+                        filter = url;
+                        }
+                        //render pagination nav
+                        var list = $(".pagination li:nth-child(3)");   // Get the <ul> element with id="pagination"
+                          if (has_previous == 'True' && current_page > 6) {
+                          list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                          }
+                          if (num_pages>1) {
+                          for (i = current_page - 5; i <= current_page + 5; i++) {
+                          if ((i + 1 > 0) && (i + 1 <= num_pages) && (i + 1 != 1) && (i + 1 != num_pages)) {
+                          if (current_page == i + 1)
+                          list.before('<li class="active"><a class="page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                          else
+                          list.before('<li ><a class="page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                          }
+                          }
+                          }
+                          if (has_next=='True' && current_page < num_pages && current_page < (num_pages-7)) {
+                          list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                          }
+                          $("#items_per_page").on('change', function(evt){
+                          evt.preventDefault();
+                          console.log('here')
+                          items_per_page = $('#items_per_page').val();
+                          url_get_info = url.substring(url.indexOf("cpo_items_page=")-1);
+                          base_url = url.replace(url_get_info, "");
+                          var sales_orders_part = '';
+                          var cpo_items_part = 'cpo_items_page=1&items_per_page='+items_per_page;
+                          if(url_get_info.indexOf("sales_orders_page=")!=-1){
+                          sales_orders_part = url.match(/sales_orders_page=(\d+)/);
+                          sales_orders_part = "sales_orders_page="+cpo_items_part[1];
+                          }
+                          if(sales_orders_part == ''){
+                          url = base_url + "?" + cpo_items_part;
+                          }
+                          else{
+                          url = base_url + "?" + cpo_items_part + "&" + sales_orders_part;
+                          }
+                          window.location.href=url;
+                          });
+                          // go to another page
+                          $('.page-link').click(function(ev){
+                          ev.preventDefault();
+                          items_per_page = $('#items_per_page').val();
+                          var page = this.getAttribute("data-page");
+                          url_get_info = url.substring(url.indexOf("cpo_items_page=")-1);
+                          base_url = url.replace(url_get_info, "");
+                          var cpo_items_part = '';
+                          var sales_orders_part = '';
+                          cpo_items_part = "cpo_items_page="+page+"&"+"items_per_page="+items_per_page;
+                          // Review it has not taken part
+                          if(url_get_info.indexOf("sales_orders_page=")!=-1){
+                          sales_orders_part = url.match(/sales_orders_page=(\d+)/);
+                          sales_orders_part = "sales_orders_page="+cpo_items_part[1];
+                          }
+                          if(sales_orders_part == ''){
+                          url = base_url + "?" + cpo_items_part;
+                          }
+                          else{
+                          url = base_url + "?" + cpo_items_part + "&" + sales_orders_part;
+                          }
+                          window.location.href=url;
+                          });
+                          //  Sales Order Pagination Functions
+                          var sales_order_current_page = 1;
+                          var sales_order_pages = 1;
+                          var sales_order_has_next = 'False';
+                          var sales_order_previous = 'False';
+                          var sales_order_list = $(".sales_order_pagination li:nth-child(3)");   // Get the <ul> element with id="pagination"
+                            if (sales_order_has_next == 'True' && sales_order_current_page > 6) {
+                            sales_order_list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                            }
+                            if (sales_order_pages > 1) {
+                            for (i = sales_order_current_page - 5; i <= sales_order_current_page + 5; i++) {
+                            if ((i + 1 > 0) && (i + 1 <= sales_order_pages) && (i + 1 != 1) && (i + 1 != sales_order_pages)) {
+                            if (sales_order_current_page == i + 1)
+                            sales_order_list.before('<li class="active"><a class="sales_orders_page-link page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                            else
+                            sales_order_list.before('<li ><a class="sales_orders_page-link page-link" href="" data-page="' + (i + 1) + '" >' + (i + 1) + '</a></li>');
+                            }
+                            }
+                            }
+                            if (sales_order_previous=='True' && sales_order_current_page < sales_order_pages && sales_order_current_page < (sales_order_pages-7)) {
+                            sales_order_list.before('<li class="ellipsis disabled"><a href="">...</a></li>');
+                            }
+                            // go to another page
+                            $('.sales_orders_page-link').click(function(ev){
+                            ev.preventDefault();
+                            var page = this.getAttribute("data-page");
+                            url_get_info = url.substring(url.indexOf("sales_orders_page=")-1);
+                            base_url = url.replace(url_get_info, "");
+                            var cpo_items_part = '';
+                            var sales_orders_part = '';
+                            sales_orders_part = "sales_orders_page="+page;
+                            // Review it has not taken part
+                            if(url_get_info.indexOf("cpo_items_page=")!=-1){
+                            cpo_items_part = url.match(/cpo_items_page=(\d+)/);
+                            cpo_items_part = "cpo_items_page="+cpo_items_part[1];
+                            }
+                            if(cpo_items_part == ''){
+                            url = base_url + "?" + sales_orders_part;
+                            }
+                            else{
+                            url = base_url + "?" + cpo_items_part + "&" + sales_orders_part;
+                            }
+                            window.location.href=url;
+                            });
+                            function has_interrogative_sign(url){
+                            if(url.indexOf('?')==-1){
+                            return true
+                            }else{
+                            return false
+                            }
+                            }
+                            // Functions for select's inside opportunity modal
+                            // Raise Modal to set up links
+                            $('#unlink_cpo_item_to_opportunity_detail').on('click', function(evt){
+                            evt.preventDefault();
+                            $('#unlink_opportunity_modal_error').html('');
+                            $('#unlink_opportunity_modal_success').html('');
+                            var errors = '';
+                            var unlink_url = '/cpos/unlink_cpo_items_and_opportunities/385480/';
+                            if(errors != ''){
+                          $('#unlink_opportunity_modal_error').html('<ul>'+errors+'</ul>');
+                          }
+                          else{
+                          items_to_unlink = [];
+                          $('#cpo_items_table input:checked').each(function() {
+                          items_to_unlink.push($(this).attr('value'));
+                          });
+                          $.post(unlink_url, {items_to_unlink:items_to_unlink}, function (data) {
+                          if(data.status == 200){
+                          $('#unlink_opportunity_modal_success').html(data.message);
+                          setTimeout(function(){ location.reload(); }, 800);
+                          }
+                          else{
+                          $('#unlink_opportunity_modal_error').html(data.message);
+                          }
+                          });
+                          }
+                          });
+                          });
+                          </script>
+                          <script>
+                          var chain = "Claro-colombia";
+                          var customerName = $('#customer-name');
+                          var replacement = function(value) {
+                          return value.replace(/\-/g, ' ');
+                          }
+                          chain = replacement(chain);
+                          customerName.css('text-transform', 'capitalize').html(chain);
+                          </script>
+                          <script>
+                          $(function(){
+                          $('.panel-title').click(function(){
+                          var fa = $('.panel-head-icon');
+                          fa.toggleClass('fa-chevron-right');
+                          fa.toggleClass('fa-chevron-down');
+                          });
+                          });
+                          window.save_opportunity_cpo_link = '/cpos/save_customer_purchase_order_opportunity_detail_link/'
+                          $(document).ready(function () {
+                          var show_modal_reject_cpo = $('#cpo_detail').data('show_modal_reject_cpo');
+                          if (show_modal_reject_cpo==true){
+                          $('#chage_status_cpo_rej').modal();
+                          }
+                          });
+                          </script>
+                          <script src="/static/js/generic_cpo_inbox.js"></script>
+                        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Modales -->
+  <!-- Rejection -->
+  <div id="chage_status_cpo_rej" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Reject CPO confirmation</h4>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fa fa-close" style="font-size: 40px;color: #d9534f;"></i>
+          <p>You are about to Reject CPO File. Are you sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i>  Yes, proceed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Acceptance -->
+  <div id="chage_status_cpo_acc" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Accept CPO confirmation</h4>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fa fa-check-circle-o s" style="font-size: 40px;color: #5cb85c;"></i>
+          <p>You are about to Accept CPO File. Are you sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i>  Yes, proceed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Revalidate -->
+  <div id="revalidateCpo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Revalidate confirmation</h4>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fa fa-exclamation-triangle huge"></i>
+          <p>You are about to Revalidate CPO File. Are you sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i>  Yes, proceed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Reparse -->
+  <div id="reparseCpo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Re-parse confirmation</h4>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fa fa-exclamation-triangle huge"></i>
+          <p>You are about to Re-parse CPO File. Are you sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i>  Yes, proceed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Update Adquira -->
+  <div id="updateAdquira" class="modal fade">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Information</h4>
+        </div>
+        <div class="modal-body">
+          <p>Update from Adquira will remove any other data registred, do you wanna confirm this?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <a href="#" class="btn btn-success"><i class="fa fa-refresh"></i> Yes, proceed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 col-xs-6">
+          <span><a class="copyright" href="https://intranet.nokia.com/sites/global/Pages/Home.aspx"></a></span>
+        </div>
+        <div class="col-md-2 pull-right logoFooter col-xs-6">
+          <a href=" http://company.nokia.com/en" target="-blank">
+            <img src="../static/img/NOKIA_LOGO_WHITE.png" alt="Powered by NOKIA">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../static/js/jquery-1.10.2.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/bootbox.min.js"></script>
+  <script src="../static/js/multiple_select_all.js"></script>
+  <script src="../static/js/bootstrap-datepicker.js"></script>
+  <script src="../static/js/fileinput.min.js"></script>
+  <script src="../static/js/jstree.js"></script>
+  <script src="../static/js/transport_tracking_tool.js"></script>
+  <script src="../static/js/jquery.quicksearch.js"></script>
+  <script src="../static/js/jquery.inputmask.bundle.min.js"></script>
+  <script src="../static/js/search_dropdown_controller.js"></script>
+  <script src="../static/js/app.js"></script>
+  <script src="../static/js/multiple_choice_field.js"></script>
+  <script src="../static/js/serialize_object.js"></script>
+  <script src="../static/js/jquery.dataTables.min.js"></script>
+  <script src="../static/js/dataTables.bootstrap.min.js"></script>
+  <script src="../static/js/notifications/push.js"></script>
+  <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
+  <script src="../static/js/js.cookie.js"></script>
+  <script src="../static/js/bootstrap-tour.min.js"></script>
+  <script>
+    $(function(){
+      $('#min, #max').datepicker();
+    });
+  </script>
+  <script>
+    $(window).scroll(function(){
+      var win =$(window).scrollTop();
+      $("#global-search-top .input-group").detach().appendTo('#global-search');
+    })
+  </script>
+  <script type="javascript:void">
+    $(function(){
+      $('#multilink01, #multilink02').on('click', function(){
+        window.location = 'link-opportunity-open.html';
+      })
+    });
+  </script>
+</body>
+</html>
