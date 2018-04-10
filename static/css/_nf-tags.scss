@@ -1,0 +1,40 @@
+#MainMenu {
+  #sidebar {
+    .dropdown-submenu{
+      .menu-new-tag {
+        background: green;
+        height: 13px;
+        padding: 0 3px;
+        position: absolute;
+        right: 30px;
+        top: 12px;
+        width: auto;
+        &:after {
+          color: white;
+          content: "New";
+          font-size: 0.7em;
+          position: relative;
+          text-transform: uppercase;
+          top: -3px;
+        }
+      }
+      .dropdown-submenu-subitems{
+        li {
+          a {
+            display: inline-block;
+          }
+          .menu-new-tag {
+            top: 3px;
+            left: 5px;
+            right: initial;
+            position: relative;
+            display: inline-block;
+            &:after {
+              font-size:0.65em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

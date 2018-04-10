@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../static/css/datepicker.css">
   <link rel="stylesheet" href="../static/css/multi-select-2-cols.css">
   <link rel="stylesheet" href="../static/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="../static/css/jquery.autocomplete.css">
   <link rel="stylesheet" href="../static/css/style.css">
   <link rel="stylesheet" href="../static/css/dataTables.bootstrap.css">
   <link rel="stylesheet" href="../static/css/notification/bootstrap-notifications.min.css  ">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="../static/css/bootstrap-tour.min.css">
 </head>
 <body>
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
   <header>
     <nav class="navbar fwc" id="navbar" style="z-index: 1000000;">
       <section class="top-logo">
@@ -272,13 +274,13 @@
                               <tr>
                                 <td><a href="/cpos/17/4500194054/">4500194054</a></td>
                                 <td>USD</td>
-                                <td>307.393,66</td>
-                                <td><div id="cpo-382934-items-value">247.345,28</div></td>
+                                <td>XXX XXX XXX,XX</td>
+                                <td><div id="cpo-items-value">None selected</div></td>
                               </tr>
                               
                               <tr>
                                 <td colspan="3"><strong class="pull-right">TOTAL</strong></td>
-                                <td><div id="total_selected">247.345,28</div></td>
+                                <td><div id="total_selected">0,00</div></td>
                               </tr>
                             </tbody>
                           </table>
@@ -297,31 +299,62 @@
                           <label for="id_customer_purchase_order_item" class="cleafix control-label required">Customer purchase order item</label>
                           <div class="clearfix">
                             <select multiple="multiple" id="id_customer_purchase_order_item" name="customer_purchase_order_item" class="multiSelect" tabindex="4" style="display: none;">
-                              <option value="1587991">4500194054: 1 - FXCB A203 FLEXI RF MODULE 850 TRIPLE 90W           </option>
-                              <option value="1587992">4500194054: 2 - CABLE M-M-RECTO 7-16DIN 4.3-10 1/2" 4M                </option>
-                              <option value="1587993">4500194054: 3 - LTE FTSI EAC Cable HDMI-D37 2,5m                      </option>
-                              <option value="1587994">4500194054: 4 - FTCX OD CABLE RJ48C 120ohm 50M                       </option>
-                              <option value="1587995">4500194054: 5 - NOKIA FPCA DC cable 2xmultibeam open 2m                </option>
-                              <option value="1587996">4500194054: 6 - FTCV OD CABLE RJ48C 120ohm 30M                         </option>
-                              </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="4500194054: 1 - FXCB A203 FLEXI RF MODULE 850 TRIPLE 90W           , 4500194054: 2 - CABLE M-M-RECTO 7-16DIN 4.3-10 1/2&quot; 4M                , 4500194054: 3 - LTE FTSI EAC Cable HDMI-D37 2,5m                      " aria-expanded="false"><span>4500194054: 1 - FXCB A203 FLEXI RF MODULE 850 TRIPLE 90W           </span>  <span>4500194054: 2 - CABLE M-M-RECTO 7-16DIN 4.3-10 1/2" 4M                </span>  <span>4500194054: 3 - LTE FTSI EAC Cable HDMI-D37 2,5m                      </span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu" style="max-height: 200px; overflow-y: auto; overflow-x: hidden;"><li class="multiselect-item filter" value="0"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text" placeholder="Type text to search" tabindex="5"><span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span></div></li><li class="multiselect-item multiselect-all"><a href="javascript:void(0);" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all" tabindex="6">  Select all</label></a></li><li class="active"><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="1587991" tabindex="7"> 4500194054: 1 - FXCB A203 FLEXI RF MODULE 850 TRIPLE 90W           </label></a></li><li class="active"><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="1587992" tabindex="8"> 4500194054: 2 - CABLE M-M-RECTO 7-16DIN 4.3-10 1/2" 4M                </label></a></li><li class="active"><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="1587993" tabindex="9"> 4500194054: 3 - LTE FTSI EAC Cable HDMI-D37 2,5m                      </label></a></li><li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="1587994" tabindex="10"> 4500194054: 4 - FTCX OD CABLE RJ48C 120ohm 50M                       </label></a></li><li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="1587995" tabindex="11"> 4500194054: 5 - NOKIA FPCA DC cable 2xmultibeam open 2m                </label></a></li><li><a href="javascript:void(0);"><label class="checkbox"><input type="checkbox" value="1587996" tabindex="12"> 4500194054: 6 - FTCV OD CABLE RJ48C 120ohm 30M                         </label></a></li></ul></div>
+                              <option value="1587991">0102030405: 1 - CUSTOMER PURCHASE ORDER ITEM 1</option>
+                              <option value="1587992">0203040506: 2 - CUSTOMER PURCHASE ORDER ITEM 2</option>
+                              <option value="1587993">0304050607: 3 - CUSTOMER PURCHASE ORDER ITEM 3</option>
+                              <option value="1587994">0405060708: 4 - CUSTOMER PURCHASE ORDER ITEM 4</option>
+                              <option value="1587995">0506070809: 5 - CUSTOMER PURCHASE ORDER ITEM 5</option>
+                              </select>
                             </div>
                           </div>
-                          
-                          <div id="opportunity-g5-error" class="alert alert-danger">
-                            You are trying to book an opportunity that has no Gate 5 approval date yet. Please launch the approval workflow in single CRM to be able to book it.
-                          </div>
-                          
+                          <script>
+                            $('#id_customer_purchase_order_item').change(function(){
+                                if($(this).val()){
+                                  $('#total_selected').html('X XXX XXX,XX');
+                                  $('#cpo-items-value').html('X XXX XXX,XX');
+                                } else {
+                                  $('#total_selected').html('0,00');
+                                  $('#cpo-items-value').html('None selected');
+                                }
+                            });
+                          </script>
                           <div class="form-group">
                             <label for="id_opportunity_number" class="cleafix control-label required">Opportunity number</label>
-                            <div class="clearfix">
-                              
-                              <input type="text" name="opportunity_number_text" id="opportunity_number_text" value="" class="form-control ac_input" autocomplete="off" tabindex="13">
-                              <div id="opportunity_number_on_deck" class="results_on_deck"><div><span class="iconic" id="kill_opportunity_number">X</span>    20133458 - OF4255_PAYG 3G FORECAST - 2019 - Claro Chile S.A.</div></div>
-                              <input type="hidden" name="opportunity_number" id="opportunity_number" value="6283">
-                              
+                            <div class="clearfix">                              
+                              <input type="text" name="opportunity_number_text" id="opportunity_number_text" value="" class="form-control ac_input removd" autocomplete="off" tabindex="13">
+                              <div id="opportunity_number_on_deck" class="results_on_deck"><div></div></div>
+                              <input type="hidden" name="opportunity_number" id="opportunity_number" value="6283">                              
                             </div>
                           </div>
-                          <div class="tile-box-padding" id="filter_oportunity" style="display: block;">
+                          <script>
+                            $('#opportunity_number_text').keypress(function(){
+                              $('.ac_results').removeClass('hide');
+                            });
+                            $('body:not(.ac_results)').click(function(){
+                              if(!$('.ac_results').hasClass('hide')){
+                                $('.ac_results').addClass('hide')
+                              }
+                            });
+                          </script>
+                          <div class="ac_results hide"><ul style="max-height: 180px; overflow: auto;"><li class="ac_even">20133458 - OF4<strong>25</strong>5_PAYG 3G FORECAST - 2019 - Claro Chile S.A.</li><li class="ac_odd">20133190 - OF4<strong>25</strong>4_SMALL CELLS FORECAST - 2019 - Claro Chile S.A.</li><li class="ac_even">20150424 - AMXCL - OF45<strong>25</strong>  SQM Feature expansion - Claro Chile S.A.</li><li class="ac_odd">20133357 - OF4<strong>25</strong>7_PAYG PACO FORECAST - 2019 - Claro Chile S.A.</li><li class="ac_even">20133674 - OF4<strong>25</strong>9_LTE 2600 FORECAST - 2020 - Claro Chile S.A.</li><li class="ac_odd ac_over">20133865 - OF4<strong>25</strong>6_PAYG LTE FORECAST  - 2019 - Claro Chile S.A.</li><li class="ac_even">15.CT.008075 - Telefonica AR - CR GIT-MPA UAT CR<strong>25</strong>229&amp;518&amp;708&amp;636&amp;642 - Telefónica Móviles Argentina S.A.</li><li class="ac_odd">20133675 - OF4<strong>25</strong>3_3G FORECAST - 2019 - Claro Chile S.A.</li><li class="ac_even">17.PE.777952 - TEFPE - AA - ACS <strong>25</strong> Jornadas - Telefónica del Perú SAA</li><li class="ac_odd">15.CO.603168 - AMX CO - <strong>25</strong>2 MW Links - Comunicación Celular SA (Comcel)</li></ul></div>
+                          <script>
+                             $('.ac_results li').on('click', function(){
+                              var input_text = '<span class="iconic" id="kill_opportunity_number">X</span>';
+                              input_text += $(this).text();
+                              $('#opportunity_number_text').val("");
+                              $('.results_on_deck div').html(input_text);
+                              $('#opportunity_link_table tbody tr').show();
+                              $('#filter_oportunity').removeClass('hdn');
+
+                               $('.iconic').on('click', function(){
+                                $('.results_on_deck div').html("");
+                                $('#opportunity_number_text').val("");
+                                $('#opportunity_link_table tbody tr').hide();
+                                $('#filter_oportunity').addClass('hdn');
+                               });
+                            });
+                          </script>
+                          <div class="tile-box-padding hdn" id="filter_oportunity" style="display: block;">
                             <div class="collapse in" id="displayFilter1">
                               <div class="tab-content">
                                 <div class="tab-pane fade in active" id="tab1default">
@@ -390,8 +423,8 @@
                                       <option value="2019 - P12" selected="selected">2019 - P12</option>
                                       <option value="2018 - P04">2018 - P04</option>
                                     </select></td>
-                                    <td><input readonly="True" type="text" value="$ 174,300"></td>
-                                    <td><input readonly="True" type="text" value="€ 141.465,79"></td>
+                                    <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                                    <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                                     <td><input type="text" name="form-0-custom_value" id="id_form-0-custom_value"></td>
                                   </tr>
                                   <tr class="hidden" name="form-0"><td colspan="10"><div id="form-0"><textarea id="id_form-0-notes" rows="2" cols="40" name="form-0-notes"></textarea></div></td></tr>
@@ -407,8 +440,8 @@
                                     <option value="2019 - P03" selected="selected">2019 - P03</option>
                                     <option value="2018 - P04">2018 - P04</option>
                                   </select></td>
-                                  <td><input readonly="True" type="text" value="$ 174,300"></td>
-                                  <td><input readonly="True" type="text" value="€ 141.465,79"></td>
+                                  <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                                    <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                                   <td><input type="text" name="form-1-custom_value" id="id_form-1-custom_value"></td>
                                 </tr>
                                 <tr class="hidden" name="form-1"><td colspan="10"><div id="form-1"><textarea id="id_form-1-notes" rows="2" cols="40" name="form-1-notes"></textarea></div></td></tr>
@@ -424,8 +457,8 @@
                                   <option value="2019 - P06" selected="selected">2019 - P06</option>
                                   <option value="2018 - P04">2018 - P04</option>
                                 </select></td>
-                                <td><input readonly="True" type="text" value="$ 174,600"></td>
-                                <td><input readonly="True" type="text" value="€ 141.709,28"></td>
+                                <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                                    <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                                 <td><input type="text" name="form-2-custom_value" id="id_form-2-custom_value"></td>
                               </tr>
                               <tr class="hidden" name="form-2"><td colspan="10"><div id="form-2"><textarea id="id_form-2-notes" rows="2" cols="40" name="form-2-notes"></textarea></div></td></tr>
@@ -441,8 +474,8 @@
                                 <option value="2019 - P09" selected="selected">2019 - P09</option>
                                 <option value="2018 - P04">2018 - P04</option>
                               </select></td>
-                              <td><input readonly="True" type="text" value="$ 174,300"></td>
-                              <td><input readonly="True" type="text" value="€ 141.465,79"></td>
+                              <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                              <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                               <td><input type="text" name="form-3-custom_value" id="id_form-3-custom_value"></td>
                             </tr>
                             <tr class="hidden" name="form-3"><td colspan="10"><div id="form-3"><textarea id="id_form-3-notes" rows="2" cols="40" name="form-3-notes"></textarea></div></td></tr>
@@ -458,8 +491,8 @@
                               <option value="2019 - P09" selected="selected">2019 - P09</option>
                               <option value="2018 - P04">2018 - P04</option>
                             </select></td>
-                            <td><input readonly="True" type="text" value="$ 406,700"></td>
-                            <td><input readonly="True" type="text" value="€ 330.086,84"></td>
+                            <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                            <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                             <td><input type="text" name="form-4-custom_value" id="id_form-4-custom_value"></td>
                           </tr>
                           <tr class="hidden" name="form-4"><td colspan="10"><div id="form-4"><textarea id="id_form-4-notes" rows="2" cols="40" name="form-4-notes"></textarea></div></td></tr>
@@ -475,8 +508,8 @@
                             <option value="2019 - P12" selected="selected">2019 - P12</option>
                             <option value="2018 - P04">2018 - P04</option>
                           </select></td>
-                          <td><input readonly="True" type="text" value="$ 406,700"></td>
-                          <td><input readonly="True" type="text" value="€ 330.086,84"></td>
+                          <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                          <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                           <td><input type="text" name="form-5-custom_value" id="id_form-5-custom_value"></td>
                         </tr>
                         <tr class="hidden" name="form-5"><td colspan="10"><div id="form-5"><textarea id="id_form-5-notes" rows="2" cols="40" name="form-5-notes"></textarea></div></td></tr>
@@ -492,8 +525,8 @@
                           <option value="2019 - P03" selected="selected">2019 - P03</option>
                           <option value="2018 - P04">2018 - P04</option>
                         </select></td>
-                        <td><input readonly="True" type="text" value="$ 406,700"></td>
-                        <td><input readonly="True" type="text" value="€ 330.086,84"></td>
+                        <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                          <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                         <td><input type="text" name="form-6-custom_value" id="id_form-6-custom_value"></td>
                       </tr>
                       <tr class="hidden" name="form-6"><td colspan="10"><div id="form-6"><textarea id="id_form-6-notes" rows="2" cols="40" name="form-6-notes"></textarea></div></td></tr>
@@ -509,8 +542,8 @@
                         <option value="2019 - P06" selected="selected">2019 - P06</option>
                         <option value="2018 - P04">2018 - P04</option>
                       </select></td>
-                      <td><input readonly="True" type="text" value="$ 407,400"></td>
-                      <td><input readonly="True" type="text" value="€ 330.654,98"></td>
+                      <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                          <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                       <td><input type="text" name="form-7-custom_value" id="id_form-7-custom_value"></td>
                     </tr>
                     <tr class="hidden" name="form-7"><td colspan="10"><div id="form-7"><textarea id="id_form-7-notes" rows="2" cols="40" name="form-7-notes"></textarea></div></td></tr>
@@ -526,8 +559,8 @@
                       <option value="2019 - P09" selected="selected">2019 - P09</option>
                       <option value="2018 - P04">2018 - P04</option>
                     </select></td>
-                    <td><input readonly="True" type="text" value="$ 20,335"></td>
-                    <td><input readonly="True" type="text" value="€ 16.504,34"></td>
+                    <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                          <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                     <td><input type="text" name="form-8-custom_value" id="id_form-8-custom_value"></td>
                   </tr>
                   <tr class="hidden" name="form-8"><td colspan="10"><div id="form-8"><textarea id="id_form-8-notes" rows="2" cols="40" name="form-8-notes"></textarea></div></td></tr>
@@ -543,8 +576,8 @@
                     <option value="2019 - P12" selected="selected">2019 - P12</option>
                     <option value="2018 - P04">2018 - P04</option>
                   </select></td>
-                  <td><input readonly="True" type="text" value="$ 20,335"></td>
-                  <td><input readonly="True" type="text" value="€ 16.504,34"></td>
+                  <td><input readonly="True" type="text" value="$ XXX,XXX"></td>
+                          <td><input readonly="True" type="text" value="€ XXX.XXX,XX"></td>
                   <td><input type="text" name="form-9-custom_value" id="id_form-9-custom_value"></td>
                 </tr>
                 <tr class="hidden" name="form-9"><td colspan="10"><div id="form-9"><textarea id="id_form-9-notes" rows="2" cols="40" name="form-9-notes"></textarea></div></td></tr>
@@ -565,7 +598,7 @@
               </div>
               <div class="modal-footer">
               <a id="add_new_bl_modal" class="btn btn-primary" data-toggle="modal" data-target="#create_bl_modal" style="display: inline-block;"><i class="fa fa-plus"></i>&nbsp;&nbsp;Create new BL</a>
-              <button type="submit" class="btn btn-success" id="link_cpo_item_to_opportunity"><span class="fa fa-link"></span> Link CPO Items</button>
+              <a href="#" class="btn btn-success" id="link_cpo_item_to_opportunity"><span class="fa fa-link"></span> Link CPO Items</a>
               <!--<a class="btn btn-success" href="/cpos/crm_sync/"><i class="glyphicon glyphicon-refresh"></i>&nbsp;&nbsp;Update Opportunity</a>-->
               </div>
               </form>
@@ -627,7 +660,7 @@
               </div>
               <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-              <button type="button" class="btn btn-primary" id="add_new_bl"><span class="glyphicon glyphicon-refresh"></span> Save</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="add_new_bl"><span class="glyphicon glyphicon-refresh"></span> Save</button>
               <input id="add_bl_url" type="hidden" value="/cpos/add_new_bussiness_line_from_opportunity/">
               <input id="search_bu_bg_url" type="hidden" value="/cpos/search_bu_bg_from_bl/">
               </div>
@@ -658,7 +691,6 @@
       </div>
     </div>
   </footer>
-  <script src="../static/js/jquery-1.10.2.min.js"></script>
   <script src="../static/js/bootstrap.min.js"></script>
   <script src="../static/js/bootbox.min.js"></script>
   <script src="../static/js/multiple_select_all.js"></script>
