@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ZINA - Workflow Management</title>
+  <!-- CSS References -->
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/fileinput.min.css">
+  <link rel="stylesheet" href="../static/css/datepicker.css">
+  <link rel="stylesheet" href="../static/css/multi-select-2-cols.css">
+  <link rel="stylesheet" href="../static/css/bootstrap-multiselect.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="../static/css/notification/bootstrap-notifications.min.css  ">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/bootstrap-tour.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar fwc" id="navbar" style="z-index: 1000000;">
+        <section class="demo-logo">
+          <img src="../static/img/zinawfm-interactive.png">
+        </section>
+      <section class="top-logo">
+        <div class="nav-bar-logo">
+          <a href="#">
+            <img src="../static/img/logoZina-Blanco.png">
+          </a>
+        </div>
+      </section>
+      <section class="top-icons">
+        <div class="dropdown pull-right">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenu-config" data-toggle="dropdown">
+          <span class="glyphicon glyphicon-info-sign"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+          </ul>
+        </div>
+        <div class="dropdown pull-right">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenu-config"
+          data-toggle="dropdown">
+          <span class="glyphicon glyphicon-cog"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span
+            class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-lock"></span> Change password</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-off"></span> Log out</a></li>
+          </ul>
+        </div>
+        <div class="dropdown show pull-right dropdown-notifications" id="id-notification-panel">
+          <a class="btn dropdown-toggle"  id="id-button-notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-count="" data-total="" class="glyphicon glyphicon-bell" id="id-notification-icon"></i></a>
+          <div class="dropdown-menu dropdown-container notification_box" id="notification-box-id" aria-labelledby="id-button-notifications">
+            <div class="dropdown-toolbar">
+              <div class="dropdown-toolbar-actions">
+                  <a href="#" data-count-unread id="mark-all-as-read-id">Mark all as read</a>
+              </div>
+              <h3 class="dropdown-toolbar-title"><span id="span-total-unread">5</span> unread notifications</h3>
+            </div>
+            <ul class="dropdown-menu notification-list">
+            </ul>
+            <a href="{% url notifications:notification_list %}">
+              <div class="dropdown-footer text-center not-footer">View All</div>
+            </a>
+          </div>
+        </div>
+        <div class="pull-right hello">
+          Welcome, <strong>ZINA User</strong>
+        </div>
+      </section>
+      <section class="top-central">
+          <div class="hide" id="global-search-top"></div>
+              <span id="getting-started"></span>
+          </div>
+      </section>
+    </nav>
+    <div id="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 logo">
+            <a class="title" href="#">
+              <img src="../static/img/logoZina.png" class="zinawfm-logo">
+            </a>
+          </div>
+          <div class="col-md-7" id="global-search">
+            <div class="input-group">
+              <div class="input-group-btn btn-filtre">
+                <button class="btn dropdown-toggle" id="dropdown_select" data-toggle="dropdown" aria-expanded="false">
+                  Select filter <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="search_option">
+                    <a data-value="" data-name="" href="">-----------</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Schedule" href="">Schedule</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Site" href="">Site</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Work Package" href="">Work Package</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="VOA" href="">VOA</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Proposal" href="">Proposal</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Proposal Package" href="">Proposal Package</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="CPO" href="">CPO</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="SSR" href="">SSR</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="SMR" href="">SMR</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="ZI" href="">ZI</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="WBS" href="">WBS</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="Invoices" href="">Invoices</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="LPR" href="">LPR</a>
+                  </li>
+                  <li class="search_option">
+                    <a data-name="SPO" href="">SPO</a>
+                  </li>
+                </ul>
+              </div>
+              <input type="text" class="form-control" id="bs_search_input" placeholder="Select a filter first..." title="please select filter first" data-placement="bottom">
+              <span class="input-group-btn btn-search">
+                <button class="btn btn-default" id="bs_search_button"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="main-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-lg-2">
+          <div id="MainMenu">
+              <div id="sidebar" class="sidebar-nav span3"  style="height: 60vh;background: white;border: #e5e5e5 solid 1px;">
+                <ul class="nav nav-tabs nav-stacked">
+                  <ul id="ul_basis" class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">Robotic Process Automation RPA</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container doble" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>SPO</span>
+                          <ul>
+                            <li><a href="data-importer-scratchpo.html">Scratch PO Creation</a></li>
+                            <li><a href="data-importer-scratchalign.html">SPO Alignment in IPM</a></li>
+                          </ul>
+                          <br>
+                          <span>WBS</span>
+                            <ul>
+                              <li><a href="data-importer-wbs.html">Massive WBS Creation</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>B2B SPO</span>
+                          <ul>
+                            <li><a href="data-importer-calloff.html">B2B SPO with Post-SSR</a></li>
+                          </ul>
+                          <br>
+                          <span>ZI Partner</span>
+                          <ul>
+                            <li><a href="data-importer-zimassive.html">Massive ZI Partner Creation</a></li>
+                            <li><a href="data-importer-ziupdate.html">ZI Update</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#" tabindex="-1">Customer Purchase Orders</a><span class="glyphicon glyphicon-chevron-right"></span>
+                        <ul class="dropdown-submenu-container single" id="contractMenuBox">
+                            <li class="dropdown-submenu-subitems col-md-12">
+                            <span>CPO</span>
+                            <ul>
+                                <li><a href="cpo-inbox.html">All Customer Purchase Orders</a></li>
+                                <li><a href="cpo-detail.html">CPO Detail</a></li>
+                                <li><a href="cpo-item.html">CPO Item</a></li>
+                                <!-- <li><a href="http://127.0.0.1:8321/reports/customer_purchase_orders/">CPO Report</a></li> -->
+                            </ul>
+                            </li>
+                            <li class="dropdown-submenu-subitems col-md-12">
+                            <span>Order Intake</span>
+                                <ul>
+                                    <li><a href="oit-summary-bg.html">Summary by BG</a></li>
+                                    <li><a href="oit-summary-opp.html">Summary by Opportunity</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#" tabindex="-1">CRIA Tool</a><span class="glyphicon glyphicon-chevron-right"></span>
+                      <ul class="dropdown-submenu-container doble" id="contractMenuBox">
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>CRIA Tool</span>
+                          <ul>
+                            <li><a href="cria-inbox.html">CRIA Tool Inbox</a></li>
+                            <li><a href="cria-detail-billable.html">CR Detail</a></li>
+                          </ul>
+                          <br>
+                          <!-- <span>Reports</span>
+                            <ul>
+                              <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_report/">Change Requests Report</a></li>
+                            <li><a href="http://127.0.0.1:8321/cria_tool/cria_tool_workflow_approval_report/">Approval Report</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="dropdown-submenu-subitems col-md-6">
+                          <span>CR SPO</span>
+                          <ul>
+                            <li><a href="data-importer-scratchpo.html">Create Scratch PO for Change Request</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-lg-10">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="">Home</a></li>
+                  <li class="active">Order Intake Summary by Opprortunity</li>
+                </ol>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h1>Order Intake Summary by Opportunity</h1>
+              </div>
+            </div>
+            <!-- Contents -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tile-box-padding">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered change-request-review-table">
+                              <tbody>
+                                  <tr>
+                                      <td><strong>Customer Team:</strong></td>
+                                      <td>TIM Brazil</td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>Period:</strong></td>
+                                      <td>P04</td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>BW Latest update:</strong></td>
+                                      <td>25/04/2019 - 12h22m</td>
+                                  </tr>
+                                  <tr>
+                                      <td><strong>Status:</strong></td>
+                                      <td>Partial OIT</td>
+                                  </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tile-box-padding">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="small-box small-box-success summary" id="box-1">
+                                    <div class="inner">
+                                        <p>&nbsp;</p><p>&nbsp;</p>
+                                        <h3><span id="total_waiting">R$ 2.580.641,74</span></h3>
+                                        <p>&nbsp;</p><p>&nbsp;</p>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="fa fa-usd"></span>
+                                    </div>
+                                    <a href="#" class="small-box-footer">Total POs Received (R$)</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="small-box small-box-success summary" id="box-2">
+                                    <div class="inner">
+                                            <p>&nbsp;</p><p>&nbsp;</p>
+                                            <h3><span id="total_waiting">R$ 352,44 </span></h3>
+                                            <p>&nbsp;</p><p>&nbsp;</p>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="fa fa-usd"></span>
+                                    </div>
+                                    <a href="#" class="small-box-footer">Total Adjustments and Cancellations (R$)</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="small-box small-box-success summary" id="box-2">
+                                    <div class="inner">
+                                            <p>&nbsp;</p><p>&nbsp;</p>
+                                            <h3><span id="total_waiting">R$ 2.580.289,30  </span></h3>
+                                            <p>&nbsp;</p><p>&nbsp;</p>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="fa fa-usd"></span>
+                                    </div>
+                                    <a href="#" class="small-box-footer">Total Order Intake - All BGs (R$)</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="small-box small-box-success summary" id="box-2">
+                                    <div class="inner">
+                                            <p>&nbsp;</p><p>&nbsp;</p>
+                                            <h3><span id="total_waiting">€ 608.558,80 </span></h3>
+                                            <p>&nbsp;</p><p>&nbsp;</p>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="fa fa-euro"></span>
+                                    </div>
+                                    <a href="#" class="small-box-footer">Total Order Intake - All BGs (€)</a>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                      <div class="col-md-12" style="padding-top: 30px; padding-bottom: 30px;">
+                          <div class="row">
+                              <form>
+                                  <div class="col-md-3 form-group">
+                                      <label for="">Opportunity Name:</label>
+                                      <input type="text" name="cpo_number" id="search_cpo_number" class="column_filter form-control filter" pattern="" title="" tabindex="4">
+                                  </div>
+                                  <div class="col-md-3 form-group">
+                                      <label for="">BG</label>
+                                      <select name="customer_team" id="select_customer_team" class="form-control filter" tabindex="5">
+                                          <option value="">------------</option>
+                                          <option value="">FN</option>
+                                          <option value="">MN</option>
+                                          <option value="">ION IP</option>
+                                          <option value="">ION OP</option>
+                                          <option value="">GS</option>
+                                          <option value="">NSW</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-md-3 form-group">
+                                      <label for="">Project Definition:</label>
+                                      <input type="text" name="cpo_number" id="search_cpo_number" class="column_filter form-control filter" pattern="" title="" tabindex="4">
+                                  </div>
+                                  <div class="col-md-3 form-group">
+                                      <label for="">Project Description:</label>
+                                      <input type="text" name="cpo_number" id="search_cpo_number" class="column_filter form-control filter" pattern="" title="" tabindex="4">
+                                  </div>
+                              </form>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12 text-right form-inline">
+                                  <a href="/cpos/"><button type="button" id="reset_filter" class="btn btn-danger"><span class="glyphicon glyphicon-refresh"></span> Reset filter</button></a>
+                                  <button type="button" id="filter_button" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Filter</button>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  <div class="text-right">
+                    <div class="row">
+                        <div class="col-md-12 text-right" style="margin-top:10px;">
+                            <a href="#" class="btn btn-default"> <i class="fa fa-download">&nbsp;&nbsp;</i>Download report</a>
+                        </div>
+                    </div>
+                  <br>
+                  <div id="id_error_cpos_status" class="alert alert-danger" hidden=""></div>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="cpo_table">
+                      <thead>
+                        <tr>
+                          <!-- <th><input type="checkbox" name="select_all_cpos" id="select_all_cpos" tabindex="8"></th> -->
+                          <th>Opportunity Name</th>
+                          <th>BG</th>
+                          <th>BL</th>
+                          <th>Project Definition</th>
+                          <th>Project Description</th>
+                          <th>POs Received (R$)</th>
+                          <th>Adjustments and Cancellations (R$)</th>
+                          <th>TOTAL Order Intake (R$)</th>
+                          <th>TOTAL Order Intake (€)</th>
+                        </tr>
+                      </thead>
+                      <tbody id="not_taken_cpo_table">
+                        <tr>
+                          <td class="text-center"><strong>OppBRL15TI003	OppTIM GPON E1</strong></td>
+                          <td class="text-center"><strong>FN</strong></td>
+                          <td class="text-center"><strong>FN - Copper (BL)</strong></td>
+                          <td class="text-center">BRL15TI003</td>
+                          <td class="text-center">TIM GPON E1</td>
+                          <td class="text-right">  352.442,02  </td>
+                          <td class="text-right"> 352,44 </td>
+                          <td class="text-right">  352.089,58 </td>
+                          <td class="text-right">  83.039,99  </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><strong>OppProj TIM Small DWDM</strong></td>
+                          <td class="text-center"><strong>ION</strong></td>
+                          <td class="text-center"><strong>ION - IP Rtg Deploym</strong></td>
+                          <td class="text-center">BRL18TI001</td>
+                          <td class="text-center">Proj TIM Small DWDM</td>
+                          <td class="text-right">  43.864,95 </td>
+                          <td class="text-right">0</td>
+                          <td class="text-right">  43.864,95 </td>
+                          <td class="text-right">  10.345,51 </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><strong>OppProj TIM Small DWDM</strong></td>
+                          <td class="text-center"><strong>ION</strong></td>
+                          <td class="text-center"><strong>ION - Optics Deploym</strong></td>
+                          <td class="text-center">BRL18TI001</td>
+                          <td class="text-center">Proj TIM Small DWDM</td>
+                          <td class="text-right">  82.835,53 </td>
+                          <td class="text-right">0</td>
+                          <td class="text-right">   82.835,53 </td>
+                          <td class="text-right">  19.536,68  </td>
+                        </tr>  
+                        <tr>
+                          <td class="text-center"><strong>OppProj TIM Small DWDM</strong></td>
+                          <td class="text-center"><strong>ION</strong></td>
+                          <td class="text-center"><strong>ION - Optics Switche</strong></td>
+                          <td class="text-center">BRL18TI001</td>
+                          <td class="text-center">Proj TIM Small DWDM</td>
+                          <td class="text-right">  249.636,81 </td>
+                          <td class="text-right">0</td>
+                          <td class="text-right"> 249.636,81 </td>
+                          <td class="text-right">  58.876,61 </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><strong>OppProj Exp. de rede Satelite 17.BR.789889</strong></td>
+                          <td class="text-center"><strong>GS</strong></td>
+                          <td class="text-center"><strong>GS - Systems Integra</strong></td>
+                          <td class="text-center">BRL18TI004</td>
+                          <td class="text-center">Proj Exp. de rede Satelite 17.BR.789889</td>
+                          <td class="text-right">  346.019,65 </td>
+                          <td class="text-right">0</td>
+                          <td class="text-right"> 346.019,65  </td>
+                          <td class="text-right">  81.608,41 </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><strong>OppTIM RFP MW SHORT HAUL 2018</strong></td>
+                          <td class="text-center"><strong>MN</strong></td>
+                          <td class="text-center"><strong>MN - Microwave (BL)</strong></td>
+                          <td class="text-center">BRL18TI006</td>
+                          <td class="text-center">TIM RFP MW SHORT HAUL 2018</td>
+                          <td class="text-right">  1.505.842,78 </td>
+                          <td class="text-right">0</td>
+                          <td class="text-right">  1.505.842,78 </td>
+                          <td class="text-right"> 355.151,60  </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div>
+                      <span class="step-links">
+                        <div class="text-center">
+                          <ul class="pagination">
+                            <li>
+                              
+                            </li>
+                            <li class="active"><a class="page-link" data-page="1" href="">1</a></li>
+                            <li><a class="page-link" href="" data-page="2">2</a></li><li><a class="page-link" href="" data-page="3">3</a></li><li class="ellipsis disabled"><a href="">...</a></li><li><a class="page-link" data-page="5919" href="">10</a></li>
+                            <li>
+                              
+                              <a class="page-link" data-page="2" href="" aria-label="Next">
+                                <span aria-hidden="true">Next</span>
+                              </a>
+                              
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="current">
+                          Showing page 1 of 58.
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 col-xs-6">
+          <span><a class="copyright" href="https://intranet.nokia.com/sites/global/Pages/Home.aspx"></a></span>
+        </div>
+        <div class="col-md-2 pull-right logoFooter col-xs-6">
+          <a href=" http://company.nokia.com/en" target="-blank">
+            <img src="../static/img/NOKIA_LOGO_WHITE.png" alt="Powered by NOKIA">
+          </a>
+        </div>
+      </div>
+  </div>
+  </footer>
+  <script src="../static/js/jquery-1.10.2.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/bootbox.min.js"></script>
+  <script src="../static/js/multiple_select_all.js"></script>
+  <script src="../static/js/bootstrap-datepicker.js"></script>
+  <script src="../static/js/fileinput.min.js"></script>
+  <script src="../static/js/jstree.js"></script>
+  <script src="../static/js/transport_tracking_tool.js"></script>
+  <script src="../static/js/bootstrap-multiselect.js"></script>
+  <script src="../static/js/jquery.quicksearch.js"></script>
+  <script src="../static/js/jquery.inputmask.bundle.min.js"></script>
+  <script src="../static/js/search_dropdown_controller.js"></script>
+  <script src="../static/js/app.js"></script>
+  <script src="../static/js/multiple_choice_field.js"></script>
+  <script src="../static/js/serialize_object.js"></script>
+  <script src="../static/js/jquery.dataTables.min.js"></script>
+  <script src="../static/js/dataTables.bootstrap.min.js"></script>
+  <script src="../static/js/notifications/push.js"></script>
+  <script src="../static/js/notifications/createjs-2015.11.26.min.js"></script>
+  <script src="../static/js/js.cookie.js"></script>
+  <script src="../static/js/bootstrap-tour.min.js"></script>
+
+  <script>
+    $(function(){
+      $('#min, #max').datepicker();
+    });
+  </script>
+  <script>
+    $(window).scroll(function(){
+      var win =$(window).scrollTop();
+      $("#global-search-top .input-group").detach().appendTo('#global-search');
+    })
+  </script>
+</body>
+</html>
